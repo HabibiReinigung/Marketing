@@ -1,0 +1,50 @@
+name: Audio holen
+# Lädt Stimmen-Dateien von ElevenLabs (storage.googleapis.com) ins Repo.
+# Grund: Die Claude-Cloud darf storage.googleapis.com nicht direkt laden.
+# Auslöser: neue Datei werkstatt/audio/<id>.json mit {"url": "https://storage.googleapis.com/..."}
+on:
+  push:
+    branches: [main]
+    paths: ['werkstatt/audio/*.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: audio-holen
+  cancel-in-progress: false
+jobs:
+  holen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audio laden
+        run: |
+          set -eu
+          neu=0
+          for f in werkstatt/audio/*.json; do
+            [ -e "$f" ] || continue
+            id=$(basename "$f" .json)
+            if ls "werkstatt/audio/$id".* 2>/dev/null | grep -qv '\.json$'; then continue; fi
+            url=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["url"])' "$f")
+            case "$url" in
+              https://storage.googleapis.com/*|https://*.storage.googleapis.com/*|https://*.elevenlabs.io/*) ;;
+              *) echo "Quelle nicht erlaubt: $url"; continue ;;
+            esac
+            pfad="${url%%\?*}"; ext="${pfad##*.}"
+            case "$ext" in mp3|wav|m4a|ogg|aac|flac) ;; *) ext=mp3 ;; esac
+            if curl -fsSL --retry 2 --max-time 120 --max-filesize 30000000 "$url" -o "werkstatt/audio/$id.$ext"; then
+              echo "OK $id.$ext ($(stat -c %s "werkstatt/audio/$id.$ext") Bytes)"; neu=1
+            else
+              echo "FEHLER beim Laden von $id"; rm -f "werkstatt/audio/$id.$ext"
+              echo "{\"id\":\"$id\",\"fehler\":\"Download fehlgeschlagen\"}" > "werkstatt/audio/$id.fehler"; neu=1
+            fi
+          done
+          if [ "$neu" = 1 ]; then
+            git config user.name "audio-holen"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add werkstatt/audio
+            git commit -m "Audio geholt"
+            git pull --rebase
+            git push
+          fi
