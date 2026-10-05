@@ -1,9 +1,75 @@
 {
   "format": "habibi-instagram-plan",
   "version": 1,
-  "aktualisiert_am": "2026-10-05T21:08:42+02:00",
+  "aktualisiert_am": "2026-10-06T00:10:09+02:00",
   "hinweis": "Nur Beiträge, die Mortaza in der App freigegeben hat. Geschrieben vom Lauf «Instagram vorbereiten» (23:50), gelesen vom Lauf «Instagram posten».",
   "posts": [
+    {
+      "post_id": "IG-2026-10-03-1",
+      "datum": "2026-10-06",
+      "zeit": "10:00",
+      "format": "bild",
+      "caption": "Früh am Morgen oder am Abend: Wann soll euer Büro gereinigt werden?\n\nManche wollen morgens in ein frisch gereinigtes Büro kommen.\nAndere lassen lieber abends reinigen, wenn niemand mehr da ist.\nWas passt bei euch besser? Schreibt es in die Kommentare.\n\n#chur #graubünden #büroreinigung #reinigungchur #unterhaltsreinigung #habibireinigung #kmu",
+      "freigegeben_am": "2026-09-29T20:40:54.620Z",
+      "status": "geplant",
+      "hochgeladen_am": "2026-10-06T00:10:09+02:00",
+      "medien": [
+        {
+          "datei": "IG-2026-10-03-1_01.jpg",
+          "typ": "bild",
+          "url": "https://cdn.jsdelivr.net/gh/HabibiReinigung/Marketing@6264ac8c4223b7f92872825719a46ed4c11d6276/instagram/IG-2026-10-03-1/IG-2026-10-03-1_01.jpg",
+          "url_raw": "https://raw.githubusercontent.com/HabibiReinigung/Marketing/6264ac8c4223b7f92872825719a46ed4c11d6276/instagram/IG-2026-10-03-1/IG-2026-10-03-1_01.jpg"
+        }
+      ]
+    },
+    {
+      "post_id": "IG-2026-10-05-1",
+      "datum": "2026-10-06",
+      "zeit": "12:00",
+      "format": "karussell",
+      "caption": "Was sehen Patienten im Wartezimmer zuerst?\n\nDie Empfangstheke, die Armlehnen, den Boden beim Eingang und die Garderobe.\nGenau dort fällt es auf, wenn etwas nicht sauber ist.\nBesonders jetzt, wenn es draussen nass ist.\n\nSpeichern für später\n\n#chur #graubünden #praxisreinigung #reinigungchur #unterhaltsreinigung #habibireinigung #arztpraxis",
+      "freigegeben_am": "2026-09-29T20:41:55.374Z",
+      "status": "geplant",
+      "hochgeladen_am": "2026-10-06T00:10:09+02:00",
+      "medien": [
+        {
+          "datei": "IG-2026-10-05-1_01.jpg",
+          "typ": "bild",
+          "url": "https://cdn.jsdelivr.net/gh/HabibiReinigung/Marketing@6264ac8c4223b7f92872825719a46ed4c11d6276/instagram/IG-2026-10-05-1/IG-2026-10-05-1_01.jpg",
+          "url_raw": "https://raw.githubusercontent.com/HabibiReinigung/Marketing/6264ac8c4223b7f92872825719a46ed4c11d6276/instagram/IG-2026-10-05-1/IG-2026-10-05-1_01.jpg"
+        },
+        {
+          "datei": "IG-2026-10-05-1_02.jpg",
+          "typ": "bild",
+          "url": "https://cdn.jsdelivr.net/gh/HabibiReinigung/Marketing@6264ac8c4223b7f92872825719a46ed4c11d6276/instagram/IG-2026-10-05-1/IG-2026-10-05-1_02.jpg",
+          "url_raw": "https://raw.githubusercontent.com/HabibiReinigung/Marketing/6264ac8c4223b7f92872825719a46ed4c11d6276/instagram/IG-2026-10-05-1/IG-2026-10-05-1_02.jpg"
+        },
+        {
+          "datei": "IG-2026-10-05-1_03.jpg",
+          "typ": "bild",
+          "url": "https://cdn.jsdelivr.net/gh/HabibiReinigung/Marketing@6264ac8c4223b7f92872825719a46ed4c11d6276/instagram/IG-2026-10-05-1/IG-2026-10-05-1_03.jpg",
+          "url_raw": "https://raw.githubusercontent.com/HabibiReinigung/Marketing/6264ac8c4223b7f92872825719a46ed4c11d6276/instagram/IG-2026-10-05-1/IG-2026-10-05-1_03.jpg"
+        },
+        {
+          "datei": "IG-2026-10-05-1_04.jpg",
+          "typ": "bild",
+          "url": "https://cdn.jsdelivr.net/gh/HabibiReinigung/Marketing@6264ac8c4223b7f92872825719a46ed4c11d6276/instagram/IG-2026-10-05-1/IG-2026-10-05-1_04.jpg",
+          "url_raw": "https://raw.githubusercontent.com/HabibiReinigung/Marketing/6264ac8c4223b7f92872825719a46ed4c11d6276/instagram/IG-2026-10-05-1/IG-2026-10-05-1_04.jpg"
+        },
+        {
+          "datei": "IG-2026-10-05-1_05.jpg",
+          "typ": "bild",
+          "url": "https://cdn.jsdelivr.net/gh/HabibiReinigung/Marketing@6264ac8c4223b7f92872825719a46ed4c11d6276/instagram/IG-2026-10-05-1/IG-2026-10-05-1_05.jpg",
+          "url_raw": "https://raw.githubusercontent.com/HabibiReinigung/Marketing/6264ac8c4223b7f92872825719a46ed4c11d6276/instagram/IG-2026-10-05-1/IG-2026-10-05-1_05.jpg"
+        },
+        {
+          "datei": "IG-2026-10-05-1_06.jpg",
+          "typ": "bild",
+          "url": "https://cdn.jsdelivr.net/gh/HabibiReinigung/Marketing@6264ac8c4223b7f92872825719a46ed4c11d6276/instagram/IG-2026-10-05-1/IG-2026-10-05-1_06.jpg",
+          "url_raw": "https://raw.githubusercontent.com/HabibiReinigung/Marketing/6264ac8c4223b7f92872825719a46ed4c11d6276/instagram/IG-2026-10-05-1/IG-2026-10-05-1_06.jpg"
+        }
+      ]
+    },
     {
       "post_id": "IG-2026-10-07-2",
       "datum": "2026-10-07",
