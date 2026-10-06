@@ -361,6 +361,71 @@ def abschluss(reel, sid, start, ende, t_marke, t_zeile, t_knopf, bg='var(--navy-
     reel.szene(sid, start, ende, bg, inhalt, css=css, js='\n'.join(js), sfx=sfx)
 
 
+def stempel(reel, sid, start, ende, zeilen, wort, t_stempel, label=None, farbe_stempel='var(--rot)', unter=None, t_unter=None, bg='var(--ice)'):
+    """Mythos-Check: Behauptung erscheint (zeilen wie bei hook, mit t), dann knallt ein Stempel (z.B. FALSCH) darüber.
+    zeilen: Liste dict(text, art='big'|'serif', groesse=110, t). Stempel-Farbe z.B. var(--rot) oder var(--steel)."""
+    css = f'''#{sid}-w {{ position:absolute; left:70px; right:70px; top:470px; text-align:center; color:var(--navy); }}
+#{sid}-w .big {{ display:block; line-height:1.12; }}
+#{sid}-w .serif {{ display:block; color:var(--steel); line-height:1.15; margin-top:6px; }}
+#{sid}-st {{ position:absolute; left:150px; right:150px; top:1180px; height:230px; border:16px solid {farbe_stempel}; border-radius:34px;
+  display:flex; align-items:center; justify-content:center; font-weight:900; font-size:150px; letter-spacing:.04em; color:{farbe_stempel};
+  background:rgba(255,255,255,.55); transform:rotate(-8deg); }}
+#{sid}-u {{ position:absolute; left:60px; right:60px; top:1530px; text-align:center; font-size:96px; color:var(--navy); line-height:1.1; }}'''
+    zt = ''.join(f'<div id="{sid}-z{i}" class="{"big" if z.get("art", "big") == "big" else "serif"}" style="font-size:{z.get("groesse", 110 if z.get("art", "big") == "big" else 120)}px">{z["text"]}</div>' for i, z in enumerate(zeilen))
+    inhalt = (f'<div id="{sid}-lab" class="label top-label" style="color:var(--steel)">{label}</div>' if label else '') + \
+        f'<div id="{sid}-w" data-layout-allow-overflow>{zt}</div><div id="{sid}-st" data-layout-allow-overflow>{wort}</div>' + \
+        (f'<div id="{sid}-u" class="serif">{unter}</div>' if unter else '')
+    js, sfx = [], []
+    if label:
+        js.append(f'tl.fromTo("#{sid}-lab", {{ opacity: 0, y: -24 }}, {{ opacity: 1, y: 0, duration: .3 }}, {r(start + .02)});')
+    for i, z in enumerate(zeilen):
+        t = r(z['t'])
+        if z.get('art', 'big') == 'big':
+            js.append(f'tl.fromTo("#{sid}-z{i}", {{ scale: 1.8, opacity: 0, filter: "blur(12px)" }}, {{ scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }}, {t});')
+            sfx += [('whoosh', t - .08, .18), ('thump_klein', t, .25)]
+        else:
+            js.append(f'tl.fromTo("#{sid}-z{i}", {{ y: 70, opacity: 0, rotation: -5 }}, {{ y: 0, opacity: 1, rotation: 0, duration: .4, ease: "back.out(2.4)" }}, {t});')
+            sfx.append(('pop', t, .25))
+    ts = r(t_stempel)
+    js.append(f'tl.fromTo("#{sid}-st", {{ scale: 3, opacity: 0, rotation: -25 }}, {{ scale: 1, opacity: 1, rotation: -8, duration: .2, ease: "power4.in" }}, {ts});')
+    js.append(f'tl.fromTo("#{sid}-w", {{ x: 0, y: 0 }}, {{ keyframes: [{{ x: -22, y: 12, duration: .04 }}, {{ x: 18, y: -14, duration: .04 }}, {{ x: -10, y: 8, duration: .04 }}, {{ x: 0, y: 0, duration: .05 }}] }}, {r(ts + .2)});')
+    js.append(f'tl.to("#{sid}-w", {{ opacity: .35, duration: .3 }}, {r(ts + .25)});')
+    sfx += [('riser', ts - .4, .15), ('stamp', ts + .18, .6)]
+    if unter:
+        tu = r(t_unter if t_unter is not None else ts + .6)
+        js.append(f'tl.fromTo("#{sid}-u", {{ y: 60, opacity: 0 }}, {{ y: 0, opacity: 1, duration: .4, ease: "back.out(2.2)" }}, {tu});')
+        sfx.append(('pop_tief', tu, .22))
+    reel.szene(sid, start, ende, bg, inhalt, css=css, js='\n'.join(js), sfx=sfx)
+
+
+def liste(reel, sid, start, ende, titel_html, punkte, t_titel=None, bg='var(--navy)'):
+    """Checkliste: Titel oben (HTML mit <span class="a"> und <span class="serif">), darunter 2 bis 4 Punkte,
+    die nacheinander mit Häkchen erscheinen. punkte: Liste (text, t). Text kurz halten (höchstens rund 22 Zeichen pro Punkt)."""
+    n = len(punkte)
+    y0 = 760 if n <= 3 else 700
+    gap = 230 if n <= 3 else 200
+    css = f'''#{sid}-ti {{ position:absolute; left:60px; right:60px; top:290px; text-align:center; color:#fff; }}
+#{sid}-ti .a {{ font-weight:900; font-size:104px; letter-spacing:-0.02em; line-height:1.15; display:block; }}
+#{sid}-ti .serif {{ font-size:116px; color:var(--blue); display:block; line-height:1.15; margin-top:4px; }}
+.{sid}-p {{ position:absolute; left:110px; right:80px; height:160px; display:flex; align-items:center; }}
+.{sid}-box {{ width:118px; height:118px; border-radius:30px; border:9px solid var(--blue); flex:0 0 auto; position:relative; display:block; }}
+.{sid}-box svg {{ position:absolute; left:6px; top:6px; width:88px; height:88px; }}
+.{sid}-t {{ margin-left:44px; color:#fff; font-weight:700; font-size:68px; line-height:1.12; letter-spacing:-0.01em; }}'''
+    rows = ''.join(f'''<div id="{sid}-p{i}" class="{sid}-p" style="top:{y0 + i * gap}px" data-layout-allow-overflow>
+<div class="{sid}-box"><svg viewBox="0 0 100 100"><path id="{sid}-h{i}" d="M18 52 L42 76 L84 26" fill="none" stroke="#9fd3ee" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="{sid}-t">{txt}</div></div>''' for i, (txt, _) in enumerate(punkte))
+    inhalt = f'<div id="{sid}-ti">{titel_html}</div>{rows}'
+    tt = r(t_titel if t_titel is not None else start + .05)
+    js = [f'tl.fromTo("#{sid}-ti", {{ y: -60, opacity: 0 }}, {{ y: 0, opacity: 1, duration: .35, ease: "back.out(2)" }}, {tt});']
+    sfx = [('whoosh_runter', tt - .05, .2)]
+    for i, (_, t) in enumerate(punkte):
+        t = r(t)
+        js.append(f'tl.fromTo("#{sid}-p{i}", {{ x: -700, opacity: 0 }}, {{ x: 0, opacity: 1, duration: .35, ease: "back.out(1.6)" }}, {t});')
+        js.append(f'{{ const p = document.getElementById("{sid}-h{i}"); const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L; tl.to(p, {{ strokeDashoffset: 0, duration: .25, ease: "power2.out" }}, {r(t + .3)}); }}')
+        sfx += [('whoosh', t - .05, .15, -.3), ('tick', t + .3, .3), ('pop_hoch', t + .32, .2)]
+    reel.szene(sid, start, ende, bg, inhalt, css=css, js='\n'.join(js), sfx=sfx)
+
+
 def schreiben(reel, ordner):
     import os
     os.makedirs(ordner, exist_ok=True)

@@ -1,0 +1,26 @@
+{
+  "hinweis": "Faktenregister von Habibi Reinigung (Stand 27.09.2026, Quelle habibireinigung.ch). Nur diese Aussagen über die Firma verwenden.",
+  "erlaubt": [
+    "Unterhaltsreinigung für Büros, Praxen, Studios und Gewerbe in Chur und Umgebung",
+    "Immer dieselben Leute: festes Team für Ihr Objekt, bei Ferien oder Krankheit jemand, der das Objekt kennt",
+    "Fester Monatspreis, keine Mindestlaufzeit, Kündigung auf Ende Monat",
+    "Richtpreis selbst ausrechnen auf habibireinigung.ch (#rechner), ohne Formular",
+    "Kostenlose Besichtigung, danach schriftlicher Festpreis und Reinigungsplan",
+    "Antwort innert 24 Stunden",
+    "Büro und Studio ab CHF 650 pro Monat, alles inbegriffen",
+    "Zone 1 (bis 5 km ab Chur) ohne Zuschlag, Zone 2 CHF 15 pro Einsatz, Zone 3 CHF 35 pro Einsatz",
+    "Einsatzzeiten Montag bis Freitag 06 bis 23 Uhr, Samstag 08 bis 20 Uhr",
+    "Höchstens vier neue Objekte pro Monat"
+  ],
+  "betraege_chf": [650, 15, 35],
+  "verboten": [
+    "Betriebshaftpflicht oder Versicherung erwähnen",
+    "Umzugsreinigung, Endreinigung, Wohnungsreinigung, Privatreinigung bewerben",
+    "Fensterreinigung aktiv bewerben",
+    "Rabatte, Gratis-Reinigung, Aktionen",
+    "Teamgrösse nennen",
+    "Annahmen über den heutigen Reiniger, Komplimente ohne Fakt",
+    "Gedankenstriche im Text"
+  ],
+  "verbotene_woerter": ["haftpflicht", "versichert", "versicherungsschutz", "unsere versicherung", "umzugsreinigung", "endreinigung", "wohnungsreinigung", "privatreinigung", "fensterreinigung", "rabatt", "gratis", "aktion", "2 personen", "zwei personen", "newsletter"]
+}
