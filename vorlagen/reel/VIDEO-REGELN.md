@@ -1,6 +1,6 @@
 # Video-Regeln Habibi Reinigung
 
-**Version 1.0, 07.10.2026.** Verbindliche Regeln für jedes Video (Instagram Reel, TikTok, Shorts) von Habibi Reinigung, Mortaza Habibi, Chur.
+**Version 1.1, 07.10.2026.** Verbindliche Regeln für jedes Video (Instagram Reel, TikTok, Shorts) von Habibi Reinigung, Mortaza Habibi, Chur.
 
 **Für Claude:** Diese Datei vor jedem Video vollständig lesen. Sie entscheidet über Inhalt, Hook, Stimme, Emotion, Bild, Ton und Schnitt. Bei Widerspruch gilt: Faktenregister der Marketing-App (Zahlen und Aussagen) zuerst, dann diese Datei, dann `vorlagen/reel/FABRIK.md` (technischer Ablauf), dann die ANLEITUNG der App. Mortaza muss nichts davon im Chat wiederholen. Wenn etwas hier nicht geregelt ist: so entscheiden, wie es die Beispiele in Abschnitt 12 tun.
 
@@ -52,7 +52,7 @@ Ein Reel verliert den Zuschauer in jeder Zehntelsekunde Stille. Deshalb:
 - Das Reel beginnt mit Stimme bei **0.15 s** (V0). Vorher keine Stille, der Ton des ersten Effekts läuft schon.
 - Am Schluss nach dem letzten Wort höchstens **0.85 s** (für den Knopf), danach ist das Video zu Ende.
 - Atemgeräusche und Zögerer («ähm», Einatmen vor einem Satz) wegschneiden. `fabrik.py phrasen` findet sie, `straffen` entfernt sie.
-- Sprechtempo nach dem Straffen: **2.6 bis 3.2 Wörter pro Sekunde**. Darunter klingt es müde. Tempo 1.08 ist der Standard, bei der eigenen Stimme 1.04 bis 1.08 je nach Aufnahme.
+- Sprechtempo nach dem Straffen: **2.6 bis 3.2 Wörter pro Sekunde**. Darunter klingt es müde. Tempo 1.08 ist der Standard.
 
 **Im Bild**
 - Keine Szene ohne Bewegung, auch nicht am Schluss (der Knopf pulsiert, die Figur wippt).
@@ -69,10 +69,9 @@ Ein Reel verliert den Zuschauer in jeder Zehntelsekunde Stille. Deshalb:
 
 | Zweck | Stimme | voice_id |
 | --- | --- | --- |
-| **Standard** | «Mortaza» (eigene geklonte Stimme, energetisch) | `VKHUKjVIrEtrinPsbI1G` |
-| Ausweichstimme | «Lenny – Casual Creator Voice» | `6IEvIqBOPOMUc5HwR9sQ` |
+| **Standard** | «Lenny – Casual Creator Voice» | `6IEvIqBOPOMUc5HwR9sQ` |
 
-Modell: **`eleven_v3`**, Sprache Deutsch. Die eigene Stimme ist seit 06.10.2026 ausdrücklich erlaubt und erwünscht; das Gesicht bleibt trotzdem immer aussen vor. Nie eine andere Stimme nehmen, ohne dass Mortaza es sagt. Werkzeug: `creative_generate_speech`, danach `creative_get_flow_run_status` abfragen. `generations_count: 1` (Credits sparen), einen fehlgeschlagenen Aufruf **nie blind wiederholen**, das kostet doppelt.
+Modell: **`eleven_v3`**, Sprache Deutsch. **Die geklonte Stimme von Mortaza wird nicht verwendet** (Entscheid 07.10.2026: der Klon klingt nicht nach ihm). Es bleibt bei Lenny, bis Mortaza ausdrücklich etwas anderes sagt. Nie eine andere Stimme nehmen, ohne dass er es sagt. Werkzeug: `creative_generate_speech`, danach `creative_get_flow_run_status` abfragen. `generations_count: 1` (Credits sparen), einen fehlgeschlagenen Aufruf **nie blind wiederholen**, das kostet doppelt.
 
 ### 4.2 Wie die Stimme klingen muss
 
@@ -339,4 +338,5 @@ Diese Datei ändert nur Mortaza oder Claude auf seine Anweisung. Wenn er ein Vid
 
 | Version | Datum | Änderung |
 | --- | --- | --- |
-| 1.0 | 07.10.2026 | Erste Fassung. Qualitätsmassstab, Pausenverbot, eigene Stimme als Standard, Hook-Muster, Szenen-Baukasten, Prüfliste. |
+| 1.1 | 07.10.2026 | Stimme: Lenny ist Standard, der Klon von Mortaza wird nicht verwendet. |
+| 1.0 | 07.10.2026 | Erste Fassung. Qualitätsmassstab, Pausenverbot, Hook-Muster, Szenen-Baukasten, Prüfliste. |

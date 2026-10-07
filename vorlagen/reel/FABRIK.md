@@ -1,6 +1,6 @@
 # Reel-Fabrik Habibi Reinigung (Anleitung für den geplanten Cloud-Lauf)
 
-> **Zuerst `VIDEO-REGELN.md` im selben Ordner lesen.** Dort stehen die verbindlichen Regeln zu Hook, Stimme, Emotion, Bild, Ton und Schnitt (inklusive Pausenverbot und der Stimme von Mortaza). Diese Datei hier beschreibt nur den technischen Ablauf.
+> **Zuerst `VIDEO-REGELN.md` im selben Ordner lesen.** Dort stehen die verbindlichen Regeln zu Hook, Stimme, Emotion, Bild, Ton und Schnitt (inklusive Pausenverbot; Stimme ist Lenny). Diese Datei hier beschreibt nur den technischen Ablauf.
 
 Ziel: 4 Reels pro Woche, vollautomatisch erstellt, in der Qualität der bisherigen Reels (Motion Design, KI-Stimme mit Energie, Soundeffekte, KEINE Musik). Mortaza gibt jedes Reel in seiner App frei, erst dann wird es gepostet.
 
@@ -49,7 +49,7 @@ Die übrigen Tage (Di, Do, Sa) gehören den Karussells und Bildern des Tageslauf
 - Satz 1 = Haken (Frage oder steile These), sofort Spannung.
 - Mitte: 2 bis 4 kurze Sätze, je ein Gedanke.
 - Schluss immer: «[excited] Habibi Reinigung! Richtpreis in EINER Minute, auf habibireinigung Punkt C-H!» (Varianten erlaubt, aber «habibireinigung Punkt C-H» genau so).
-- ElevenLabs v3 Tags für Emotion: `[excited]`, `[intense]`, `[curious]`, `[sarcastic]`, `[warmly]`, `[short pause]`. Betonte Wörter in GROSSBUCHSTABEN (sparsam, 1 pro Satz). Zahlen ausschreiben («SECHSHUNDERTFÜNFZIG»). Keine Abkürzungen.
+- ElevenLabs v3 Tags für Emotion: `[excited]`, `[intense]`, `[curious]`, `[sarcastic]`, `[warmly]`. **Pausen-Tags sind verboten** (VIDEO-REGELN Abschnitt 3). Betonte Wörter in GROSSBUCHSTABEN (sparsam, 1 pro Satz). Zahlen ausschreiben («SECHSHUNDERTFÜNFZIG»). Keine Abkürzungen.
 - Beispiele: `vorlagen/reel/reel_preis.py` und `reel_heizung.py` (Texte in FABRIK.md Abschnitt 9).
 
 ## 4. Stimme (ElevenLabs)
@@ -129,7 +129,7 @@ In `reel.py` gilt `T = json.load(open(sys.argv[1]))` (direkt das Objekt aus zeit
 
 ## 9. Beispieltexte (gut bewertet)
 
-Preis (24 s): «[curious] Was kostet eigentlich eine Büroreinigung in Chur? [short pause] [sarcastic] «Preis auf Anfrage»… super hilfreich. [excited] Bei uns steht der Preis DA! Büros ab SECHSHUNDERTFÜNFZIG Franken im Monat. ALLES inbegriffen! [intense] Fester Monatspreis. KEINE Mindestlaufzeit. [warmly] Und bis fünf Kilometer ab Chur: ohne Zuschlag. [excited] Habibi Reinigung! Euren Richtpreis rechnet ihr in EINER Minute aus, auf habibireinigung Punkt C-H!»
+Preis (24 s): «[curious] Was kostet eigentlich eine Büroreinigung in Chur? [sarcastic] «Preis auf Anfrage»… super hilfreich. [excited] Bei uns steht der Preis DA! Büros ab SECHSHUNDERTFÜNFZIG Franken im Monat. ALLES inbegriffen! [intense] Fester Monatspreis. KEINE Mindestlaufzeit. [warmly] Und bis fünf Kilometer ab Chur: ohne Zuschlag. [excited] Habibi Reinigung! Euren Richtpreis rechnet ihr in EINER Minute aus, auf habibireinigung Punkt C-H!»
 
 Heizung (15 s): «[excited] Heizung läuft wieder? [intense] Dann wirbelt sie den Staub vom GANZEN Sommer durchs Büro! [excited] Also JETZT Heizkörper abstauben, auch ZWISCHEN den Rippen! [warmly] Von oben nach unten. [excited] Habibi Reinigung! Richtpreis auf habibireinigung Punkt C-H!»
 

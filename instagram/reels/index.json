@@ -3,8 +3,51 @@
   "version": 1,
   "hinweis": "Liste der Reels der Reel-Fabrik. Geschrieben von der Reel-Fabrik (neue Reels, import_noetig: true) und vom Tageslauf (import_noetig: false nach Übernahme in die App).",
   "reels": [
-    {"post_id": "IG-2026-10-07-2", "datum": "2026-10-07", "zeit": "18:00", "thema": "Mythos #1: Mehr Putzmittel = sauberer?", "saeule": "mythos", "erstellt_am": "2026-10-05", "version": 1, "import_noetig": false, "hinweis": "von Hand im Chat erstellt"},
-    {"post_id": "IG-2026-10-09-2", "datum": "2026-10-09", "zeit": "12:00", "thema": "Preis auf Anfrage? Nicht bei uns.", "saeule": "transparenz", "sprechtext": "[curious] Was kostet eigentlich eine Büroreinigung in Chur? [sarcastic] «Preis auf Anfrage»… [excited] Bei uns steht der Preis DA! …", "erstellt_am": "2026-10-05", "version": 1, "import_noetig": false, "hinweis": "von Hand im Chat erstellt"},
-    {"post_id": "IG-2026-10-11-2", "datum": "2026-10-11", "zeit": "10:00", "thema": "Heizung läuft wieder? Heizkörper abstauben", "saeule": "lokal", "sprechtext": "[excited] Heizung läuft wieder? [intense] Dann wirbelt sie den Staub vom GANZEN Sommer durchs Büro! …", "erstellt_am": "2026-10-05", "version": 1, "import_noetig": false, "hinweis": "von Hand im Chat erstellt"}
+    {
+      "post_id": "IG-2026-10-07-2",
+      "datum": "2026-10-07",
+      "zeit": "18:00",
+      "thema": "Mythos #1: Mehr Putzmittel = sauberer?",
+      "saeule": "mythos",
+      "erstellt_am": "2026-10-05",
+      "version": 1,
+      "import_noetig": false,
+      "hinweis": "von Hand im Chat erstellt"
+    },
+    {
+      "post_id": "IG-2026-10-09-2",
+      "datum": "2026-10-09",
+      "zeit": "12:00",
+      "thema": "Preis auf Anfrage? Nicht bei uns.",
+      "saeule": "transparenz",
+      "sprechtext": "[curious] Was kostet eigentlich eine Büroreinigung in Chur? [sarcastic] «Preis auf Anfrage»… [excited] Bei uns steht der Preis DA! …",
+      "erstellt_am": "2026-10-05",
+      "version": 1,
+      "import_noetig": false,
+      "hinweis": "von Hand im Chat erstellt"
+    },
+    {
+      "post_id": "IG-2026-10-11-2",
+      "datum": "2026-10-11",
+      "zeit": "10:00",
+      "thema": "Heizung läuft wieder? Heizkörper abstauben",
+      "saeule": "lokal",
+      "sprechtext": "[excited] Heizung läuft wieder? [intense] Dann wirbelt sie den Staub vom GANZEN Sommer durchs Büro! …",
+      "erstellt_am": "2026-10-05",
+      "version": 1,
+      "import_noetig": false,
+      "hinweis": "von Hand im Chat erstellt"
+    },
+    {
+      "post_id": "IG-2026-10-12-r1",
+      "datum": "2026-10-12",
+      "zeit": "18:00",
+      "thema": "Mythos: Desinfektion ohne Einwirkzeit",
+      "saeule": "mythos",
+      "sprechtext": "[curious] Dein Desinfektionsmittel wirkt gar NICHT. [intense] Weil ihr es sofort wieder WEGWISCHT! [excited] Desinfektion braucht EINWIRKZEIT! Die Fläche muss nass BLEIBEN! [warmly] Wie lange, steht auf der FLASCHE. [excited] Habibi Reinigung! Richtpreis in EINER Minute, auf habibireinigung Punkt C-H!",
+      "erstellt_am": "2026-10-07",
+      "version": 1,
+      "import_noetig": true
+    }
   ]
 }

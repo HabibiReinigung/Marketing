@@ -1,0 +1,42 @@
+{
+ "post_id": "IG-2026-10-12-r1",
+ "datum": "2026-10-12",
+ "zeit": "18:00",
+ "format": "reel",
+ "thema": "Mythos: Desinfektion ohne Einwirkzeit",
+ "saeule": "mythos",
+ "caption": "Dein Desinfektionsmittel wirkt gar nicht? Dann wischt ihr es zu früh weg.\n\nDesinfektion braucht Einwirkzeit.\nDie Fläche muss die ganze Zeit nass bleiben.\nWie lange genau, steht auf der Flasche.\n\nRichtpreis in 1 Minute: Link in der Bio\n\n#chur #graubünden #büroreinigung #reinigungchur #unterhaltsreinigung #praxisreinigung #habibireinigung",
+ "spec": {
+  "szenen": [
+   {
+    "text": "Dein Desinfektionsmittel wirkt gar nicht."
+   },
+   {
+    "text": "Sprühen. Sofort trocken wischen. FALSCH"
+   },
+   {
+    "text": "Desinfektion braucht EINWIRKZEIT"
+   },
+   {
+    "text": "Die Fläche muss nass bleiben. Wie lange? Steht auf der Flasche."
+   }
+  ],
+  "schluss": {
+   "text": "Richtpreis für euer Büro in 1 Minute",
+   "knopf": "habibireinigung.ch"
+  },
+  "sprechtext": "[curious] Dein Desinfektionsmittel wirkt gar NICHT. [intense] Weil ihr es sofort wieder WEGWISCHT! [excited] Desinfektion braucht EINWIRKZEIT! Die Fläche muss nass BLEIBEN! [warmly] Wie lange, steht auf der FLASCHE. [excited] Habibi Reinigung! Richtpreis in EINER Minute, auf habibireinigung Punkt C-H!"
+ },
+ "medien": [
+  {
+   "datei": "IG-2026-10-12-r1.mp4",
+   "typ": "video"
+  },
+  {
+   "datei": "IG-2026-10-12-r1_titel.jpg",
+   "typ": "titelbild"
+  }
+ ],
+ "ordner": "instagram/IG-2026-10-12-r1",
+ "warnungen": []
+}

@@ -7,9 +7,9 @@ Ein Reel = Liste von Szenen + Stimme. Siehe reel_*.py für Beispiele.
 import json
 
 BASIS_CSS = """
-@font-face { font-family: "Poppins"; font-weight: 900; src: url("assets/fonts/poppins-latin-900-normal.woff2") format("woff2"); }
-@font-face { font-family: "Poppins"; font-weight: 700; src: url("assets/fonts/poppins-latin-700-normal.woff2") format("woff2"); }
-@font-face { font-family: "Poppins"; font-weight: 500; src: url("assets/fonts/poppins-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-weight: 900; src: url("assets/fonts/Poppins-Black.ttf") format("truetype"); }
+@font-face { font-family: "Poppins"; font-weight: 700; src: url("assets/fonts/Poppins-Bold.ttf") format("truetype"); }
+@font-face { font-family: "Poppins"; font-weight: 500; src: url("assets/fonts/Poppins-Medium.ttf") format("truetype"); }
 @font-face { font-family: "Instrument Serif"; font-style: italic; font-weight: 400; src: url("assets/fonts/instrument-serif-latin-400-italic.woff2") format("woff2"); }
 :root { --navy:#152a43; --navy-deep:#0a1826; --steel:#2c6693; --ice:#eef3f7; --blue:#9fd3ee; --white:#fff; --rot:#e5484d; }
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -427,7 +427,9 @@ def liste(reel, sid, start, ende, titel_html, punkte, t_titel=None, bg='var(--na
 
 
 def schreiben(reel, ordner):
-    import os
+    import io, os
     os.makedirs(ordner, exist_ok=True)
-    open(os.path.join(ordner, 'index.html'), 'w').write(reel.bauen())
-    json.dump(reel.sfx, open(os.path.join(ordner, 'sfx.json'), 'w'))
+    # encoding ausdruecklich: unter Windows waere der Standard cp1252, die Seite
+    # erklaert sich aber als UTF-8, und jeder Umlaut wuerde zu U+FFFD.
+    io.open(os.path.join(ordner, 'index.html'), 'w', encoding='utf-8', newline='').write(reel.bauen())
+    json.dump(reel.sfx, io.open(os.path.join(ordner, 'sfx.json'), 'w', encoding='utf-8'), ensure_ascii=False)
