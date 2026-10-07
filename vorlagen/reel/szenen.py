@@ -67,10 +67,43 @@ def r(x):
     return round(float(x), 3)
 
 
+LEBEN_CSS = """
+#leben { position:absolute; inset:0; pointer-events:none; z-index:5; overflow:hidden; }
+#leben i { position:absolute; display:block; border-radius:50%; background:radial-gradient(circle at 35% 35%, rgba(159,211,238,.20), rgba(159,211,238,0) 72%); }
+#leben b { position:absolute; display:block; border-radius:50%; border:3px solid rgba(159,211,238,.16); }
+.clip { z-index:1; }
+"""
+
+LEBEN_JS = """// Dauerbewegung: fuenf weiche Formen ziehen langsam durch das Bild.
+(() => {
+  const n = document.getElementById('leben');
+  const gr = [520, 380, 640, 300, 460];
+  const ringe = n.querySelectorAll('b');
+  [[-180, 420, 760], [720, 1320, 560]].forEach((v, i) => {
+    const e = ringe[i];
+    e.style.left = v[0] + 'px'; e.style.top = v[1] + 'px';
+    e.style.width = v[2] + 'px'; e.style.height = v[2] + 'px';
+    tl.fromTo(e, { rotation: 0, x: 0, scale: .95 },
+      { rotation: 360, x: (i ? -150 : 150), scale: 1.1, duration: %(d)s, ease: 'none' }, 0);
+  });
+  for (let i = 0; i < 5; i++) {
+    const e = n.children[i];
+    e.style.width = gr[i] + 'px'; e.style.height = gr[i] + 'px';
+    e.style.left = (-200 + rnd() * 900) + 'px';
+    e.style.top = (-150 + rnd() * 1700) + 'px';
+    tl.fromTo(e, { x: -120 + rnd() * 60, y: 0, scale: .9 },
+      { x: 120 + rnd() * 80, y: -140 + rnd() * 280, scale: 1.12, duration: %(d)s, ease: 'none' }, 0);
+  }
+})();
+"""
+
+
 class Reel:
     def __init__(self, titel, dauer):
         self.titel, self.dauer = titel, r(dauer)
-        self.html, self.css, self.js, self.sfx = [], [BASIS_CSS], [BASIS_JS], []
+        self.html, self.css, self.js, self.sfx = [], [BASIS_CSS, LEBEN_CSS], [BASIS_JS], []
+        # Hinter allen Szenen laeuft eine ruhige Bewegung, damit nie ein Bild stillsteht.
+        self.js.append(LEBEN_JS % {'d': r(self.dauer)})
 
     def szene(self, sid, start, ende, bg, inhalt, css='', js='', sfx=()):
         self.html.append(f'<section id="{sid}" class="clip" data-start="{r(start)}" data-duration="{r(ende - start)}" data-track-index="0" style="background:{bg}">\n{inhalt}\n<div class="grain"></div>\n</section>')
@@ -88,7 +121,7 @@ class Reel:
 <style>{''.join(self.css)}</style>
 </head>
 <body>
-<div id="root" data-composition-id="main" data-start="0" data-duration="{self.dauer}" data-width="1080" data-height="1920">
+<div id="root" data-composition-id="main" data-start="0" data-duration="{self.dauer}" data-width="1080" data-height="1920">\n<div id="leben" data-layout-allow-overflow><i></i><i></i><i></i><i></i><i></i><b></b><b></b></div>
 {chr(10).join(self.html)}
 </div>
 <script>
@@ -136,13 +169,15 @@ def punch(reel, sid, start, ende, wort, t_wort, klein=None, t_klein=None, unter=
     # ein Grossbuchstabe in Poppins 900 ist rund 0.62 der Schriftgroesse breit.
     if px is None:
         px = max(90, min(250, int(960 / max(1, len(str(wort))) / 0.62)))
-    inhalt = f'''<div id="{sid}-w" class="center" data-layout-allow-overflow>
+    inhalt = f'''<div id="{sid}-ring" style="position:absolute;left:50%;top:50%;width:820px;height:820px;margin:-410px 0 0 -410px;border:10px solid rgba(159,211,238,.38);border-radius:50%;opacity:0"></div>
+<div id="{sid}-w" class="center" data-layout-allow-overflow>
 {f'<div id="{sid}-k" class="blk big" style="font-size:{klein_px}px;color:var(--blue);margin-bottom:10px">{klein}</div>' if klein else ''}
 <div id="{sid}-b" class="blk big" style="font-size:{px}px;color:#fff;letter-spacing:-0.05em;line-height:1">{wort}</div>
 <div id="{sid}-bar" style="width:600px;height:26px;background:var(--blue);border-radius:13px;margin-top:28px;transform-origin:left center;display:block"></div>
 {f'<div id="{sid}-u" class="label blk" style="color:var(--blue);margin-top:64px">{unter}</div>' if unter else ''}
 </div>'''
-    js = []
+    js = [f'tl.fromTo("#{sid}-ring", {{ scale: .55, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: .4, ease: "back.out(1.6)" }}, {r(start + .02)});',
+          f'tl.to("#{sid}-ring", {{ scale: 1.12, duration: 1.1, yoyo: true, repeat: -1, ease: "sine.inOut" }}, {r(start + .45)});']
     sfx = []
     if klein:
         js.append(f'tl.fromTo("#{sid}-k", {{ y: 40, opacity: 0 }}, {{ y: 0, opacity: 1, duration: .3, ease: "power3.out" }}, {r(t_klein)});')
@@ -543,7 +578,10 @@ def enthuellen(reel, sid, start, ende, punkte, titel_html=None, t_titel=None, bg
         js.append(f'tl.to("#{sid}-d{i}", {{ filter: "blur(0px)", scale: 1.04, duration: .34, ease: "back.out(2)" }}, {t});')
         js.append(f'tl.to("#{sid}-d{i}", {{ scale: 1, duration: .25, ease: "power2.out" }}, {r(t + .34)});')
         if i + 1 < len(punkte):
-            js.append(f'tl.to("#{sid}-d{i}", {{ opacity: 0, filter: "blur(28px)", duration: .18 }}, {r(punkte[i + 1]["t"] - .34)});')
+            # Erst ausblenden, wenn der naechste schon einblendet: nie eine leere Buehne.
+            js.append(f'tl.to("#{sid}-d{i}", {{ opacity: 0, filter: "blur(26px)", duration: .20 }}, {r(punkte[i + 1]["t"] - .16)});')
+        # Der Gegenstand atmet leicht, solange er steht.
+        js.append(f'tl.to("#{sid}-d{i}", {{ y: -14, duration: 1.6, yoyo: true, repeat: -1, ease: "sine.inOut" }}, {r(t + .4)});')
         js.append(f'tl.set("#{sid}-name", {{ innerText: "{pk["name"]}" }}, {t});')
         js.append(f'tl.fromTo("#{sid}-name", {{ y: 44, opacity: 0 }}, {{ y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }}, {t});')
         # Begruendung zusammen mit dem Namen umschalten, sonst steht noch die

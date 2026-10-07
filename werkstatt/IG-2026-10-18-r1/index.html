@@ -29,6 +29,11 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:var(--navy
 .big { font-weight:900; letter-spacing:-0.02em; line-height:1.02; }
 .spark { position:absolute; width:90px; height:90px; display:block; }
 
+#leben { position:absolute; inset:0; pointer-events:none; z-index:5; overflow:hidden; }
+#leben i { position:absolute; display:block; border-radius:50%; background:radial-gradient(circle at 35% 35%, rgba(159,211,238,.20), rgba(159,211,238,0) 72%); }
+#leben b { position:absolute; display:block; border-radius:50%; border:3px solid rgba(159,211,238,.16); }
+.clip { z-index:1; }
+
 #s2 .ding { position:absolute; left:50%; top:50%; width:460px; height:460px; margin:-230px 0 0 -230px; }
 #s2 .ding .d-rahmen { position:absolute; inset:60px 110px; background:#f2f6f9; border-radius:26px; box-shadow:0 16px 40px rgba(0,0,0,.35); }
 #s2 .ding .d-wippe { position:absolute; left:18%; right:18%; top:16%; bottom:16%; background:#dbe6ee; border-radius:16px; border-bottom:10px solid #b9cbd9; }
@@ -67,19 +72,21 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:var(--navy
 #s5-m img { width:100%; height:100%; display:block; }</style>
 </head>
 <body>
-<div id="root" data-composition-id="main" data-start="0" data-duration="46.157" data-width="1080" data-height="1920">
-<section id="s1" class="clip" data-start="0.0" data-duration="3.73" data-track-index="0" style="background:var(--blue)">
+<div id="root" data-composition-id="main" data-start="0" data-duration="39.333" data-width="1080" data-height="1920">
+<div id="leben" data-layout-allow-overflow><i></i><i></i><i></i><i></i><i></i><b></b><b></b></div>
+<section id="s1" class="clip" data-start="0.0" data-duration="2.823" data-track-index="0" style="background:var(--blue)">
 <div id="s1-bl" class="fill" data-layout-allow-overflow></div><div id="s1-lab" class="label top-label" style="color:var(--navy)">Tipp vom Profi</div><div id="s1-w" class="center" style="padding:0 60px" data-layout-allow-overflow><div id="s1-z0" class="blk big" style="font-size:86px;color:var(--navy);">Ein graues Putztuch</div><div id="s1-z1" class="blk serif" style="font-size:138px;color:var(--navy);line-height:1.05;margin-top:6px;">putzt nicht.</div><div id="s1-z2" class="blk big" style="font-size:86px;color:var(--navy);">Es verteilt.</div></div>
 <div class="grain"></div>
 </section>
-<section id="s2" class="clip" data-start="3.73" data-duration="6.293" data-track-index="0" style="background:var(--navy-deep)">
+<section id="s2" class="clip" data-start="2.823" data-duration="5.969" data-track-index="0" style="background:var(--navy-deep)">
 <div id="s2-t" data-layout-allow-overflow>Was wirklich passiert</div>
 <div id="s2-buehne" data-layout-allow-overflow><div class="ding" id="s2-d0" style="opacity:0"><div class="d-tuch"><s></s><s></s><s></s></div></div></div>
 <div id="s2-name" data-layout-allow-overflow></div>
 <div id="s2-warum" class="serif" data-layout-allow-overflow></div>
 <div class="grain"></div>
 </section>
-<section id="s3" class="clip" data-start="10.023" data-duration="15.372" data-track-index="0" style="background:var(--navy)">
+<section id="s3" class="clip" data-start="8.792" data-duration="12.77" data-track-index="0" style="background:var(--navy)">
+<div id="s3-ring" style="position:absolute;left:50%;top:50%;width:820px;height:820px;margin:-410px 0 0 -410px;border:10px solid rgba(159,211,238,.38);border-radius:50%;opacity:0"></div>
 <div id="s3-w" class="center" data-layout-allow-overflow>
 <div id="s3-k" class="blk big" style="font-size:64px;color:var(--blue);margin-bottom:10px">Zweimal falten, vier Lagen</div>
 <div id="s3-b" class="blk big" style="font-size:250px;color:#fff;letter-spacing:-0.05em;line-height:1">ACHT</div>
@@ -88,14 +95,14 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:var(--navy
 </div>
 <div class="grain"></div>
 </section>
-<section id="s4" class="clip" data-start="25.395" data-duration="13.99" data-track-index="0" style="background:var(--blue)">
+<section id="s4" class="clip" data-start="21.562" data-duration="11.379" data-track-index="0" style="background:var(--blue)">
 <div id="s4-glow"></div>
 <div class="label top-label" id="s4-lab" style="color:var(--navy)">Tipp vom Profi</div>
 <div id="s4-card" data-layout-allow-occlusion><div id="s4-tail" data-layout-allow-overflow></div><div id="s4-t0" class="s4-txt"><div class="a">Pro Bereich</div><div class="a"><span class="serif">eine frische Fläche.</span></div></div><div id="s4-t1" class="s4-txt"><div class="b">Grau?</div><div class="b"><span class="serif">Umklappen statt weiterwischen.</span></div></div></div>
 <div id="s4-m" data-layout-allow-overflow><img src="assets/maskottchen.png" alt="Habibi Maskottchen" /></div>
 <div class="grain"></div>
 </section>
-<section id="s5" class="clip" data-start="39.386" data-duration="6.771" data-track-index="0" style="background:var(--navy-deep)">
+<section id="s5" class="clip" data-start="32.941" data-duration="6.392" data-track-index="0" style="background:var(--navy-deep)">
 <div id="s5-bl" class="fill" data-layout-allow-overflow></div>
 <div class="center"><img id="s5-mark" src="assets/wortmarke.png" alt="Habibi Reinigung" />
 <div id="s5-line" class="blk"><div class="blk">Richtpreis für euer Büro</div><div class="blk serif">in 1 Minute</div></div>
@@ -132,58 +139,83 @@ function sparks(container, pts, t0, tl) {
 }
 const tl = gsap.timeline({ paused: true });
 
+// Dauerbewegung: fuenf weiche Formen ziehen langsam durch das Bild.
+(() => {
+  const n = document.getElementById('leben');
+  const gr = [520, 380, 640, 300, 460];
+  const ringe = n.querySelectorAll('b');
+  [[-180, 420, 760], [720, 1320, 560]].forEach((v, i) => {
+    const e = ringe[i];
+    e.style.left = v[0] + 'px'; e.style.top = v[1] + 'px';
+    e.style.width = v[2] + 'px'; e.style.height = v[2] + 'px';
+    tl.fromTo(e, { rotation: 0, x: 0, scale: .95 },
+      { rotation: 360, x: (i ? -150 : 150), scale: 1.1, duration: 39.333, ease: 'none' }, 0);
+  });
+  for (let i = 0; i < 5; i++) {
+    const e = n.children[i];
+    e.style.width = gr[i] + 'px'; e.style.height = gr[i] + 'px';
+    e.style.left = (-200 + rnd() * 900) + 'px';
+    e.style.top = (-150 + rnd() * 1700) + 'px';
+    tl.fromTo(e, { x: -120 + rnd() * 60, y: 0, scale: .9 },
+      { x: 120 + rnd() * 80, y: -140 + rnd() * 280, scale: 1.12, duration: 39.333, ease: 'none' }, 0);
+  }
+})();
+
 // ---- s1
 {
-makeBubbles(document.getElementById("s1-bl"), 14, 60, 210).forEach((b, i) => tl.fromTo(b.el, { y: 0, x: 0, opacity: 0 }, { y: -b.drift, x: (i % 2 ? 1 : -1) * b.sway, opacity: .95, duration: 3.73, ease: "none" }, 0.0));
+makeBubbles(document.getElementById("s1-bl"), 14, 60, 210).forEach((b, i) => tl.fromTo(b.el, { y: 0, x: 0, opacity: 0 }, { y: -b.drift, x: (i % 2 ? 1 : -1) * b.sway, opacity: .95, duration: 2.823, ease: "none" }, 0.0));
 tl.fromTo("#s1-lab", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 0.02);
-tl.fromTo("#s1-z0", { scale: 2.2, opacity: 0, filter: "blur(18px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, -0.02);
-tl.fromTo("#s1-z1", { y: 80, opacity: 0, rotation: -6 }, { y: 0, opacity: 1, rotation: 0, duration: .4, ease: "back.out(2.6)" }, 1.061);
-tl.fromTo("#s1-z2", { scale: 2.2, opacity: 0, filter: "blur(18px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 3.049);
-tl.to("#s1-w", { scale: 1.06, duration: 0.681, ease: "none" }, 3.049);
+tl.fromTo("#s1-z0", { scale: 2.2, opacity: 0, filter: "blur(18px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 0.035);
+tl.fromTo("#s1-z1", { y: 80, opacity: 0, rotation: -6 }, { y: 0, opacity: 1, rotation: 0, duration: .4, ease: "back.out(2.6)" }, 1.117);
+tl.fromTo("#s1-z2", { scale: 2.2, opacity: 0, filter: "blur(18px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 2.281);
+tl.to("#s1-w", { scale: 1.06, duration: 0.543, ease: "none" }, 2.281);
 }
 // ---- s2
 {
-tl.fromTo("#s2-t", { y: 48, opacity: 0 }, { y: 0, opacity: 1, duration: .3, ease: "back.out(1.7)" }, 3.83);
-tl.fromTo("#s2-d0", { opacity: 0, scale: .82, filter: "blur(34px)" }, { opacity: 1, scale: 1, filter: "blur(22px)", duration: .22, ease: "power2.out", immediateRender: true }, 3.93);
-tl.to("#s2-d0", { filter: "blur(0px)", scale: 1.04, duration: .34, ease: "back.out(2)" }, 4.23);
-tl.to("#s2-d0", { scale: 1, duration: .25, ease: "power2.out" }, 4.57);
-tl.set("#s2-name", { innerText: "Das graue Tuch" }, 4.23);
-tl.fromTo("#s2-name", { y: 44, opacity: 0 }, { y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }, 4.23);
-tl.set("#s2-warum", { innerText: "Fett, Staub und Keime vom WC landen auf dem nächsten Tisch." }, 4.23);
-tl.fromTo("#s2-warum", { y: 34, opacity: 0 }, { y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }, 4.35);
+tl.fromTo("#s2-t", { y: 48, opacity: 0 }, { y: 0, opacity: 1, duration: .3, ease: "back.out(1.7)" }, 2.923);
+tl.fromTo("#s2-d0", { opacity: 0, scale: .82, filter: "blur(34px)" }, { opacity: 1, scale: 1, filter: "blur(22px)", duration: .22, ease: "power2.out", immediateRender: true }, 3.023);
+tl.to("#s2-d0", { filter: "blur(0px)", scale: 1.04, duration: .34, ease: "back.out(2)" }, 3.323);
+tl.to("#s2-d0", { scale: 1, duration: .25, ease: "power2.out" }, 3.663);
+tl.to("#s2-d0", { y: -14, duration: 1.6, yoyo: true, repeat: -1, ease: "sine.inOut" }, 3.723);
+tl.set("#s2-name", { innerText: "Das graue Tuch" }, 3.323);
+tl.fromTo("#s2-name", { y: 44, opacity: 0 }, { y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }, 3.323);
+tl.set("#s2-warum", { innerText: "Fett, Staub und Keime vom WC landen auf dem nächsten Tisch." }, 3.323);
+tl.fromTo("#s2-warum", { y: 34, opacity: 0 }, { y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }, 3.443);
 }
 // ---- s3
 {
-tl.fromTo("#s3-k", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: .3, ease: "power3.out" }, 13.345);
-tl.fromTo("#s3-b", { scale: 3.2, opacity: 0 }, { scale: 1, opacity: 1, duration: .16, ease: "power4.in" }, 22.768);
-tl.fromTo("#s3-w", { x: 0, y: 0 }, { keyframes: [{ x: -26, y: 14, duration: .04 }, { x: 22, y: -18, duration: .04 }, { x: -14, y: 10, duration: .04 }, { x: 8, y: -6, duration: .04 }, { x: 0, y: 0, duration: .05 }] }, 22.928);
-tl.fromTo("#s3-bar", { scaleX: 0 }, { scaleX: 1, duration: .35, ease: "expo.out" }, 23.018);
-tl.fromTo("#s3-u", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 23.05);
-tl.to("#s3-w", { scale: 1.08, duration: 2.327, ease: "none" }, 23.068);
+tl.fromTo("#s3-ring", { scale: .55, opacity: 0 }, { scale: 1, opacity: 1, duration: .4, ease: "back.out(1.6)" }, 8.812);
+tl.to("#s3-ring", { scale: 1.12, duration: 1.1, yoyo: true, repeat: -1, ease: "sine.inOut" }, 9.242);
+tl.fromTo("#s3-k", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: .3, ease: "power3.out" }, 11.327);
+tl.fromTo("#s3-b", { scale: 3.2, opacity: 0 }, { scale: 1, opacity: 1, duration: .16, ease: "power4.in" }, 19.101);
+tl.fromTo("#s3-w", { x: 0, y: 0 }, { keyframes: [{ x: -26, y: 14, duration: .04 }, { x: 22, y: -18, duration: .04 }, { x: -14, y: 10, duration: .04 }, { x: 8, y: -6, duration: .04 }, { x: 0, y: 0, duration: .05 }] }, 19.261);
+tl.fromTo("#s3-bar", { scaleX: 0 }, { scaleX: 1, duration: .35, ease: "expo.out" }, 19.351);
+tl.fromTo("#s3-u", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 19.356);
+tl.to("#s3-w", { scale: 1.08, duration: 2.161, ease: "none" }, 19.401);
 }
 // ---- s4
 {
-tl.fromTo("#s4-glow", { scale: .8, opacity: 0 }, { scale: 1, opacity: 1, duration: .7, ease: "power2.out" }, 25.395);
-tl.fromTo("#s4-lab", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 25.445);
-tl.fromTo("#s4-m", { y: 1100, scaleY: 1.15, scaleX: .9 }, { y: 0, scaleY: 1, scaleX: 1, duration: .5, ease: "back.out(1.7)" }, 25.395);
-tl.to("#s4-m", { keyframes: [{ scaleY: .92, scaleX: 1.06, duration: .09 }, { scaleY: 1.04, scaleX: .97, duration: .12 }, { scaleY: 1, scaleX: 1, duration: .12 }] }, 25.895);
-tl.fromTo("#s4-card", { scale: 0, transformOrigin: "50% 100%" }, { scale: 1, duration: .35, ease: "back.out(2.2)" }, 25.445);
-tl.to("#s4-m", { keyframes: [{ rotation: -4, duration: 2.365, ease: "sine.inOut" }, { rotation: 3, duration: 2.891, ease: "sine.inOut" }, { rotation: -3, duration: 2.891, ease: "sine.inOut" }, { rotation: 2, duration: 2.628, ease: "sine.inOut" }, { rotation: 0, duration: 2.365, ease: "sine.inOut" }] }, 26.245);
-tl.fromTo("#s4-t0", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .25, ease: "power3.out" }, 25.645);
-tl.to("#s4-t0", { opacity: 0, y: -30, duration: .18, ease: "power2.in" }, 29.771);
-tl.fromTo("#s4-t1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .25, ease: "power3.out" }, 29.951);
-tl.to("#s4-m", { y: -30, duration: .22, yoyo: true, repeat: 1, ease: "power2.out" }, 29.951);
+tl.fromTo("#s4-glow", { scale: .8, opacity: 0 }, { scale: 1, opacity: 1, duration: .7, ease: "power2.out" }, 21.562);
+tl.fromTo("#s4-lab", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 21.612);
+tl.fromTo("#s4-m", { y: 1100, scaleY: 1.15, scaleX: .9 }, { y: 0, scaleY: 1, scaleX: 1, duration: .5, ease: "back.out(1.7)" }, 21.562);
+tl.to("#s4-m", { keyframes: [{ scaleY: .92, scaleX: 1.06, duration: .09 }, { scaleY: 1.04, scaleX: .97, duration: .12 }, { scaleY: 1, scaleX: 1, duration: .12 }] }, 22.062);
+tl.fromTo("#s4-card", { scale: 0, transformOrigin: "50% 100%" }, { scale: 1, duration: .35, ease: "back.out(2.2)" }, 21.612);
+tl.to("#s4-m", { keyframes: [{ rotation: -4, duration: 1.895, ease: "sine.inOut" }, { rotation: 3, duration: 2.316, ease: "sine.inOut" }, { rotation: -3, duration: 2.316, ease: "sine.inOut" }, { rotation: 2, duration: 2.106, ease: "sine.inOut" }, { rotation: 0, duration: 1.895, ease: "sine.inOut" }] }, 22.412);
+tl.fromTo("#s4-t0", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .25, ease: "power3.out" }, 21.812);
+tl.to("#s4-t0", { opacity: 0, y: -30, duration: .18, ease: "power2.in" }, 25.502);
+tl.fromTo("#s4-t1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .25, ease: "power3.out" }, 25.682);
+tl.to("#s4-m", { y: -30, duration: .22, yoyo: true, repeat: 1, ease: "power2.out" }, 25.682);
 }
 // ---- s5
 {
-makeBubbles(document.getElementById("s5-bl"), 10, 50, 170).forEach((b, i) => tl.fromTo(b.el, { y: 0, opacity: 0 }, { y: -b.drift * .8, x: (i % 2 ? 1 : -1) * b.sway, opacity: .6, duration: 6.771, ease: "none" }, 39.386));
-tl.fromTo("#s5-mark", { y: -60, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .42, ease: "back.out(1.8)" }, 39.536);
-tl.fromTo("#s5-m", { y: 500 }, { y: 0, duration: .42, ease: "back.out(1.8)" }, 39.886);
-tl.to("#s5-m", { keyframes: [{ rotation: -8, duration: .25 }, { rotation: 6, duration: .25 }, { rotation: -6, duration: .25 }, { rotation: 0, duration: .25 }] }, 40.336);
-tl.fromTo("#s5-line", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: .38, ease: "power3.out" }, 40.507);
-tl.fromTo("#s5-tag", { opacity: 0 }, { opacity: 1, duration: .4 }, 41.007);
-tl.fromTo("#s5-btn", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: .38, ease: "back.out(2.5)" }, 43.186);
-tl.to("#s5-btn", { scale: 1.06, duration: .25, yoyo: true, repeat: 1, ease: "sine.inOut" }, 43.786);
+makeBubbles(document.getElementById("s5-bl"), 10, 50, 170).forEach((b, i) => tl.fromTo(b.el, { y: 0, opacity: 0 }, { y: -b.drift * .8, x: (i % 2 ? 1 : -1) * b.sway, opacity: .6, duration: 6.392, ease: "none" }, 32.941));
+tl.fromTo("#s5-mark", { y: -60, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .42, ease: "back.out(1.8)" }, 33.091);
+tl.fromTo("#s5-m", { y: 500 }, { y: 0, duration: .42, ease: "back.out(1.8)" }, 33.441);
+tl.to("#s5-m", { keyframes: [{ rotation: -8, duration: .25 }, { rotation: 6, duration: .25 }, { rotation: -6, duration: .25 }, { rotation: 0, duration: .25 }] }, 33.891);
+tl.fromTo("#s5-line", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: .38, ease: "power3.out" }, 34.056);
+tl.fromTo("#s5-tag", { opacity: 0 }, { opacity: 1, duration: .4 }, 34.556);
+tl.fromTo("#s5-btn", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: .38, ease: "back.out(2.5)" }, 36.362);
+tl.to("#s5-btn", { scale: 1.06, duration: .25, yoyo: true, repeat: 1, ease: "sine.inOut" }, 36.962);
 }
 window.__timelines["main"] = tl;
 </script>

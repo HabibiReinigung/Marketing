@@ -28,89 +28,86 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:var(--navy
 .grain { position:absolute; inset:-50%; background:url("assets/grain.png"); opacity:.07; mix-blend-mode:overlay; pointer-events:none; }
 .big { font-weight:900; letter-spacing:-0.02em; line-height:1.02; }
 .spark { position:absolute; width:90px; height:90px; display:block; }
-#s3-w { position:absolute; left:70px; right:70px; top:470px; text-align:center; color:var(--navy); }
-#s3-w .big { display:block; line-height:1.12; }
-#s3-w .serif { display:block; color:var(--steel); line-height:1.15; margin-top:6px; }
-#s3-st { position:absolute; left:150px; right:150px; top:1180px; height:230px; border:16px solid var(--rot); border-radius:34px;
-  display:flex; align-items:center; justify-content:center; font-weight:900; font-size:150px; letter-spacing:.04em; color:var(--rot);
-  background:rgba(255,255,255,.55); transform:rotate(-8deg); }
-#s3-u { position:absolute; left:60px; right:60px; top:1530px; text-align:center; font-size:96px; color:var(--navy); line-height:1.1; }
-#s4 .ding { position:absolute; left:50%; top:50%; width:460px; height:460px; margin:-230px 0 0 -230px; }
-#s4 .ding .d-rahmen { position:absolute; inset:60px 110px; background:#f2f6f9; border-radius:26px; box-shadow:0 16px 40px rgba(0,0,0,.35); }
-#s4 .ding .d-wippe { position:absolute; left:18%; right:18%; top:16%; bottom:16%; background:#dbe6ee; border-radius:16px; border-bottom:10px solid #b9cbd9; }
-#s4 .ding .d-rosette { position:absolute; left:70px; top:170px; width:120px; height:120px; border-radius:50%; background:#cfdbe6; box-shadow:0 14px 34px rgba(0,0,0,.35); }
-#s4 .ding .d-griff { position:absolute; left:120px; top:198px; width:290px; height:64px; border-radius:32px; background:linear-gradient(180deg,#f2f6f9,#c3d3e0); }
-#s4 .ding .d-schale { position:absolute; inset:120px 40px; background:#dbe6ee; border-radius:22px; display:grid; grid-template-columns:repeat(3,1fr); gap:16px; padding:22px; }
-#s4 .ding .d-schale i { display:block; background:#9fb6c7; border-radius:8px; }
-#s4 .ding .d-tast { position:absolute; inset:110px 20px; background:#e7eef4; border-radius:20px; display:grid; grid-template-columns:repeat(6,1fr); gap:12px; padding:20px; align-content:start; }
-#s4 .ding .d-tast i { display:block; height:54px; background:#c3d3e0; border-radius:8px; }
-#s4 .ding .d-tast b { grid-column:2/6; height:46px; background:#c3d3e0; border-radius:8px; display:block; }
-#s4 .ding .d-tuch { position:absolute; inset:90px 50px; background:#bcd9ec; border-radius:18px; padding:30px; }
-#s4 .ding .d-tuch s { display:block; height:26px; background:rgba(255,255,255,.55); border-radius:13px; margin-bottom:26px; text-decoration:none; }
 
-#s4-t { position:absolute; left:70px; right:70px; top:250px; text-align:center; color:#fff; font-size:84px; line-height:1.12; }
-#s4-t .serif { color:var(--blue); }
-#s4-buehne { position:absolute; left:120px; right:120px; top:520px; height:620px; border-radius:34px;
+#leben { position:absolute; inset:0; pointer-events:none; z-index:5; overflow:hidden; }
+#leben i { position:absolute; display:block; border-radius:50%; background:radial-gradient(circle at 35% 35%, rgba(159,211,238,.20), rgba(159,211,238,0) 72%); }
+#leben b { position:absolute; display:block; border-radius:50%; border:3px solid rgba(159,211,238,.16); }
+.clip { z-index:1; }
+
+#s3 .ding { position:absolute; left:50%; top:50%; width:460px; height:460px; margin:-230px 0 0 -230px; }
+#s3 .ding .d-rahmen { position:absolute; inset:60px 110px; background:#f2f6f9; border-radius:26px; box-shadow:0 16px 40px rgba(0,0,0,.35); }
+#s3 .ding .d-wippe { position:absolute; left:18%; right:18%; top:16%; bottom:16%; background:#dbe6ee; border-radius:16px; border-bottom:10px solid #b9cbd9; }
+#s3 .ding .d-rosette { position:absolute; left:70px; top:170px; width:120px; height:120px; border-radius:50%; background:#cfdbe6; box-shadow:0 14px 34px rgba(0,0,0,.35); }
+#s3 .ding .d-griff { position:absolute; left:120px; top:198px; width:290px; height:64px; border-radius:32px; background:linear-gradient(180deg,#f2f6f9,#c3d3e0); }
+#s3 .ding .d-schale { position:absolute; inset:120px 40px; background:#dbe6ee; border-radius:22px; display:grid; grid-template-columns:repeat(3,1fr); gap:16px; padding:22px; }
+#s3 .ding .d-schale i { display:block; background:#9fb6c7; border-radius:8px; }
+#s3 .ding .d-tast { position:absolute; inset:110px 20px; background:#e7eef4; border-radius:20px; display:grid; grid-template-columns:repeat(6,1fr); gap:12px; padding:20px; align-content:start; }
+#s3 .ding .d-tast i { display:block; height:54px; background:#c3d3e0; border-radius:8px; }
+#s3 .ding .d-tast b { grid-column:2/6; height:46px; background:#c3d3e0; border-radius:8px; display:block; }
+#s3 .ding .d-tuch { position:absolute; inset:90px 50px; background:#bcd9ec; border-radius:18px; padding:30px; }
+#s3 .ding .d-tuch s { display:block; height:26px; background:rgba(255,255,255,.55); border-radius:13px; margin-bottom:26px; text-decoration:none; }
+
+#s3-t { position:absolute; left:70px; right:70px; top:250px; text-align:center; color:#fff; font-size:84px; line-height:1.12; }
+#s3-t .serif { color:var(--blue); }
+#s3-buehne { position:absolute; left:120px; right:120px; top:520px; height:620px; border-radius:34px;
   background:rgba(159,211,238,.10); border:6px solid rgba(159,211,238,.28); overflow:hidden; }
-#s4-name { position:absolute; left:60px; right:60px; top:1200px; text-align:center; font-weight:900;
+#s3-name { position:absolute; left:60px; right:60px; top:1200px; text-align:center; font-weight:900;
   font-size:118px; color:#fff; line-height:1.05; }
-#s4-warum { position:absolute; left:80px; right:80px; top:1350px; text-align:center;
-  font-size:68px; color:var(--blue); line-height:1.15; }#s5-glow { position:absolute; left:40px; top:760px; width:1000px; height:1000px; border-radius:50%;
+#s3-warum { position:absolute; left:80px; right:80px; top:1350px; text-align:center;
+  font-size:68px; color:var(--blue); line-height:1.15; }#s4-glow { position:absolute; left:40px; top:760px; width:1000px; height:1000px; border-radius:50%;
   background:radial-gradient(circle, rgba(255,255,255,.75) 0%, rgba(255,255,255,.25) 40%, rgba(255,255,255,0) 68%); display:block; }
-#s5-card { position:absolute; left:90px; right:90px; top:330px; height:470px; background:#fff; border-radius:48px; box-shadow:0 30px 60px rgba(21,42,67,.25); display:block; }
-#s5-tail { position:absolute; left:520px; bottom:-46px; width:0; height:0; border-left:40px solid transparent; border-right:40px solid transparent; border-top:50px solid #fff; }
-.s5-txt { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 60px; color:var(--navy); }
-.s5-txt .a { font-weight:900; font-size:104px; letter-spacing:-0.02em; line-height:1.04; }
-.s5-txt .b { font-weight:700; font-size:70px; line-height:1.12; letter-spacing:-0.01em; }
-.s5-txt .serif { font-size:96px; color:var(--steel); }
-#s5-m { position:absolute; left:218px; top:830px; width:643px; height:760px; display:block; transform-origin:50% 100%; }
-#s5-m img { width:100%; height:100%; display:block; filter:drop-shadow(0 34px 40px rgba(21,42,67,.35)); }#s6-mark { width:900px; display:block; margin-top:-380px; }
-#s6-line { color:#fff; font-weight:700; font-size:58px; line-height:1.2; margin-top:90px; }
-#s6-line .serif { color:var(--blue); font-size:78px; }
-#s6-btn { margin-top:60px; background:var(--blue); color:var(--navy); font-weight:900; font-size:54px; padding:26px 64px; border-radius:80px; display:block; }
-#s6-tag { color:rgba(238,243,247,.7); position:absolute; top:300px; left:0; right:0; font-size:28px; }
-#s6-m { position:absolute; left:400px; top:1290px; width:279px; height:330px; display:block; transform-origin:50% 100%; }
-#s6-m img { width:100%; height:100%; display:block; }</style>
+#s4-card { position:absolute; left:90px; right:90px; top:330px; height:470px; background:#fff; border-radius:48px; box-shadow:0 30px 60px rgba(21,42,67,.25); display:block; }
+#s4-tail { position:absolute; left:520px; bottom:-46px; width:0; height:0; border-left:40px solid transparent; border-right:40px solid transparent; border-top:50px solid #fff; }
+.s4-txt { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 60px; color:var(--navy); }
+.s4-txt .a { font-weight:900; font-size:104px; letter-spacing:-0.02em; line-height:1.04; }
+.s4-txt .b { font-weight:700; font-size:70px; line-height:1.12; letter-spacing:-0.01em; }
+.s4-txt .serif { font-size:96px; color:var(--steel); }
+#s4-m { position:absolute; left:218px; top:830px; width:643px; height:760px; display:block; transform-origin:50% 100%; }
+#s4-m img { width:100%; height:100%; display:block; filter:drop-shadow(0 34px 40px rgba(21,42,67,.35)); }#s5-mark { width:900px; display:block; margin-top:-380px; }
+#s5-line { color:#fff; font-weight:700; font-size:58px; line-height:1.2; margin-top:90px; }
+#s5-line .serif { color:var(--blue); font-size:78px; }
+#s5-btn { margin-top:60px; background:var(--blue); color:var(--navy); font-weight:900; font-size:54px; padding:26px 64px; border-radius:80px; display:block; }
+#s5-tag { color:rgba(238,243,247,.7); position:absolute; top:300px; left:0; right:0; font-size:28px; }
+#s5-m { position:absolute; left:400px; top:1290px; width:279px; height:330px; display:block; transform-origin:50% 100%; }
+#s5-m img { width:100%; height:100%; display:block; }</style>
 </head>
 <body>
-<div id="root" data-composition-id="main" data-start="0" data-duration="53.361" data-width="1080" data-height="1920">
-<section id="s1" class="clip" data-start="0.0" data-duration="4.05" data-track-index="0" style="background:var(--ice)">
+<div id="root" data-composition-id="main" data-start="0" data-duration="43.111" data-width="1080" data-height="1920">
+<div id="leben" data-layout-allow-overflow><i></i><i></i><i></i><i></i><i></i><b></b><b></b></div>
+<section id="s1" class="clip" data-start="0.0" data-duration="3.522" data-track-index="0" style="background:var(--ice)">
 <div id="s1-bl" class="fill" data-layout-allow-overflow></div><div id="s1-lab" class="label top-label" style="color:var(--navy)">Büro-Hygiene</div><div id="s1-w" class="center" style="padding:0 60px" data-layout-allow-overflow><div id="s1-z0" class="blk big" style="font-size:102px;color:var(--navy);">Dein Schreibtisch</div><div id="s1-z1" class="blk big" style="font-size:72px;color:var(--navy);">hat mehr Bakterien als</div><div id="s1-z2" class="blk serif" style="font-size:112px;color:var(--navy);line-height:1.05;margin-top:6px;">eine Toilettenbrille.</div></div>
 <div class="grain"></div>
 </section>
-<section id="s2" class="clip" data-start="4.05" data-duration="5.667" data-track-index="0" style="background:var(--navy)">
+<section id="s2" class="clip" data-start="3.522" data-duration="13.202" data-track-index="0" style="background:var(--navy)">
+<div id="s2-ring" style="position:absolute;left:50%;top:50%;width:820px;height:820px;margin:-410px 0 0 -410px;border:10px solid rgba(159,211,238,.38);border-radius:50%;opacity:0"></div>
 <div id="s2-w" class="center" data-layout-allow-overflow>
 <div id="s2-k" class="blk big" style="font-size:64px;color:var(--blue);margin-bottom:10px">mehr Bakterien</div>
 <div id="s2-b" class="blk big" style="font-size:250px;color:#fff;letter-spacing:-0.05em;line-height:1">400x</div>
 <div id="s2-bar" style="width:600px;height:26px;background:var(--blue);border-radius:13px;margin-top:28px;transform-origin:left center;display:block"></div>
-<div id="s2-u" class="label blk" style="color:var(--blue);margin-top:64px">Studie Universität Arizona</div>
+<div id="s2-u" class="label blk" style="color:var(--blue);margin-top:64px">Toilette täglich. Schreibtisch nie.</div>
 </div>
 <div class="grain"></div>
 </section>
-<section id="s3" class="clip" data-start="9.717" data-duration="11.074" data-track-index="0" style="background:var(--ice)">
-<div id="s3-lab" class="label top-label" style="color:var(--steel)">Warum eigentlich</div><div id="s3-w" data-layout-allow-overflow><div id="s3-z0" class="big" style="font-size:76px">Toilette täglich. Schreibtisch nie.</div></div><div id="s3-st" data-layout-allow-overflow>DARUM</div><div id="s3-u" class="serif">Er sieht ja sauber aus.</div>
+<section id="s3" class="clip" data-start="16.724" data-duration="15.4" data-track-index="0" style="background:var(--navy-deep)">
+<div id="s3-t" data-layout-allow-overflow>Dieselben drei <span class="serif">jeden Tag</span></div>
+<div id="s3-buehne" data-layout-allow-overflow><div class="ding" id="s3-d0" style="opacity:0"><div class="d-rahmen"><div class="d-wippe"></div></div></div><div class="ding" id="s3-d1" style="opacity:0"><div class="d-rosette"></div><div class="d-griff"></div></div><div class="ding" id="s3-d2" style="opacity:0"><div class="d-schale"><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
+<div id="s3-name" data-layout-allow-overflow></div>
+<div id="s3-warum" class="serif" data-layout-allow-overflow></div>
 <div class="grain"></div>
 </section>
-<section id="s4" class="clip" data-start="20.791" data-duration="19.832" data-track-index="0" style="background:var(--navy-deep)">
-<div id="s4-t" data-layout-allow-overflow>Dieselben drei <span class="serif">jeden Tag</span></div>
-<div id="s4-buehne" data-layout-allow-overflow><div class="ding" id="s4-d0" style="opacity:0"><div class="d-rahmen"><div class="d-wippe"></div></div></div><div class="ding" id="s4-d1" style="opacity:0"><div class="d-rosette"></div><div class="d-griff"></div></div><div class="ding" id="s4-d2" style="opacity:0"><div class="d-schale"><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
-<div id="s4-name" data-layout-allow-overflow></div>
-<div id="s4-warum" class="serif" data-layout-allow-overflow></div>
+<section id="s4" class="clip" data-start="32.124" data-duration="5.077" data-track-index="0" style="background:var(--blue)">
+<div id="s4-glow"></div>
+<div class="label top-label" id="s4-lab" style="color:var(--navy)">Tipp vom Profi</div>
+<div id="s4-card" data-layout-allow-occlusion><div id="s4-tail" data-layout-allow-overflow></div><div id="s4-t0" class="s4-txt"><div class="a">Kein Spezialmittel.</div><div class="a"><span class="serif">Ein feuchtes Tuch.</span></div></div><div id="s4-t1" class="s4-txt"><div class="b">Einmal am Tag,</div><div class="b"><span class="serif">zehn Sekunden pro Raum.</span></div></div></div>
+<div id="s4-m" data-layout-allow-overflow><img src="assets/maskottchen.png" alt="Habibi Maskottchen" /></div>
 <div class="grain"></div>
 </section>
-<section id="s5" class="clip" data-start="40.624" data-duration="6.484" data-track-index="0" style="background:var(--blue)">
-<div id="s5-glow"></div>
-<div class="label top-label" id="s5-lab" style="color:var(--navy)">Tipp vom Profi</div>
-<div id="s5-card" data-layout-allow-occlusion><div id="s5-tail" data-layout-allow-overflow></div><div id="s5-t0" class="s5-txt"><div class="a">Kein Spezialmittel.</div><div class="a"><span class="serif">Ein feuchtes Tuch.</span></div></div><div id="s5-t1" class="s5-txt"><div class="b">Einmal am Tag,</div><div class="b"><span class="serif">zehn Sekunden pro Raum.</span></div></div></div>
-<div id="s5-m" data-layout-allow-overflow><img src="assets/maskottchen.png" alt="Habibi Maskottchen" /></div>
-<div class="grain"></div>
-</section>
-<section id="s6" class="clip" data-start="47.108" data-duration="6.253" data-track-index="0" style="background:var(--navy-deep)">
-<div id="s6-bl" class="fill" data-layout-allow-overflow></div>
-<div class="center"><img id="s6-mark" src="assets/wortmarke.png" alt="Habibi Reinigung" />
-<div id="s6-line" class="blk"><div class="blk">Richtpreis für euer Büro</div><div class="blk serif">in 1 Minute</div></div>
-<div id="s6-btn">habibireinigung.ch</div><div id="s6-tag" class="label blk">Büros · Praxen · Studios · Chur</div></div>
-<div id="s6-m"><img src="assets/maskottchen.png" alt="" /></div>
+<section id="s5" class="clip" data-start="37.201" data-duration="5.91" data-track-index="0" style="background:var(--navy-deep)">
+<div id="s5-bl" class="fill" data-layout-allow-overflow></div>
+<div class="center"><img id="s5-mark" src="assets/wortmarke.png" alt="Habibi Reinigung" />
+<div id="s5-line" class="blk"><div class="blk">Richtpreis für euer Büro</div><div class="blk serif">in 1 Minute</div></div>
+<div id="s5-btn">habibireinigung.ch</div><div id="s5-tag" class="label blk">Büros · Praxen · Studios · Chur</div></div>
+<div id="s5-m"><img src="assets/maskottchen.png" alt="" /></div>
 <div class="grain"></div>
 </section>
 </div>
@@ -142,83 +139,101 @@ function sparks(container, pts, t0, tl) {
 }
 const tl = gsap.timeline({ paused: true });
 
+// Dauerbewegung: fuenf weiche Formen ziehen langsam durch das Bild.
+(() => {
+  const n = document.getElementById('leben');
+  const gr = [520, 380, 640, 300, 460];
+  const ringe = n.querySelectorAll('b');
+  [[-180, 420, 760], [720, 1320, 560]].forEach((v, i) => {
+    const e = ringe[i];
+    e.style.left = v[0] + 'px'; e.style.top = v[1] + 'px';
+    e.style.width = v[2] + 'px'; e.style.height = v[2] + 'px';
+    tl.fromTo(e, { rotation: 0, x: 0, scale: .95 },
+      { rotation: 360, x: (i ? -150 : 150), scale: 1.1, duration: 43.111, ease: 'none' }, 0);
+  });
+  for (let i = 0; i < 5; i++) {
+    const e = n.children[i];
+    e.style.width = gr[i] + 'px'; e.style.height = gr[i] + 'px';
+    e.style.left = (-200 + rnd() * 900) + 'px';
+    e.style.top = (-150 + rnd() * 1700) + 'px';
+    tl.fromTo(e, { x: -120 + rnd() * 60, y: 0, scale: .9 },
+      { x: 120 + rnd() * 80, y: -140 + rnd() * 280, scale: 1.12, duration: 43.111, ease: 'none' }, 0);
+  }
+})();
+
 // ---- s1
 {
-makeBubbles(document.getElementById("s1-bl"), 14, 60, 210).forEach((b, i) => tl.fromTo(b.el, { y: 0, x: 0, opacity: 0 }, { y: -b.drift, x: (i % 2 ? 1 : -1) * b.sway, opacity: .95, duration: 4.05, ease: "none" }, 0.0));
+makeBubbles(document.getElementById("s1-bl"), 14, 60, 210).forEach((b, i) => tl.fromTo(b.el, { y: 0, x: 0, opacity: 0 }, { y: -b.drift, x: (i % 2 ? 1 : -1) * b.sway, opacity: .95, duration: 3.522, ease: "none" }, 0.0));
 tl.fromTo("#s1-lab", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 0.02);
-tl.fromTo("#s1-z0", { scale: 2.2, opacity: 0, filter: "blur(18px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 0.108);
-tl.fromTo("#s1-z1", { scale: 2.2, opacity: 0, filter: "blur(18px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 1.23);
-tl.fromTo("#s1-z2", { y: 80, opacity: 0, rotation: -6 }, { y: 0, opacity: 1, rotation: 0, duration: .4, ease: "back.out(2.6)" }, 2.47);
-tl.to("#s1-w", { scale: 1.06, duration: 1.58, ease: "none" }, 2.47);
+tl.fromTo("#s1-z0", { scale: 2.2, opacity: 0, filter: "blur(18px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 0.164);
+tl.fromTo("#s1-z1", { scale: 2.2, opacity: 0, filter: "blur(18px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 1.285);
+tl.fromTo("#s1-z2", { y: 80, opacity: 0, rotation: -6 }, { y: 0, opacity: 1, rotation: 0, duration: .4, ease: "back.out(2.6)" }, 2.517);
+tl.to("#s1-w", { scale: 1.06, duration: 1.006, ease: "none" }, 2.517);
 }
 // ---- s2
 {
-tl.fromTo("#s2-k", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: .3, ease: "power3.out" }, 4.1);
-tl.fromTo("#s2-b", { scale: 3.2, opacity: 0 }, { scale: 1, opacity: 1, duration: .16, ease: "power4.in" }, 4.2);
-tl.fromTo("#s2-w", { x: 0, y: 0 }, { keyframes: [{ x: -26, y: 14, duration: .04 }, { x: 22, y: -18, duration: .04 }, { x: -14, y: 10, duration: .04 }, { x: 8, y: -6, duration: .04 }, { x: 0, y: 0, duration: .05 }] }, 4.36);
-tl.fromTo("#s2-bar", { scaleX: 0 }, { scaleX: 1, duration: .35, ease: "expo.out" }, 4.45);
-tl.fromTo("#s2-u", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 6.227);
-tl.to("#s2-w", { scale: 1.08, duration: 5.217, ease: "none" }, 4.5);
+tl.fromTo("#s2-ring", { scale: .55, opacity: 0 }, { scale: 1, opacity: 1, duration: .4, ease: "back.out(1.6)" }, 3.542);
+tl.to("#s2-ring", { scale: 1.12, duration: 1.1, yoyo: true, repeat: -1, ease: "sine.inOut" }, 3.972);
+tl.fromTo("#s2-k", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: .3, ease: "power3.out" }, 3.572);
+tl.fromTo("#s2-b", { scale: 3.2, opacity: 0 }, { scale: 1, opacity: 1, duration: .16, ease: "power4.in" }, 3.672);
+tl.fromTo("#s2-w", { x: 0, y: 0 }, { keyframes: [{ x: -26, y: 14, duration: .04 }, { x: 22, y: -18, duration: .04 }, { x: -14, y: 10, duration: .04 }, { x: 8, y: -6, duration: .04 }, { x: 0, y: 0, duration: .05 }] }, 3.832);
+tl.fromTo("#s2-bar", { scaleX: 0 }, { scaleX: 1, duration: .35, ease: "expo.out" }, 3.922);
+tl.fromTo("#s2-u", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 10.53);
+tl.to("#s2-w", { scale: 1.08, duration: 12.752, ease: "none" }, 3.972);
 }
 // ---- s3
 {
-tl.fromTo("#s3-lab", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: .3 }, 9.737);
-tl.fromTo("#s3-z0", { scale: 1.8, opacity: 0, filter: "blur(12px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 13.316);
-tl.fromTo("#s3-st", { scale: 3, opacity: 0, rotation: -25 }, { scale: 1, opacity: 1, rotation: -8, duration: .2, ease: "power4.in" }, 16.399);
-tl.fromTo("#s3-w", { x: 0, y: 0 }, { keyframes: [{ x: -22, y: 12, duration: .04 }, { x: 18, y: -14, duration: .04 }, { x: -10, y: 8, duration: .04 }, { x: 0, y: 0, duration: .05 }] }, 16.599);
-tl.to("#s3-w", { opacity: .35, duration: .3 }, 16.649);
-tl.fromTo("#s3-u", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: .4, ease: "back.out(2.2)" }, 17.081);
+tl.fromTo("#s3-t", { y: 48, opacity: 0 }, { y: 0, opacity: 1, duration: .3, ease: "back.out(1.7)" }, 16.774);
+tl.fromTo("#s3-d0", { opacity: 0, scale: .82, filter: "blur(34px)" }, { opacity: 1, scale: 1, filter: "blur(22px)", duration: .22, ease: "power2.out", immediateRender: true }, 17.406);
+tl.to("#s3-d0", { filter: "blur(0px)", scale: 1.04, duration: .34, ease: "back.out(2)" }, 17.706);
+tl.to("#s3-d0", { scale: 1, duration: .25, ease: "power2.out" }, 18.046);
+tl.to("#s3-d0", { opacity: 0, filter: "blur(26px)", duration: .20 }, 22.62);
+tl.to("#s3-d0", { y: -14, duration: 1.6, yoyo: true, repeat: -1, ease: "sine.inOut" }, 18.106);
+tl.set("#s3-name", { innerText: "Lichtschalter" }, 17.706);
+tl.fromTo("#s3-name", { y: 44, opacity: 0 }, { y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }, 17.706);
+tl.set("#s3-warum", { innerText: "Jeder drückt ihn mehrmals am Tag. Niemand wischt ihn ab." }, 17.706);
+tl.fromTo("#s3-warum", { y: 34, opacity: 0 }, { y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }, 17.826);
+tl.fromTo("#s3-d1", { opacity: 0, scale: .82, filter: "blur(34px)" }, { opacity: 1, scale: 1, filter: "blur(22px)", duration: .22, ease: "power2.out", immediateRender: false }, 22.48);
+tl.to("#s3-d1", { filter: "blur(0px)", scale: 1.04, duration: .34, ease: "back.out(2)" }, 22.78);
+tl.to("#s3-d1", { scale: 1, duration: .25, ease: "power2.out" }, 23.12);
+tl.to("#s3-d1", { opacity: 0, filter: "blur(26px)", duration: .20 }, 26.87);
+tl.to("#s3-d1", { y: -14, duration: 1.6, yoyo: true, repeat: -1, ease: "sine.inOut" }, 23.18);
+tl.set("#s3-name", { innerText: "Türklinke" }, 22.78);
+tl.fromTo("#s3-name", { y: 44, opacity: 0 }, { y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }, 22.78);
+tl.set("#s3-warum", { innerText: "Das Erste, was eine fremde Hand bei euch berührt." }, 22.78);
+tl.fromTo("#s3-warum", { y: 34, opacity: 0 }, { y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }, 22.9);
+tl.fromTo("#s3-d2", { opacity: 0, scale: .82, filter: "blur(34px)" }, { opacity: 1, scale: 1, filter: "blur(22px)", duration: .22, ease: "power2.out", immediateRender: false }, 26.73);
+tl.to("#s3-d2", { filter: "blur(0px)", scale: 1.04, duration: .34, ease: "back.out(2)" }, 27.03);
+tl.to("#s3-d2", { scale: 1, duration: .25, ease: "power2.out" }, 27.37);
+tl.to("#s3-d2", { y: -14, duration: 1.6, yoyo: true, repeat: -1, ease: "sine.inOut" }, 27.43);
+tl.set("#s3-name", { innerText: "Abtropfschale" }, 27.03);
+tl.fromTo("#s3-name", { y: 44, opacity: 0 }, { y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }, 27.03);
+tl.set("#s3-warum", { innerText: "Dauernd feucht und warm. Genau das mögen Bakterien." }, 27.03);
+tl.fromTo("#s3-warum", { y: 34, opacity: 0 }, { y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }, 27.15);
 }
 // ---- s4
 {
-tl.fromTo("#s4-t", { y: 48, opacity: 0 }, { y: 0, opacity: 1, duration: .3, ease: "back.out(1.7)" }, 20.841);
-tl.fromTo("#s4-d0", { opacity: 0, scale: .82, filter: "blur(34px)" }, { opacity: 1, scale: 1, filter: "blur(22px)", duration: .22, ease: "power2.out", immediateRender: true }, 21.6);
-tl.to("#s4-d0", { filter: "blur(0px)", scale: 1.04, duration: .34, ease: "back.out(2)" }, 21.9);
-tl.to("#s4-d0", { scale: 1, duration: .25, ease: "power2.out" }, 22.24);
-tl.to("#s4-d0", { opacity: 0, filter: "blur(28px)", duration: .18 }, 27.967);
-tl.set("#s4-name", { innerText: "Lichtschalter" }, 21.9);
-tl.fromTo("#s4-name", { y: 44, opacity: 0 }, { y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }, 21.9);
-tl.set("#s4-warum", { innerText: "Jeder drückt ihn mehrmals am Tag. Niemand wischt ihn ab." }, 21.9);
-tl.fromTo("#s4-warum", { y: 34, opacity: 0 }, { y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }, 22.02);
-tl.fromTo("#s4-d1", { opacity: 0, scale: .82, filter: "blur(34px)" }, { opacity: 1, scale: 1, filter: "blur(22px)", duration: .22, ease: "power2.out", immediateRender: false }, 28.007);
-tl.to("#s4-d1", { filter: "blur(0px)", scale: 1.04, duration: .34, ease: "back.out(2)" }, 28.307);
-tl.to("#s4-d1", { scale: 1, duration: .25, ease: "power2.out" }, 28.647);
-tl.to("#s4-d1", { opacity: 0, filter: "blur(28px)", duration: .18 }, 33.939);
-tl.set("#s4-name", { innerText: "Türklinke" }, 28.307);
-tl.fromTo("#s4-name", { y: 44, opacity: 0 }, { y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }, 28.307);
-tl.set("#s4-warum", { innerText: "Das Erste, was eine fremde Hand bei euch berührt." }, 28.307);
-tl.fromTo("#s4-warum", { y: 34, opacity: 0 }, { y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }, 28.427);
-tl.fromTo("#s4-d2", { opacity: 0, scale: .82, filter: "blur(34px)" }, { opacity: 1, scale: 1, filter: "blur(22px)", duration: .22, ease: "power2.out", immediateRender: false }, 33.979);
-tl.to("#s4-d2", { filter: "blur(0px)", scale: 1.04, duration: .34, ease: "back.out(2)" }, 34.279);
-tl.to("#s4-d2", { scale: 1, duration: .25, ease: "power2.out" }, 34.619);
-tl.set("#s4-name", { innerText: "Abtropfschale" }, 34.279);
-tl.fromTo("#s4-name", { y: 44, opacity: 0 }, { y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }, 34.279);
-tl.set("#s4-warum", { innerText: "Dauernd feucht und warm. Genau das mögen Bakterien." }, 34.279);
-tl.fromTo("#s4-warum", { y: 34, opacity: 0 }, { y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }, 34.399);
+tl.fromTo("#s4-glow", { scale: .8, opacity: 0 }, { scale: 1, opacity: 1, duration: .7, ease: "power2.out" }, 32.124);
+tl.fromTo("#s4-lab", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 32.174);
+tl.fromTo("#s4-m", { y: 1100, scaleY: 1.15, scaleX: .9 }, { y: 0, scaleY: 1, scaleX: 1, duration: .5, ease: "back.out(1.7)" }, 32.124);
+tl.to("#s4-m", { keyframes: [{ scaleY: .92, scaleX: 1.06, duration: .09 }, { scaleY: 1.04, scaleX: .97, duration: .12 }, { scaleY: 1, scaleX: 1, duration: .12 }] }, 32.624);
+tl.fromTo("#s4-card", { scale: 0, transformOrigin: "50% 100%" }, { scale: 1, duration: .35, ease: "back.out(2.2)" }, 32.174);
+tl.to("#s4-m", { keyframes: [{ rotation: -4, duration: 0.761, ease: "sine.inOut" }, { rotation: 3, duration: 0.93, ease: "sine.inOut" }, { rotation: -3, duration: 0.93, ease: "sine.inOut" }, { rotation: 2, duration: 0.845, ease: "sine.inOut" }, { rotation: 0, duration: 0.761, ease: "sine.inOut" }] }, 32.974);
+tl.fromTo("#s4-t0", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .25, ease: "power3.out" }, 32.374);
+tl.to("#s4-t0", { opacity: 0, y: -30, duration: .18, ease: "power2.in" }, 34.77);
+tl.fromTo("#s4-t1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .25, ease: "power3.out" }, 34.95);
+tl.to("#s4-m", { y: -30, duration: .22, yoyo: true, repeat: 1, ease: "power2.out" }, 34.95);
 }
 // ---- s5
 {
-tl.fromTo("#s5-glow", { scale: .8, opacity: 0 }, { scale: 1, opacity: 1, duration: .7, ease: "power2.out" }, 40.624);
-tl.fromTo("#s5-lab", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 40.674);
-tl.fromTo("#s5-m", { y: 1100, scaleY: 1.15, scaleX: .9 }, { y: 0, scaleY: 1, scaleX: 1, duration: .5, ease: "back.out(1.7)" }, 40.624);
-tl.to("#s5-m", { keyframes: [{ scaleY: .92, scaleX: 1.06, duration: .09 }, { scaleY: 1.04, scaleX: .97, duration: .12 }, { scaleY: 1, scaleX: 1, duration: .12 }] }, 41.124);
-tl.fromTo("#s5-card", { scale: 0, transformOrigin: "50% 100%" }, { scale: 1, duration: .35, ease: "back.out(2.2)" }, 40.674);
-tl.to("#s5-m", { keyframes: [{ rotation: -4, duration: 1.014, ease: "sine.inOut" }, { rotation: 3, duration: 1.239, ease: "sine.inOut" }, { rotation: -3, duration: 1.239, ease: "sine.inOut" }, { rotation: 2, duration: 1.127, ease: "sine.inOut" }, { rotation: 0, duration: 1.014, ease: "sine.inOut" }] }, 41.474);
-tl.fromTo("#s5-t0", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .25, ease: "power3.out" }, 40.874);
-tl.to("#s5-t0", { opacity: 0, y: -30, duration: .18, ease: "power2.in" }, 43.647);
-tl.fromTo("#s5-t1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .25, ease: "power3.out" }, 43.827);
-tl.to("#s5-m", { y: -30, duration: .22, yoyo: true, repeat: 1, ease: "power2.out" }, 43.827);
-}
-// ---- s6
-{
-makeBubbles(document.getElementById("s6-bl"), 10, 50, 170).forEach((b, i) => tl.fromTo(b.el, { y: 0, opacity: 0 }, { y: -b.drift * .8, x: (i % 2 ? 1 : -1) * b.sway, opacity: .6, duration: 6.253, ease: "none" }, 47.108));
-tl.fromTo("#s6-mark", { y: -60, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .42, ease: "back.out(1.8)" }, 47.258);
-tl.fromTo("#s6-m", { y: 500 }, { y: 0, duration: .42, ease: "back.out(1.8)" }, 47.608);
-tl.to("#s6-m", { keyframes: [{ rotation: -8, duration: .25 }, { rotation: 6, duration: .25 }, { rotation: -6, duration: .25 }, { rotation: 0, duration: .25 }] }, 48.058);
-tl.fromTo("#s6-line", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: .38, ease: "power3.out" }, 48.214);
-tl.fromTo("#s6-tag", { opacity: 0 }, { opacity: 1, duration: .4 }, 48.714);
-tl.fromTo("#s6-btn", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: .38, ease: "back.out(2.5)" }, 50.46);
-tl.to("#s6-btn", { scale: 1.06, duration: .25, yoyo: true, repeat: 1, ease: "sine.inOut" }, 51.06);
+makeBubbles(document.getElementById("s5-bl"), 10, 50, 170).forEach((b, i) => tl.fromTo(b.el, { y: 0, opacity: 0 }, { y: -b.drift * .8, x: (i % 2 ? 1 : -1) * b.sway, opacity: .6, duration: 5.91, ease: "none" }, 37.201));
+tl.fromTo("#s5-mark", { y: -60, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .42, ease: "back.out(1.8)" }, 37.351);
+tl.fromTo("#s5-m", { y: 500 }, { y: 0, duration: .42, ease: "back.out(1.8)" }, 37.701);
+tl.to("#s5-m", { keyframes: [{ rotation: -8, duration: .25 }, { rotation: 6, duration: .25 }, { rotation: -6, duration: .25 }, { rotation: 0, duration: .25 }] }, 38.151);
+tl.fromTo("#s5-line", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: .38, ease: "power3.out" }, 38.315);
+tl.fromTo("#s5-tag", { opacity: 0 }, { opacity: 1, duration: .4 }, 38.815);
+tl.fromTo("#s5-btn", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: .38, ease: "back.out(2.5)" }, 40.21);
+tl.to("#s5-btn", { scale: 1.06, duration: .25, yoyo: true, repeat: 1, ease: "sine.inOut" }, 40.81);
 }
 window.__timelines["main"] = tl;
 </script>

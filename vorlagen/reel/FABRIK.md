@@ -52,6 +52,8 @@ Die übrigen Tage (Di, Do, Sa) gehören den Karussells und Bildern des Tageslauf
 - ElevenLabs v3 Tags für Emotion: `[excited]`, `[intense]`, `[curious]`, `[sarcastic]`, `[warmly]`. **Pausen-Tags sind verboten** (VIDEO-REGELN Abschnitt 3). Betonte Wörter in GROSSBUCHSTABEN (sparsam, 1 pro Satz). Zahlen ausschreiben («SECHSHUNDERTFÜNFZIG»). Keine Abkürzungen.
 - Beispiele: `vorlagen/reel/reel_preis.py` und `reel_heizung.py` (Texte in FABRIK.md Abschnitt 9).
 
+**Wort-Zeitstempel:** nach dem Erzeugen `creative_transcribe_audio` auf den Sprach-Knoten (`connect_from`, kostet nichts). Die Wortzeiten mit `karte.json` umrechnen und die Szenen daran haengen. Siehe VIDEO-REGELN Abschnitt 18.3.
+
 ## 4. Stimme (ElevenLabs)
 
 - Stimme «Lenny» `voice_id 6IEvIqBOPOMUc5HwR9sQ`, Modell `eleven_v3`, Sprache Deutsch.
@@ -81,7 +83,7 @@ R=/home/claude/marketing/vorlagen/reel; W=/tmp/reel/<post_id>; mkdir -p $W
 python3 $R/fabrik.py umgebung
 python3 $R/fabrik.py phrasen werkstatt/audio/<post_id>.mp3          # Phrasen + Lautstärke-Karte
 #  -> Phrasen den Sätzen zuordnen, Namen P1..Pn, als [[name, start, ende], ...] in $W/phrasen.json
-python3 $R/fabrik.py straffen werkstatt/audio/<post_id>.mp3 $W/phrasen.json $W   # stimme.wav + zeiten.json
+python3 $R/fabrik.py straffen werkstatt/audio/<post_id>.mp3 $W/phrasen.json $W   # stimme.wav, zeiten.json, karte.json
 python3 $R/fabrik.py projekt $W
 #  -> $W/reel.py schreiben (Vorlage: reel_preis.py / reel_heizung.py), Szenen an die Phrasen-Zeiten hängen
 python3 $W/reel.py $W/zeiten.json $W

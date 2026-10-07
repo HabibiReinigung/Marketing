@@ -1,6 +1,6 @@
 # Video-Regeln Habibi Reinigung
 
-**Version 1.4, 07.10.2026.** Verbindliche Regeln für jedes Video (Instagram Reel, TikTok, Shorts) von Habibi Reinigung, Mortaza Habibi, Chur.
+**Version 1.5, 07.10.2026.** Verbindliche Regeln für jedes Video (Instagram Reel, TikTok, Shorts) von Habibi Reinigung, Mortaza Habibi, Chur.
 
 **Für Claude:** Diese Datei vor jedem Video vollständig lesen. Sie entscheidet über Inhalt, Hook, Stimme, Emotion, Bild, Ton und Schnitt. Bei Widerspruch gilt: Faktenregister der Marketing-App (Zahlen und Aussagen) zuerst, dann diese Datei, dann `vorlagen/reel/FABRIK.md` (technischer Ablauf), dann die ANLEITUNG der App. Mortaza muss nichts davon im Chat wiederholen. Wenn etwas hier nicht geregelt ist: so entscheiden, wie es die Beispiele in Abschnitt 12 tun.
 
@@ -346,6 +346,7 @@ Diese Datei ändert nur Mortaza oder Claude auf seine Anweisung. Wenn er ein Vid
 
 | Version | Datum | Änderung |
 | --- | --- | --- |
+| 1.5 | 07.10.2026 | Keine Laengenvorgabe mehr. Pausen im ganzen Stueck auf 0.10 s gekuerzt (Zeitkarte). Dauerbewegung hinter allen Szenen, kein Bild nur mit Text. Bild haengt an Wort-Zeitstempeln. Erklaeren statt abkuerzen. |
 | 1.4 | 07.10.2026 | Abschnitt 17: jedes Reel braucht das Warum mit Fakt, Gegenstaende werden gezeigt (Szene enthuellen), Transparenz braucht Konflikt, [sarcastic] verboten. |
 | 1.3 | 07.10.2026 | Markenabzeichen auf erzeugte Gegenstaende, Rauschen im Abschluss behoben, Webadresse getrennt sprechen, Tonkette mit Zweidurchlauf, neue Szene hotspots. |
 | 1.2 | 07.10.2026 | Abschnitt 15: ohne konkrete Zahl kein Video, Schrift muss ins Bild passen, mehr Abwechslung im Bild bei gleichbleibendem Abschluss. |
@@ -445,3 +446,52 @@ Ein Reel, das nur Konditionen aufzählt (Zonen, Zuschläge), ist Werbung ohne In
 ### 17.4 Immer dieselbe Stimme, immer dasselbe Tag-Muster
 
 Im Zonen-Reel klang die Stimme anders als in den übrigen. Ursache war der Tag `[sarcastic]`, den nur dieses Reel benutzte: ElevenLabs v3 ändert damit hörbar die Klangfarbe. **`[sarcastic]` wird nicht mehr verwendet.** Erlaubt bleiben `[curious]`, `[intense]`, `[excited]`, `[warmly]`, und zwar in jedem Reel in derselben Reihenfolge, damit alle Videos gleich klingen.
+
+---
+
+## 18. Pausen und Bewegung (Rückmeldung 07.10.2026, vierte Runde)
+
+### 18.1 So wenig Pausen wie möglich, und keine, die auffällt
+
+Mortaza: «Einige Pausen sind viel zu lange.» Das Straffen kürzte vorher nur die Lücken
+**zwischen** den Phrasen. Pausen **innerhalb** einer Phrase blieben stehen.
+
+`stimme.py` kürzt jetzt jede Stille im ganzen Stück auf höchstens **0.10 Sekunden**, egal wo
+sie liegt. Dabei entsteht eine **Zeitkarte** (`karte.json`), die jeden Zeitpunkt der Rohaufnahme
+auf die gestraffte Fassung umrechnet. Nur so bleiben die Wort-Zeitstempel gültig.
+
+Prüfung: `silencedetect` mit 0.35 s über das fertige Video darf höchstens **einen** Treffer
+melden, nämlich das Ende nach dem letzten Wort.
+
+**Fallstrick:** ein Wort kann genau in einer gekürzten Pause beginnen. Die Zeitkarte muss
+diesen Fall abfangen und den Zeitpunkt an den Anfang des nächsten behaltenen Abschnitts
+setzen. Sonst landet das Wort rechnerisch am Dateiende und die Szene dauert bis zum Schluss.
+
+### 18.2 Kein Moment ohne etwas zum Ansehen
+
+Mortaza: «Es wird gesprochen, aber nichts erscheint im Bild. Das wirkt wie ein abgebrochenes
+Video.» Ein Bild mit nur einer kleinen Textzeile zählt als leer.
+
+- Hinter **allen** Szenen läuft eine Dauerbewegung (`LEBEN_CSS` und `LEBEN_JS` in `szenen.py`):
+  fünf weiche Formen und zwei Ringe in Markenfarben, die sich über die ganze Laufzeit bewegen.
+  Sie startet bei 0 und endet mit dem Video, es gibt also keinen stillen Frame.
+- Die Szene `punch` zeigt ab der ersten Sekunde einen grossen pulsierenden Ring, damit nicht
+  nur eine kleine Zeile im leeren Bild steht, bis das grosse Wort kommt.
+- In `enthuellen` verschwindet ein Gegenstand erst, wenn der nächste schon einblendet. Die
+  Bühne bleibt nie leer. Solange ein Gegenstand steht, atmet er leicht.
+- **Regel für neue Szenen:** jede Szene braucht ein Element, das grösser ist als Text und sich
+  bewegt. Symbole, Grafiken, der Zähler, das Maskottchen. Reiner Text reicht nie.
+
+### 18.3 Bild und Wort gehören auf denselben Moment
+
+Die Szenen hängen an **Wort-Zeitstempeln aus der Transkription**
+(`creative_transcribe_audio`, kostet nichts), nicht an geschätzten Phrasengrenzen.
+Wird «Türklinke» gesagt, ist die Türklinke in derselben Zehntelsekunde scharf.
+Name und Begründung schalten **gleichzeitig** um, nicht versetzt.
+
+### 18.4 Erklären statt abkürzen
+
+Eine Abkürzung, die nur versteht, wer das Thema schon kennt, ist ein Fehler. «Zweimal falten,
+acht Flächen» ist zu wenig. Richtig: «Du faltest das Tuch einmal, dann noch einmal. Dadurch
+liegen vier Lagen übereinander. Jede Lage hat eine Vorderseite und eine Rückseite, das ergibt
+acht saubere Flächen.» Lieber ein Satz mehr als eine Lücke im Verständnis.

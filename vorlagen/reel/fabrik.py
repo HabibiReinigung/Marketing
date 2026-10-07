@@ -112,16 +112,15 @@ def phrasen(src, min_pause=0.16):
 
 def straffen_cmd(src, phr_json, ordner, tempo=1.08):
     from stimme import straffen
+    phrasen = [tuple(x) for x in json.load(open(phr_json, encoding='utf-8'))]
     os.makedirs(ordner, exist_ok=True)
-    ph = json.load(open(phr_json))
-    if ph and isinstance(ph[0], dict): ph = [[p['name'], p['start'], p['ende']] for p in ph]
-    pausen = {p[0]: (p[3] if len(p) > 3 else 0.15) for p in ph}
-    zeiten = straffen(src, os.path.join(ordner, 'stimme.wav'), [p[:3] for p in ph], pausen, tempo)
-    json.dump(zeiten, open(os.path.join(ordner, 'zeiten.json'), 'w'), indent=1)
-    w = wave.open(os.path.join(ordner, 'stimme.wav'))
-    d = w.getnframes() / w.getframerate()
-    print(json.dumps(zeiten, indent=1))
-    print(f'Stimme: {d:.2f} s. Zeiten in {ordner}/zeiten.json (Sekunden ab Stimmbeginn; im Reel + V0={V0}).')
+    zeiten, karte = straffen(src, os.path.join(ordner, 'stimme.wav'), phrasen, tempo=tempo)
+    with open(os.path.join(ordner, 'zeiten.json'), 'w', encoding='utf-8') as fh:
+        json.dump(zeiten, fh, ensure_ascii=False, indent=1)
+    with open(os.path.join(ordner, 'karte.json'), 'w', encoding='utf-8') as fh:
+        json.dump(karte, fh)
+    laenge = max(v[1] for v in zeiten.values())
+    print('Stimme: %.2f s. Zeiten und Zeitkarte in %s.' % (laenge, ordner))
 
 
 def render(ordner):

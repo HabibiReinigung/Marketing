@@ -28,6 +28,11 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:var(--navy
 .grain { position:absolute; inset:-50%; background:url("assets/grain.png"); opacity:.07; mix-blend-mode:overlay; pointer-events:none; }
 .big { font-weight:900; letter-spacing:-0.02em; line-height:1.02; }
 .spark { position:absolute; width:90px; height:90px; display:block; }
+
+#leben { position:absolute; inset:0; pointer-events:none; z-index:5; overflow:hidden; }
+#leben i { position:absolute; display:block; border-radius:50%; background:radial-gradient(circle at 35% 35%, rgba(159,211,238,.20), rgba(159,211,238,0) 72%); }
+#leben b { position:absolute; display:block; border-radius:50%; border:3px solid rgba(159,211,238,.16); }
+.clip { z-index:1; }
 #s3-glow { position:absolute; left:40px; top:760px; width:1000px; height:1000px; border-radius:50%;
   background:radial-gradient(circle, rgba(255,255,255,.75) 0%, rgba(255,255,255,.25) 40%, rgba(255,255,255,0) 68%); display:block; }
 #s3-card { position:absolute; left:90px; right:90px; top:330px; height:470px; background:#fff; border-radius:48px; box-shadow:0 30px 60px rgba(21,42,67,.25); display:block; }
@@ -52,12 +57,14 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:var(--navy
 #s5-m img { width:100%; height:100%; display:block; }</style>
 </head>
 <body>
-<div id="root" data-composition-id="main" data-start="0" data-duration="42.63" data-width="1080" data-height="1920">
-<section id="s1" class="clip" data-start="0.0" data-duration="5.23" data-track-index="0" style="background:var(--navy)">
+<div id="root" data-composition-id="main" data-start="0" data-duration="36.231" data-width="1080" data-height="1920">
+<div id="leben" data-layout-allow-overflow><i></i><i></i><i></i><i></i><i></i><b></b><b></b></div>
+<section id="s1" class="clip" data-start="0.0" data-duration="4.424" data-track-index="0" style="background:var(--navy)">
 <div id="s1-bl" class="fill" data-layout-allow-overflow></div><div id="s1-lab" class="label top-label" style="color:#fff">So arbeiten wir</div><div id="s1-w" class="center" style="padding:0 60px" data-layout-allow-overflow><div id="s1-z0" class="blk big" style="font-size:88px;color:#fff;">Wir nehmen nur</div><div id="s1-z1" class="blk serif" style="font-size:124px;color:#fff;line-height:1.05;margin-top:6px;">vier neue Büros</div><div id="s1-z2" class="blk big" style="font-size:82px;color:#fff;">pro Monat an.</div></div>
 <div class="grain"></div>
 </section>
-<section id="s2" class="clip" data-start="5.23" data-duration="5.72" data-track-index="0" style="background:var(--navy)">
+<section id="s2" class="clip" data-start="4.424" data-duration="4.766" data-track-index="0" style="background:var(--navy)">
+<div id="s2-ring" style="position:absolute;left:50%;top:50%;width:820px;height:820px;margin:-410px 0 0 -410px;border:10px solid rgba(159,211,238,.38);border-radius:50%;opacity:0"></div>
 <div id="s2-w" class="center" data-layout-allow-overflow>
 <div id="s2-k" class="blk big" style="font-size:64px;color:var(--blue);margin-bottom:10px">Kein Versehen.</div>
 <div id="s2-b" class="blk big" style="font-size:221px;color:#fff;letter-spacing:-0.05em;line-height:1">ABSICHT</div>
@@ -66,18 +73,18 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:var(--navy
 </div>
 <div class="grain"></div>
 </section>
-<section id="s3" class="clip" data-start="10.95" data-duration="9.171" data-track-index="0" style="background:var(--blue)">
+<section id="s3" class="clip" data-start="9.19" data-duration="8.199" data-track-index="0" style="background:var(--blue)">
 <div id="s3-glow"></div>
 <div class="label top-label" id="s3-lab" style="color:var(--navy)">Für euer Objekt</div>
 <div id="s3-card" data-layout-allow-occlusion><div id="s3-tail" data-layout-allow-overflow></div><div id="s3-t0" class="s3-txt"><div class="a">Immer</div><div class="a"><span class="serif">dieselben Leute.</span></div></div><div id="s3-t1" class="s3-txt"><div class="b">Sie wissen, wo der Schlüssel hängt</div><div class="b"><span class="serif">und welche Tür zu bleibt.</span></div></div></div>
 <div id="s3-m" data-layout-allow-overflow><img src="assets/maskottchen.png" alt="Habibi Maskottchen" /></div>
 <div class="grain"></div>
 </section>
-<section id="s4" class="clip" data-start="20.12" data-duration="16.265" data-track-index="0" style="background:var(--ice)">
+<section id="s4" class="clip" data-start="17.389" data-duration="13.163" data-track-index="0" style="background:var(--ice)">
 <div id="s4-lab" class="label top-label" style="color:var(--steel)">Wer schneller wächst</div><div id="s4-w" data-layout-allow-overflow><div id="s4-z0" class="big" style="font-size:110px">Jede Woche</div><div id="s4-z1" class="big" style="font-size:92px">jemand anderes bei euch.</div></div><div id="s4-st" data-layout-allow-overflow>NIE</div><div id="s4-u" class="serif">Bei Ferien kommt jemand, der euer Objekt kennt.</div>
 <div class="grain"></div>
 </section>
-<section id="s5" class="clip" data-start="36.385" data-duration="6.245" data-track-index="0" style="background:var(--navy-deep)">
+<section id="s5" class="clip" data-start="30.552" data-duration="5.679" data-track-index="0" style="background:var(--navy-deep)">
 <div id="s5-bl" class="fill" data-layout-allow-overflow></div>
 <div class="center"><img id="s5-mark" src="assets/wortmarke.png" alt="Habibi Reinigung" />
 <div id="s5-line" class="blk"><div class="blk">Richtpreis für euer Büro</div><div class="blk serif">in 1 Minute</div></div>
@@ -114,57 +121,81 @@ function sparks(container, pts, t0, tl) {
 }
 const tl = gsap.timeline({ paused: true });
 
+// Dauerbewegung: fuenf weiche Formen ziehen langsam durch das Bild.
+(() => {
+  const n = document.getElementById('leben');
+  const gr = [520, 380, 640, 300, 460];
+  const ringe = n.querySelectorAll('b');
+  [[-180, 420, 760], [720, 1320, 560]].forEach((v, i) => {
+    const e = ringe[i];
+    e.style.left = v[0] + 'px'; e.style.top = v[1] + 'px';
+    e.style.width = v[2] + 'px'; e.style.height = v[2] + 'px';
+    tl.fromTo(e, { rotation: 0, x: 0, scale: .95 },
+      { rotation: 360, x: (i ? -150 : 150), scale: 1.1, duration: 36.231, ease: 'none' }, 0);
+  });
+  for (let i = 0; i < 5; i++) {
+    const e = n.children[i];
+    e.style.width = gr[i] + 'px'; e.style.height = gr[i] + 'px';
+    e.style.left = (-200 + rnd() * 900) + 'px';
+    e.style.top = (-150 + rnd() * 1700) + 'px';
+    tl.fromTo(e, { x: -120 + rnd() * 60, y: 0, scale: .9 },
+      { x: 120 + rnd() * 80, y: -140 + rnd() * 280, scale: 1.12, duration: 36.231, ease: 'none' }, 0);
+  }
+})();
+
 // ---- s1
 {
-makeBubbles(document.getElementById("s1-bl"), 14, 60, 210).forEach((b, i) => tl.fromTo(b.el, { y: 0, x: 0, opacity: 0 }, { y: -b.drift, x: (i % 2 ? 1 : -1) * b.sway, opacity: .95, duration: 5.23, ease: "none" }, 0.0));
+makeBubbles(document.getElementById("s1-bl"), 14, 60, 210).forEach((b, i) => tl.fromTo(b.el, { y: 0, x: 0, opacity: 0 }, { y: -b.drift, x: (i % 2 ? 1 : -1) * b.sway, opacity: .95, duration: 4.424, ease: "none" }, 0.0));
 tl.fromTo("#s1-lab", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 0.02);
-tl.fromTo("#s1-z0", { scale: 2.2, opacity: 0, filter: "blur(18px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 0.074);
-tl.fromTo("#s1-z1", { y: 80, opacity: 0, rotation: -6 }, { y: 0, opacity: 1, rotation: 0, duration: .4, ease: "back.out(2.6)" }, 0.754);
-tl.fromTo("#s1-z2", { scale: 2.2, opacity: 0, filter: "blur(18px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 1.752);
-tl.to("#s1-w", { scale: 1.06, duration: 3.478, ease: "none" }, 1.752);
+tl.fromTo("#s1-z0", { scale: 2.2, opacity: 0, filter: "blur(18px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 0.13);
+tl.fromTo("#s1-z1", { y: 80, opacity: 0, rotation: -6 }, { y: 0, opacity: 1, rotation: 0, duration: .4, ease: "back.out(2.6)" }, 0.809);
+tl.fromTo("#s1-z2", { scale: 2.2, opacity: 0, filter: "blur(18px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 1.807);
+tl.to("#s1-w", { scale: 1.06, duration: 2.617, ease: "none" }, 1.807);
 }
 // ---- s2
 {
-tl.fromTo("#s2-k", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: .3, ease: "power3.out" }, 5.48);
-tl.fromTo("#s2-b", { scale: 3.2, opacity: 0 }, { scale: 1, opacity: 1, duration: .16, ease: "power4.in" }, 6.962);
-tl.fromTo("#s2-w", { x: 0, y: 0 }, { keyframes: [{ x: -26, y: 14, duration: .04 }, { x: 22, y: -18, duration: .04 }, { x: -14, y: 10, duration: .04 }, { x: 8, y: -6, duration: .04 }, { x: 0, y: 0, duration: .05 }] }, 7.122);
-tl.fromTo("#s2-bar", { scaleX: 0 }, { scaleX: 1, duration: .35, ease: "expo.out" }, 7.212);
-tl.fromTo("#s2-u", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 9.179);
-tl.to("#s2-w", { scale: 1.08, duration: 3.688, ease: "none" }, 7.262);
+tl.fromTo("#s2-ring", { scale: .55, opacity: 0 }, { scale: 1, opacity: 1, duration: .4, ease: "back.out(1.6)" }, 4.444);
+tl.to("#s2-ring", { scale: 1.12, duration: 1.1, yoyo: true, repeat: -1, ease: "sine.inOut" }, 4.874);
+tl.fromTo("#s2-k", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: .3, ease: "power3.out" }, 4.674);
+tl.fromTo("#s2-b", { scale: 3.2, opacity: 0 }, { scale: 1, opacity: 1, duration: .16, ease: "power4.in" }, 6.019);
+tl.fromTo("#s2-w", { x: 0, y: 0 }, { keyframes: [{ x: -26, y: 14, duration: .04 }, { x: 22, y: -18, duration: .04 }, { x: -14, y: 10, duration: .04 }, { x: 8, y: -6, duration: .04 }, { x: 0, y: 0, duration: .05 }] }, 6.179);
+tl.fromTo("#s2-bar", { scaleX: 0 }, { scaleX: 1, duration: .35, ease: "expo.out" }, 6.269);
+tl.fromTo("#s2-u", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 7.587);
+tl.to("#s2-w", { scale: 1.08, duration: 2.871, ease: "none" }, 6.319);
 }
 // ---- s3
 {
-tl.fromTo("#s3-glow", { scale: .8, opacity: 0 }, { scale: 1, opacity: 1, duration: .7, ease: "power2.out" }, 10.95);
-tl.fromTo("#s3-lab", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 11.0);
-tl.fromTo("#s3-m", { y: 1100, scaleY: 1.15, scaleX: .9 }, { y: 0, scaleY: 1, scaleX: 1, duration: .5, ease: "back.out(1.7)" }, 10.95);
-tl.to("#s3-m", { keyframes: [{ scaleY: .92, scaleX: 1.06, duration: .09 }, { scaleY: 1.04, scaleX: .97, duration: .12 }, { scaleY: 1, scaleX: 1, duration: .12 }] }, 11.45);
-tl.fromTo("#s3-card", { scale: 0, transformOrigin: "50% 100%" }, { scale: 1, duration: .35, ease: "back.out(2.2)" }, 11.05);
-tl.to("#s3-m", { keyframes: [{ rotation: -4, duration: 1.498, ease: "sine.inOut" }, { rotation: 3, duration: 1.83, ease: "sine.inOut" }, { rotation: -3, duration: 1.83, ease: "sine.inOut" }, { rotation: 2, duration: 1.664, ease: "sine.inOut" }, { rotation: 0, duration: 1.498, ease: "sine.inOut" }] }, 11.8);
-tl.fromTo("#s3-t0", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .25, ease: "power3.out" }, 11.25);
-tl.to("#s3-t0", { opacity: 0, y: -30, duration: .18, ease: "power2.in" }, 15.002);
-tl.fromTo("#s3-t1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .25, ease: "power3.out" }, 15.182);
-tl.to("#s3-m", { y: -30, duration: .22, yoyo: true, repeat: 1, ease: "power2.out" }, 15.182);
+tl.fromTo("#s3-glow", { scale: .8, opacity: 0 }, { scale: 1, opacity: 1, duration: .7, ease: "power2.out" }, 9.19);
+tl.fromTo("#s3-lab", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 9.24);
+tl.fromTo("#s3-m", { y: 1100, scaleY: 1.15, scaleX: .9 }, { y: 0, scaleY: 1, scaleX: 1, duration: .5, ease: "back.out(1.7)" }, 9.19);
+tl.to("#s3-m", { keyframes: [{ scaleY: .92, scaleX: 1.06, duration: .09 }, { scaleY: 1.04, scaleX: .97, duration: .12 }, { scaleY: 1, scaleX: 1, duration: .12 }] }, 9.69);
+tl.fromTo("#s3-card", { scale: 0, transformOrigin: "50% 100%" }, { scale: 1, duration: .35, ease: "back.out(2.2)" }, 9.29);
+tl.to("#s3-m", { keyframes: [{ rotation: -4, duration: 1.323, ease: "sine.inOut" }, { rotation: 3, duration: 1.617, ease: "sine.inOut" }, { rotation: -3, duration: 1.617, ease: "sine.inOut" }, { rotation: 2, duration: 1.47, ease: "sine.inOut" }, { rotation: 0, duration: 1.323, ease: "sine.inOut" }] }, 10.04);
+tl.fromTo("#s3-t0", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .25, ease: "power3.out" }, 9.49);
+tl.to("#s3-t0", { opacity: 0, y: -30, duration: .18, ease: "power2.in" }, 12.668);
+tl.fromTo("#s3-t1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .25, ease: "power3.out" }, 12.848);
+tl.to("#s3-m", { y: -30, duration: .22, yoyo: true, repeat: 1, ease: "power2.out" }, 12.848);
 }
 // ---- s4
 {
-tl.fromTo("#s4-lab", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: .3 }, 20.14);
-tl.fromTo("#s4-z0", { scale: 1.8, opacity: 0, filter: "blur(12px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 20.42);
-tl.fromTo("#s4-z1", { scale: 1.8, opacity: 0, filter: "blur(12px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 24.868);
-tl.fromTo("#s4-st", { scale: 3, opacity: 0, rotation: -25 }, { scale: 1, opacity: 1, rotation: -8, duration: .2, ease: "power4.in" }, 22.695);
-tl.fromTo("#s4-w", { x: 0, y: 0 }, { keyframes: [{ x: -22, y: 12, duration: .04 }, { x: 18, y: -14, duration: .04 }, { x: -10, y: 8, duration: .04 }, { x: 0, y: 0, duration: .05 }] }, 22.895);
-tl.to("#s4-w", { opacity: .35, duration: .3 }, 22.945);
-tl.fromTo("#s4-u", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: .4, ease: "back.out(2.2)" }, 30.761);
+tl.fromTo("#s4-lab", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: .3 }, 17.409);
+tl.fromTo("#s4-z0", { scale: 1.8, opacity: 0, filter: "blur(12px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 17.689);
+tl.fromTo("#s4-z1", { scale: 1.8, opacity: 0, filter: "blur(12px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 21.461);
+tl.fromTo("#s4-st", { scale: 3, opacity: 0, rotation: -25 }, { scale: 1, opacity: 1, rotation: -8, duration: .2, ease: "power4.in" }, 19.871);
+tl.fromTo("#s4-w", { x: 0, y: 0 }, { keyframes: [{ x: -22, y: 12, duration: .04 }, { x: 18, y: -14, duration: .04 }, { x: -10, y: 8, duration: .04 }, { x: 0, y: 0, duration: .05 }] }, 20.071);
+tl.to("#s4-w", { opacity: .35, duration: .3 }, 20.121);
+tl.fromTo("#s4-u", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: .4, ease: "back.out(2.2)" }, 25.983);
 }
 // ---- s5
 {
-makeBubbles(document.getElementById("s5-bl"), 10, 50, 170).forEach((b, i) => tl.fromTo(b.el, { y: 0, opacity: 0 }, { y: -b.drift * .8, x: (i % 2 ? 1 : -1) * b.sway, opacity: .6, duration: 6.245, ease: "none" }, 36.385));
-tl.fromTo("#s5-mark", { y: -60, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .42, ease: "back.out(1.8)" }, 36.535);
-tl.fromTo("#s5-m", { y: 500 }, { y: 0, duration: .42, ease: "back.out(1.8)" }, 36.885);
-tl.to("#s5-m", { keyframes: [{ rotation: -8, duration: .25 }, { rotation: 6, duration: .25 }, { rotation: -6, duration: .25 }, { rotation: 0, duration: .25 }] }, 37.335);
-tl.fromTo("#s5-line", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: .38, ease: "power3.out" }, 37.775);
-tl.fromTo("#s5-tag", { opacity: 0 }, { opacity: 1, duration: .4 }, 38.275);
-tl.fromTo("#s5-btn", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: .38, ease: "back.out(2.5)" }, 39.941);
-tl.to("#s5-btn", { scale: 1.06, duration: .25, yoyo: true, repeat: 1, ease: "sine.inOut" }, 40.541);
+makeBubbles(document.getElementById("s5-bl"), 10, 50, 170).forEach((b, i) => tl.fromTo(b.el, { y: 0, opacity: 0 }, { y: -b.drift * .8, x: (i % 2 ? 1 : -1) * b.sway, opacity: .6, duration: 5.679, ease: "none" }, 30.552));
+tl.fromTo("#s5-mark", { y: -60, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .42, ease: "back.out(1.8)" }, 30.702);
+tl.fromTo("#s5-m", { y: 500 }, { y: 0, duration: .42, ease: "back.out(1.8)" }, 31.052);
+tl.to("#s5-m", { keyframes: [{ rotation: -8, duration: .25 }, { rotation: 6, duration: .25 }, { rotation: -6, duration: .25 }, { rotation: 0, duration: .25 }] }, 31.502);
+tl.fromTo("#s5-line", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: .38, ease: "power3.out" }, 31.648);
+tl.fromTo("#s5-tag", { opacity: 0 }, { opacity: 1, duration: .4 }, 32.148);
+tl.fromTo("#s5-btn", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: .38, ease: "back.out(2.5)" }, 33.543);
+tl.to("#s5-btn", { scale: 1.06, duration: .25, yoyo: true, repeat: 1, ease: "sine.inOut" }, 34.143);
 }
 window.__timelines["main"] = tl;
 </script>

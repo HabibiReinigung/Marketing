@@ -109,17 +109,29 @@ def phrasen_lesen(mp3):
     return o
 
 
-def wortuhr(worte, phrasen, zeiten):
-    """Gibt eine Funktion, die zu einem Wort die Zeit IM FERTIGEN REEL liefert."""
+def wortuhr(worte, karte):
+    """Zeit eines Wortes IM FERTIGEN REEL, ueber die Zeitkarte des Straffens."""
     liste = []
     for w in worte:
         txt = (w.get('text') or w.get('word') or '').strip()
-        if not txt:
-            continue
-        s = w.get('start', w.get('start_time'))
-        if s is None:
-            continue
-        liste.append((re.sub(r'[^0-9a-zäöüß]', '', txt.lower()), float(s)))
+        s_ = w.get('start', w.get('start_time'))
+        if txt and s_ is not None:
+            liste.append((re.sub(r'[^0-9a-zäöüß]', '', txt.lower()), float(s_)))
+
+    def um(t_roh):
+        letzter = None
+        for o, nn, laenge in karte:
+            if o <= t_roh < o + laenge * TEMPO:
+                return nn + (t_roh - o) / TEMPO
+            if o <= t_roh:
+                letzter = (o, nn, laenge)
+            elif o > t_roh:
+                # Der Zeitpunkt lag in einer gekuerzten Pause: an den Anfang
+                # des naechsten behaltenen Abschnitts setzen.
+                return nn
+        if letzter:
+            return letzter[1] + letzter[2]
+        return 0.0
 
     def zeit(wort, nr=1):
         ziel = re.sub(r'[^0-9a-zäöüß]', '', wort.lower())
@@ -127,21 +139,15 @@ def wortuhr(worte, phrasen, zeiten):
         if len(treffer) < nr:
             treffer = [t for (x, t) in liste if ziel in x]
         if len(treffer) < nr:
-            raise SystemExit('Wort "%s" (Nr %d) nicht in der Transkription gefunden.' % (wort, nr))
-        roh = treffer[nr - 1]
-        for name, a, b in phrasen:
-            if a - 0.25 <= roh <= b + 0.25:
-                return V0 + zeiten[name][0] + (roh - a) / TEMPO
-        # ausserhalb aller Phrasen: linear schaetzen
-        name, a, b = phrasen[-1]
-        return V0 + zeiten[name][0] + (roh - a) / TEMPO
+            raise SystemExit('Wort "%s" (Nr %d) fehlt in der Transkription.' % (wort, nr))
+        return V0 + um(treffer[nr - 1])
     return zeit
 
 
 # ------------------------------------------------------------------ Die drei Reels
 def bauen_14(Z, T, ordner):
-    from szenen import Reel, hook, punch, stempel, enthuellen, maskottchen_tipp, abschluss, schreiben
-    a2, a3, a4 = Z('Rund'), Z('Grund'), Z('Erstens')
+    from szenen import Reel, hook, punch, enthuellen, maskottchen_tipp, abschluss, schreiben
+    a2, a4 = Z('Rund'), Z('Erstens')
     w1, w2, w3 = Z('Lichtschalter'), Z('Türklinke'), Z('Abtropfschale')
     a5, a6 = Z('brauchst'), Z('Habibi')
     END = V0 + T['P9'][1] + 0.85
@@ -150,14 +156,10 @@ def bauen_14(Z, T, ordner):
         dict(text='Dein Schreibtisch', groesse=102, t=Z('deinem') - .15),
         dict(text='hat mehr Bakterien als', groesse=72, t=Z('Bakterien') - .3),
         dict(text='eine Toilettenbrille.', art='serif', groesse=112, t=Z('Toilettenbrille') - .25)])
-    punch(reel, 's2', a2 - .1, a3 - .5, wort='400x', t_wort=a2 + .05,
+    punch(reel, 's2', a2 - .1, a4 - .25, wort='400x', t_wort=a2 + .05,
           klein='mehr Bakterien', t_klein=a2 - .05,
-          unter='Studie Universität Arizona', t_unter=Z('Universität') - .2)
-    stempel(reel, 's3', a3 - .5, a4 - .25, label='Warum eigentlich',
-            zeilen=[dict(text='Toilette täglich. Schreibtisch nie.', groesse=76, t=Z('Toilette', 2) - .3)],
-            wort='DARUM', t_stempel=Z('niemand') - .1, farbe_stempel='var(--rot)',
-            unter='Er sieht ja sauber aus.', t_unter=Z('aussieht') - .4)
-    enthuellen(reel, 's4', a4 - .25, a5 - .35,
+          unter='Toilette täglich. Schreibtisch nie.', t_unter=Z('Toilette', 2) - .3)
+    enthuellen(reel, 's3', a4 - .25, a5 - .35,
                titel_html='Dieselben drei <span class="serif">jeden Tag</span>', t_titel=a4 - .2,
                punkte=[dict(ding='schalter', name='Lichtschalter',
                             warum='Jeder drückt ihn mehrmals am Tag. Niemand wischt ihn ab.', t=w1),
@@ -165,10 +167,10 @@ def bauen_14(Z, T, ordner):
                             warum='Das Erste, was eine fremde Hand bei euch berührt.', t=w2),
                        dict(ding='schale', name='Abtropfschale',
                             warum='Dauernd feucht und warm. Genau das mögen Bakterien.', t=w3)])
-    maskottchen_tipp(reel, 's5', a5 - .35, a6 - .2, karten=[
+    maskottchen_tipp(reel, 's4', a5 - .35, a6 - .2, karten=[
         ('<div class="a">Kein Spezialmittel.</div><div class="a"><span class="serif">Ein feuchtes Tuch.</span></div>', a5 - .1),
         ('<div class="b">Einmal am Tag,</div><div class="b"><span class="serif">zehn Sekunden pro Raum.</span></div>', Z('einmal', 1) - .2)])
-    abschluss(reel, 's6', a6 - .2, END, t_marke=a6 - .05, t_zeile=Z('Richtpreis') - .15, t_knopf=Z('habibi', 2) - .2)
+    abschluss(reel, 's5', a6 - .2, END, t_marke=a6 - .05, t_zeile=Z('Richtpreis') - .15, t_knopf=Z('habibi', 2) - .2)
     schreiben(reel, ordner)
     return END
 
@@ -270,7 +272,7 @@ TON, WORTE = lade_ergebnis()
 bericht = []
 idx = json.load(io.open(W + r'\instagram\reels\index.json', encoding='utf-8'))
 
-for pid in ['IG-2026-10-14-r1', 'IG-2026-10-18-r1']:
+for pid in ['IG-2026-10-14-r1', 'IG-2026-10-16-r1', 'IG-2026-10-18-r1']:
     url, worte = TON.get(pid), WORTE.get(pid)
     if not url or not worte:
         bericht.append('FEHLER %s  Ton oder Transkription fehlt (url=%s, worte=%s)' % (pid, bool(url), bool(worte)))
@@ -285,7 +287,8 @@ for pid in ['IG-2026-10-14-r1', 'IG-2026-10-18-r1']:
                    check=True, capture_output=True)
     subprocess.run([PY, R + r'\fabrik.py', 'projekt', ordner], check=True, capture_output=True)
     T = json.load(io.open(ordner + r'\zeiten.json', encoding='utf-8'))
-    Z = wortuhr(worte, phr, T)
+    karte = json.load(io.open(ordner + r'\karte.json', encoding='utf-8'))
+    Z = wortuhr(worte, karte)
     dauer = BAUER[pid](Z, T, ordner)
     rend = subprocess.run([PY, R + r'\fabrik.py', 'render', ordner],
                           capture_output=True, text=True, encoding='utf-8', errors='replace')
