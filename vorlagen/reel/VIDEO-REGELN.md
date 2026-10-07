@@ -1,6 +1,6 @@
 # Video-Regeln Habibi Reinigung
 
-**Version 1.1, 07.10.2026.** Verbindliche Regeln für jedes Video (Instagram Reel, TikTok, Shorts) von Habibi Reinigung, Mortaza Habibi, Chur.
+**Version 1.2, 07.10.2026.** Verbindliche Regeln für jedes Video (Instagram Reel, TikTok, Shorts) von Habibi Reinigung, Mortaza Habibi, Chur.
 
 **Für Claude:** Diese Datei vor jedem Video vollständig lesen. Sie entscheidet über Inhalt, Hook, Stimme, Emotion, Bild, Ton und Schnitt. Bei Widerspruch gilt: Faktenregister der Marketing-App (Zahlen und Aussagen) zuerst, dann diese Datei, dann `vorlagen/reel/FABRIK.md` (technischer Ablauf), dann die ANLEITUNG der App. Mortaza muss nichts davon im Chat wiederholen. Wenn etwas hier nicht geregelt ist: so entscheiden, wie es die Beispiele in Abschnitt 12 tun.
 
@@ -338,5 +338,38 @@ Diese Datei ändert nur Mortaza oder Claude auf seine Anweisung. Wenn er ein Vid
 
 | Version | Datum | Änderung |
 | --- | --- | --- |
+| 1.2 | 07.10.2026 | Abschnitt 15: ohne konkrete Zahl kein Video, Schrift muss ins Bild passen, mehr Abwechslung im Bild bei gleichbleibendem Abschluss. |
 | 1.1 | 07.10.2026 | Stimme: Lenny ist Standard, der Klon von Mortaza wird nicht verwendet. |
 | 1.0 | 07.10.2026 | Erste Fassung. Qualitätsmassstab, Pausenverbot, Hook-Muster, Szenen-Baukasten, Prüfliste. |
+
+---
+
+## 15. Lehren aus der Kritik vom 07.10.2026
+
+Mortaza hat die erste Fassung dieses Reels als «noch verbesserungswürdig» bewertet. Drei Punkte sind seither verbindlich.
+
+### 15.1 Ohne Zahl kein Video
+
+Die erste Fassung sagte «wie lange genau, steht auf der Flasche». Das ist **kein** Learning, sondern viel reden ohne Bedeutung. Wer eine Regel nennt, nennt auch die Zahl.
+
+- Jedes Reel muss eine Aussage enthalten, die der Zuschauer danach **weiss** und anwenden kann.
+- Ein Verweis auf eine andere Quelle («steht auf der Packung», «frag deinen Lieferanten», «kommt darauf an») ersetzt die Zahl nicht.
+- Lässt sich keine belastbare Zahl finden, ist das Thema ungeeignet. Dann ein anderes nehmen, statt zu schwafeln.
+- Die Zahl braucht weiterhin eine Quelle (Abschnitt 2, Regel 7). Beispiel hier: Flächendesinfektion mindestens 30 Sekunden, viele Mittel 60, die Fläche muss die ganze Einwirkzeit feucht bleiben (KRINKO/RKI-Empfehlung zur Flächendesinfektion).
+
+### 15.2 Alles muss ins Bild passen
+
+In der ersten Fassung lief das Wort EINWIRKZEIT über den Bildrand hinaus, man konnte nur ein paar Buchstaben lesen.
+
+- `punch` rechnet die Schriftgrösse jetzt aus der Wortlänge (960 px nutzbare Breite, ein Grossbuchstabe ist rund 0.62 der Schriftgrösse breit). Nie wieder eine feste Grösse für ein langes Wort.
+- `hyperframes check` muss **0 Fehler** melden, bevor gerendert wird. `content_overlap` und `panel_out_of_canvas` sind Fehler, keine Schönheitsfragen.
+- Nach dem Rendern mindestens drei Einzelbilder ansehen, darunter eines aus jeder neuen Szene.
+
+### 15.3 Mehr Abwechslung im Bild, gleicher Abschluss
+
+Alle Reels sahen gleich aus. Das soll sich ändern, der Abschluss aber nicht.
+
+- **Pro Reel mindestens eine Szene, die zum Thema gehört** und nicht nur Text zeigt: eine Sprühflasche, die wirklich sprüht, ein Zähler, der läuft, ein Heizkörper, der staubt. Das Bild soll die Aussage zeigen, nicht bloss begleiten.
+- Fehlt eine passende Szene, wird sie in `szenen.py` gebaut und in Abschnitt 6.3 ergänzt. Neu seit 07.10.2026: `spruehen` (Sprühflasche, Nebel, nasse Fläche, Sekundenzähler).
+- Hintergrundfarbe und Szenenfolge von Reel zu Reel wechseln.
+- **Der Abschluss bleibt immer gleich**: Wortmarke, «Richtpreis in 1 Minute», Knopf habibireinigung.ch. Das ist das Wiedererkennungsmerkmal der Marke und wird nicht variiert.

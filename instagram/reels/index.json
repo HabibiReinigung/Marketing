@@ -44,9 +44,9 @@
       "zeit": "18:00",
       "thema": "Mythos: Desinfektion ohne Einwirkzeit",
       "saeule": "mythos",
-      "sprechtext": "[curious] Dein Desinfektionsmittel wirkt gar NICHT. [intense] Weil ihr es sofort wieder WEGWISCHT! [excited] Desinfektion braucht EINWIRKZEIT! Die Fläche muss nass BLEIBEN! [warmly] Wie lange, steht auf der FLASCHE. [excited] Habibi Reinigung! Richtpreis in EINER Minute, auf habibireinigung Punkt C-H!",
+      "sprechtext": "[curious] Dein Desinfektionsmittel wirkt gar NICHT. [intense] Weil ihr es nach zwei Sekunden WEGWISCHT! [excited] Es braucht mindestens DREISSIG Sekunden! Manche Mittel sogar SECHZIG! [warmly] So lange muss die Fläche NASS bleiben. [excited] Erst wenn sie von selbst trocken ist, ist sie wieder BEREIT. [excited] Habibi Reinigung! Richtpreis in EINER Minute, auf habibireinigung Punkt C-H!",
       "erstellt_am": "2026-10-07",
-      "version": 1,
+      "version": 2,
       "import_noetig": true
     }
   ]
