@@ -546,8 +546,10 @@ def enthuellen(reel, sid, start, ende, punkte, titel_html=None, t_titel=None, bg
             js.append(f'tl.to("#{sid}-d{i}", {{ opacity: 0, filter: "blur(28px)", duration: .18 }}, {r(punkte[i + 1]["t"] - .34)});')
         js.append(f'tl.set("#{sid}-name", {{ innerText: "{pk["name"]}" }}, {t});')
         js.append(f'tl.fromTo("#{sid}-name", {{ y: 44, opacity: 0 }}, {{ y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }}, {t});')
-        js.append(f'tl.set("#{sid}-warum", {{ innerText: "{pk["warum"]}" }}, {r(t + .35)});')
-        js.append(f'tl.fromTo("#{sid}-warum", {{ y: 34, opacity: 0 }}, {{ y: 0, opacity: 1, duration: .26, ease: "power3.out", immediateRender: false }}, {r(t + .35)});')
+        # Begruendung zusammen mit dem Namen umschalten, sonst steht noch die
+        # vorherige da, waehrend der neue Gegenstand schon scharf ist.
+        js.append(f'tl.set("#{sid}-warum", {{ innerText: "{pk["warum"]}" }}, {t});')
+        js.append(f'tl.fromTo("#{sid}-warum", {{ y: 34, opacity: 0 }}, {{ y: 0, opacity: 1, duration: .24, ease: "power3.out", immediateRender: false }}, {r(t + .12)});')
         sfx += [('whoosh_hoch', pk['t'] - .3, .2, .3), ('pop', pk['t'], .22, .6), ('tick', pk['t'] + .35, .1, .3)]
     reel.szene(sid, start, ende, bg, inhalt, css=css, js='\n'.join(js), sfx=sfx)
 

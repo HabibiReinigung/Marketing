@@ -45,7 +45,7 @@ Die übrigen Tage (Di, Do, Sa) gehören den Karussells und Bildern des Tageslauf
 - Nur Aussagen aus `fakten.json` (Faktenregister) über Habibi Reinigung. Keine erfundenen Zahlen oder Studien. Tipps aus der Praxis, sachlich richtig.
 - **Nie:** Versicherung/Haftpflicht, Umzugs-, End-, Wohnungs-, Privat- oder Fensterreinigung, Rabatte, Gratis, Aktionen, Teamgrösse, Kundennamen, Vorher-Nachher, Gedankenstriche. Beträge nur 650, 15, 35 (CHF).
 
-**Sprechtext** (für die Stimme), 12 bis 25 Sekunden, 30 bis 60 Wörter:
+**Sprechtext** (für die Stimme), keine Längenvorgabe:
 - Satz 1 = Haken (Frage oder steile These), sofort Spannung.
 - Mitte: 2 bis 4 kurze Sätze, je ein Gedanke.
 - Schluss immer: «[excited] Habibi Reinigung! Richtpreis in EINER Minute, auf habibireinigung Punkt C-H!» (Varianten erlaubt, aber «habibireinigung Punkt C-H» genau so).
@@ -97,7 +97,7 @@ In `reel.py` gilt `T = json.load(open(sys.argv[1]))` (direkt das Objekt aus zeit
 - `stempel` Behauptung + Stempel FALSCH/RICHTIG (Mythos), `liste` Checkliste mit Häkchen (2 bis 4 Punkte, kurz),
 - `preis` Zähler bis 650, `zone` 5-km-Ring Chur, `heizung` Heizkörper (waerme/staub/buerste),
 - `maskottchen_tipp` Figur mit Sprechblase (der «Tipp vom Profi»), `abschluss` Wortmarke + «Richtpreis in 1 Minute» + Knopf habibireinigung.ch (immer am Schluss).
-- Pro Reel 4 bis 7 Szenen. Jede Szene beginnt kurz (0.05 bis 0.1 s) vor ihrer Phrase. Texte auf dem Bild sind KÜRZER als der Sprechtext (Stichworte). Szenenwechsel genau auf Phrasengrenzen.
+- Jede Szene beginnt kurz (0.05 bis 0.1 s) vor ihrer Phrase. Texte auf dem Bild sind KÜRZER als der Sprechtext (Stichworte). Szenenwechsel genau auf Phrasengrenzen.
 - Neue Szene nötig? In `szenen.py` nach dem Muster der vorhandenen bauen (HTML + CSS + GSAP + Soundeffekte), Markenfarben (var(--navy), --steel, --ice, --blue), Schriften Poppins/Instrument Serif.
 
 **Technikregeln HyperFrames:** ein pausierter GSAP-Timeline `tl` (macht `szenen.py`), keine `<br>`, kein Math.random (nur `rnd()`), jede Szene ist ein `.clip` mit data-start/data-duration (macht `szenen.py`).
@@ -107,7 +107,7 @@ In `reel.py` gilt `T = json.load(open(sys.argv[1]))` (direkt das Objekt aus zeit
 - `hyperframes check` ohne Fehler (macht `fabrik.py render`).
 - Einzelbilder ansehen: kein Text abgeschnitten oder ausserhalb des Bildes, nichts überlappt unschön, Text gut lesbar (Kontrast), oben 220 px und unten 380 px frei von wichtigem Text (Instagram-Bedienelemente), Figur und Wortmarke vollständig.
 - Ton: Stimme klar und laut (fabrik.py zeigt die Lautheit, Ziel um -14 LUFS), Effekte leiser als die Stimme, keine Musik.
-- `fabrik.py fertig` meldet «Prüfungen OK» (Dauer 3 bis 60 s, höchstens 19.5 MB, 1080x1920, Ton vorhanden).
+- `fabrik.py fertig` meldet «Prüfungen OK» (höchstens 19.5 MB, 1080x1920, Ton vorhanden).
 - Probleme beheben und neu rendern (höchstens 3 Runden). Bleibt es schlecht: nicht hochladen, melden.
 
 ## 8. Ablegen und melden

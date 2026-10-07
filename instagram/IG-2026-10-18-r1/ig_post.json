@@ -5,30 +5,33 @@
  "format": "reel",
  "thema": "Das graue Tuch verteilt statt zu putzen",
  "saeule": "tipp",
- "caption": "Mit einem grauen Putztuch machst du es schlimmer.\n\nDu nimmst die Keime vom WC mit an den Schreibtisch.\nDarum falten Profis zweimal: vier Lagen, acht saubere Flächen.\nEine Fläche pro Bereich, nie zweimal dieselbe.\n\nIst eine Seite grau: umklappen statt weiterwischen.\n\nSpeichern für später\n\n#chur #graubünden #büroreinigung #reinigungchur #unterhaltsreinigung #putztipp #habibireinigung",
+ "caption": "Ein graues Putztuch putzt nicht mehr. Es verteilt.\n\nAlles, was du vorher aufgenommen hast, Fett, Staub und Keime vom WC, wischst du damit auf den nächsten Tisch.\n\nProfis lösen das mit einer Falttechnik: Tuch einmal falten, dann noch einmal. Dadurch liegen vier Lagen übereinander. Jede Lage hat eine Vorderseite und eine Rückseite, das ergibt acht saubere Flächen aus einem einzigen Tuch.\n\nFür jeden Bereich eine frische Fläche. Ist sie grau: umklappen statt weiterwischen.\n\nSo reicht ein Tuch für acht Räume, und nichts wandert von einem Raum in den nächsten.\n\n#chur #graubünden #büroreinigung #reinigungchur #unterhaltsreinigung #putztipp #habibireinigung",
  "spec": {
   "szenen": [
    {
-    "text": "Mit einem grauen Putztuch machst du es schlimmer."
+    "text": "Ein graues Putztuch putzt nicht mehr. Es verteilt."
    },
    {
-    "text": "Du nimmst die Keime vom WC mit an den Schreibtisch."
+    "text": "Alles, was du vorher aufgenommen hast, Fett, Staub und Keime vom WC, wischst du damit auf den nächsten Tisch."
    },
    {
-    "text": "Darum falten Profis zweimal: vier Lagen, acht saubere Flächen."
+    "text": "Profis lösen das mit einer einfachen Falttechnik. Du faltest das Tuch einmal, dann noch einmal. Dadurch liegen vier Lagen übereinander."
    },
    {
-    "text": "Eine Fläche pro Bereich, nie zweimal dieselbe."
+    "text": "Jede Lage hat eine Vorderseite und eine Rückseite, das ergibt acht saubere Flächen aus einem einzigen Tuch."
    },
    {
-    "text": "Ist eine Seite grau: umklappen statt weiterwischen. So reicht ein Tuch für acht Räume, und nichts wandert mit."
+    "text": "Für jeden Bereich nimmst du eine frische Fläche, nie zweimal dieselbe."
+   },
+   {
+    "text": "Sobald eine Fläche grau ist, klappst du um, statt weiterzuwischen. So reicht ein Tuch für acht Räume, und nichts wandert von einem Raum in den nächsten."
    }
   ],
   "schluss": {
    "text": "Richtpreis für euer Büro in 1 Minute",
    "knopf": "habibireinigung.ch"
   },
-  "sprechtext": "Mit einem grauen Putztuch machst du es schlimmer. Du nimmst die Keime vom WC mit an den Schreibtisch. Darum falten Profis zweimal: vier Lagen, acht saubere Flächen. Eine Fläche pro Bereich, nie zweimal dieselbe. Ist eine Seite grau: umklappen statt weiterwischen. So reicht ein Tuch für acht Räume, und nichts wandert mit. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!"
+  "sprechtext": "Ein graues Putztuch putzt nicht mehr. Es verteilt. Alles, was du vorher aufgenommen hast, Fett, Staub und Keime vom WC, wischst du damit auf den nächsten Tisch. Profis lösen das mit einer einfachen Falttechnik. Du faltest das Tuch einmal, dann noch einmal. Dadurch liegen vier Lagen übereinander. Jede Lage hat eine Vorderseite und eine Rückseite, das ergibt acht saubere Flächen aus einem einzigen Tuch. Für jeden Bereich nimmst du eine frische Fläche, nie zweimal dieselbe. Sobald eine Fläche grau ist, klappst du um, statt weiterzuwischen. So reicht ein Tuch für acht Räume, und nichts wandert von einem Raum in den nächsten. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!"
  },
  "medien": [
   {

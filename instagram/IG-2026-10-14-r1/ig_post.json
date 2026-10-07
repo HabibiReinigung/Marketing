@@ -5,36 +5,39 @@
  "format": "reel",
  "thema": "Schreibtisch schmutziger als die Toilette",
  "saeule": "mythos",
- "caption": "Dein Schreibtisch hat rund 400 mal mehr Bakterien als eine Toilettenbrille.\n\nDer Grund ist simpel: die Toilette wird jeden Tag geputzt, der Schreibtisch nie.\nDasselbe gilt für den Lichtschalter, die Türklinke und die Abtropfschale der Kaffeemaschine.\nViele Hände, nie ein Tuch.\n\nEinmal am Tag feucht drüber, zehn Sekunden pro Raum.\n\nQuelle: Studie der University of Arizona, Charles Gerba\n\n#chur #graubünden #büroreinigung #reinigungchur #unterhaltsreinigung #praxisreinigung #habibireinigung",
+ "caption": "Auf deinem Schreibtisch sitzen rund 400 mal mehr Bakterien als auf einer Toilettenbrille.\n\nDer Grund ist nicht Ekel, sondern Gewohnheit: die Toilette putzt jemand jeden Tag, den Schreibtisch putzt niemand, weil er sauber aussieht.\n\nGenau so läuft es bei drei weiteren Stellen:\nDer Lichtschalter, den jeder mehrmals am Tag drückt.\nDie Türklinke, das Erste, was eine fremde Hand bei euch berührt.\nDie Abtropfschale unter der Kaffeemaschine, dauernd feucht und warm.\n\nEin feuchtes Tuch, einmal am Tag, zehn Sekunden pro Raum.\n\nQuelle: Studie der University of Arizona, Charles Gerba\n\n#chur #graubünden #büroreinigung #reinigungchur #unterhaltsreinigung #praxisreinigung #habibireinigung",
  "spec": {
   "szenen": [
    {
-    "text": "Dein Schreibtisch hat mehr Bakterien als eine Toilettenbrille."
+    "text": "Auf deinem Schreibtisch sitzen mehr Bakterien als auf einer Toilettenbrille."
    },
    {
-    "text": "Vierhundert mal mehr. Gemessen von der Uni Arizona."
+    "text": "Rund vierhundert mal mehr. Das hat die Universität von Arizona in echten Büros gemessen."
    },
    {
-    "text": "Der Grund ist simpel: Die Toilette wird jeden Tag geputzt. Der Schreibtisch nie."
+    "text": "Der Grund ist nicht Ekel, sondern Gewohnheit. Die Toilette putzt jemand jeden Tag. Den Schreibtisch putzt niemand, weil er sauber aussieht."
    },
    {
-    "text": "Genauso diese drei: der Lichtschalter."
+    "text": "Genau so läuft es bei drei weiteren Stellen."
    },
    {
-    "text": "Die Türklinke."
+    "text": "Erstens, der Lichtschalter. Jeder im Büro drückt ihn, mehrmals am Tag, und niemand wischt ihn ab."
    },
    {
-    "text": "Die Abtropfschale der Kaffeemaschine."
+    "text": "Zweitens, die Türklinke. Sie ist das Erste, was eine fremde Hand bei euch berührt."
    },
    {
-    "text": "Viele Hände, nie ein Tuch. Einmal am Tag feucht drüber, zehn Sekunden pro Raum."
+    "text": "Drittens, die Abtropfschale unter der Kaffeemaschine. Sie steht dauernd feucht und warm, und genau das mögen Bakterien."
+   },
+   {
+    "text": "Du brauchst dafür kein Spezialmittel. Ein feuchtes Tuch, einmal am Tag, zehn Sekunden pro Raum."
    }
   ],
   "schluss": {
    "text": "Richtpreis für euer Büro in 1 Minute",
    "knopf": "habibireinigung.ch"
   },
-  "sprechtext": "Dein Schreibtisch hat mehr Bakterien als eine Toilettenbrille. Vierhundert mal mehr. Gemessen von der Uni Arizona. Der Grund ist simpel: Die Toilette wird jeden Tag geputzt. Der Schreibtisch nie. Genauso diese drei: der Lichtschalter. Die Türklinke. Die Abtropfschale der Kaffeemaschine. Viele Hände, nie ein Tuch. Einmal am Tag feucht drüber, zehn Sekunden pro Raum. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!"
+  "sprechtext": "Auf deinem Schreibtisch sitzen mehr Bakterien als auf einer Toilettenbrille. Rund vierhundert mal mehr. Das hat die Universität von Arizona in echten Büros gemessen. Der Grund ist nicht Ekel, sondern Gewohnheit. Die Toilette putzt jemand jeden Tag. Den Schreibtisch putzt niemand, weil er sauber aussieht. Genau so läuft es bei drei weiteren Stellen. Erstens, der Lichtschalter. Jeder im Büro drückt ihn, mehrmals am Tag, und niemand wischt ihn ab. Zweitens, die Türklinke. Sie ist das Erste, was eine fremde Hand bei euch berührt. Drittens, die Abtropfschale unter der Kaffeemaschine. Sie steht dauernd feucht und warm, und genau das mögen Bakterien. Du brauchst dafür kein Spezialmittel. Ein feuchtes Tuch, einmal am Tag, zehn Sekunden pro Raum. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!"
  },
  "medien": [
   {

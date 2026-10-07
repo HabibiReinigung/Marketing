@@ -104,19 +104,24 @@ Pausen kürzen, Tempo 1.08, dann die Kette:
 ### 4.5 Lizenz und Credits
 
 - Videos entstehen **nur, solange ein bezahltes ElevenLabs-Abo aktiv ist**. Der Gratisplan (10'000 Credits) enthält keine kommerzielle Lizenz, und ein Firmen-Reel ist kommerzielle Nutzung. Läuft das Abo aus: keine Stimme erzeugen, Mortaza melden.
-- Verbrauch: etwa 1 Credit pro Zeichen Sprechtext. Ein Reel von 15 s kostet rund 270, eines von 24 s rund 450 Credits. Mit 30'000 Credits im Monat sind rund 60 Reels möglich, also reichlich für 4 pro Woche.
+- Verbrauch: etwa 1 Credit pro Zeichen Sprechtext. Ein Reel kostet je nach Textlänge rund 300 bis 600 Credits. Mit 30'000 Credits im Monat sind rund 60 Reels möglich, also reichlich für 4 pro Woche.
 - Credits sind aufgebraucht oder ein Aufruf schlägt fehl: abbrechen und melden, nie blind wiederholen.
 
 ---
 
 ## 5. Der Sprechtext
 
-### 5.1 Länge und Aufbau
+### 5.1 Länge
 
-- **12 bis 25 Sekunden**, 30 bis 60 Wörter. Kürzer als 12 s wirkt dünn, länger als 25 s verliert Zuschauer. Nie über 60 s.
-- **Satz 1: Hook.** Höchstens 7 Wörter.
-- **Mitte: 2 bis 4 Sätze.** Je ein Gedanke, je ein Hauptsatz. Keine Nebensatzketten, kein «welches», «wobei», «sodass».
-- **Schluss: immer die Marke und der Rechner.** Wortlaut: «Habibi Reinigung! Richtpreis in EINER Minute, auf habibireinigung Punkt C-H!» Varianten sind erlaubt, aber «habibireinigung Punkt C-H» steht genau so da.
+**Es gibt keine vorgeschriebene Länge.** Ein Reel ist so lang, wie es braucht, um seinen Zweck
+zu erfüllen: einen Fakt zu setzen, ihn zu erklären und eine Handlung mitzugeben. Zu kurz ist es,
+wenn eine Erklärung fehlt. Zu lang ist es, wenn ein Satz nichts Neues bringt.
+
+- **Satz 1: Hook.** Kurz und ohne Anlauf.
+- **Mitte:** so viele Sätze wie die Erklärung braucht. Lieber einen Satz mehr als eine Abkürzung,
+  die nur versteht, wer das Thema schon kennt.
+- **Schluss: immer die Marke und der Rechner.** Wortlaut: «Habibi Reinigung! Richtpreis in EINER
+  Minute, auf habibi reinigung punkt c h!»
 - Ansprache: **du und ihr** (Büros: ihr). Nie Sie. Nie «man».
 
 ### 5.2 Hook-Muster (eines auswählen)
@@ -192,7 +197,7 @@ Reicht keine Szene, eine neue in `szenen.py` nach demselben Muster bauen (HTML, 
 
 ### 6.4 Schnitt und Timing
 
-- **4 bis 7 Szenen** pro Video.
+- So viele Szenen, wie der Text Abschnitte hat.
 - Jeder Szenenwechsel liegt **auf einer Phrasengrenze** der Stimme, und zwar 0.05 bis 0.10 s **davor**. So wirkt der Schnitt getrieben, nicht hinterher.
 - Einblendungen sitzen auf dem betonten Wort, nicht danach.
 - Einfahrten kurz und hart: 0.16 bis 0.4 s, `back.out` oder `power4.in`. Nichts blendet langsam ein.
@@ -215,7 +220,7 @@ Reicht keine Szene, eine neue in `szenen.py` nach demselben Muster bauen (HTML, 
 | | |
 | --- | --- |
 | Auflösung | 1080 x 1920 (9:16), 30 fps |
-| Länge | 12 bis 25 s (Grenze 3 bis 60 s) |
+| Länge | keine Vorgabe, so lang wie der Inhalt braucht |
 | Video | H.264, High Profile, yuv420p, crf 20, faststart |
 | Ton | AAC 192 kbit/s, 48 kHz |
 | Dateigrösse | **höchstens 19.5 MB** (die Auslieferung über jsDelivr bricht bei 20 MB ab) |
@@ -265,7 +270,7 @@ Höchstens 2200 Zeichen, höchstens 15 Hashtags, höchstens 2 Emojis. Keine Link
 - [ ] Thema in den letzten 8 Wochen nicht verwendet
 
 **Technik**
-- [ ] 1080 x 1920, 30 fps, 12 bis 25 s, unter 19.5 MB, Tonspur vorhanden
+- [ ] 1080 x 1920, 30 fps, unter 19.5 MB, Tonspur vorhanden
 - [ ] Titelbild zeigt vollständigen Text
 
 Scheitert ein Punkt: beheben und neu rendern, höchstens 3 Runden. Bleibt es schlecht: **nicht hochladen**, Mortaza melden, was nicht geht.

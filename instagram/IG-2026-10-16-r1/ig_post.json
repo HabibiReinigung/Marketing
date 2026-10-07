@@ -5,30 +5,33 @@
  "format": "reel",
  "thema": "Nur vier neue Büros pro Monat, und warum",
  "saeule": "transparenz",
- "caption": "Wir nehmen höchstens vier neue Büros pro Monat an. Das ist kein Versehen.\n\nFür jedes Objekt ist ein festes Team eingeteilt.\nDie kennen euren Schlüssel, eure Räume und eure Regeln.\nWer schneller wächst, schickt jede Woche jemand Neues. Mit eurem Schlüssel.\n\nBei Ferien kommt bei uns jemand, der das Objekt schon kennt.\n\n#chur #graubünden #büroreinigung #reinigungchur #unterhaltsreinigung #praxisreinigung #habibireinigung",
+ "caption": "Wir nehmen höchstens vier neue Büros pro Monat an, obwohl wir mehr Anfragen bekommen.\n\nDas ist kein Versehen, sondern eine Entscheidung. Und sie hat mit eurem Schlüssel zu tun.\n\nFür jedes Objekt teilen wir ein festes Team ein. Dieselben Leute, jede Woche. Sie wissen, wo der Schlüssel hängt, welche Tür zu bleibt und welche Unterlagen niemand anfasst.\n\nEine Firma, die viel schneller wächst, kann das nicht halten. Dort steht jede Woche jemand anderes in euren Räumen, abends, wenn längst niemand mehr da ist.\n\nBei uns kommt auch in den Ferien jemand, der euer Objekt schon kennt.\n\n#chur #graubünden #büroreinigung #reinigungchur #unterhaltsreinigung #praxisreinigung #habibireinigung",
  "spec": {
   "szenen": [
    {
-    "text": "Wir nehmen höchstens vier neue Büros pro Monat an."
+    "text": "Wir nehmen höchstens vier neue Büros pro Monat an. Obwohl wir mehr Anfragen bekommen."
    },
    {
-    "text": "Das ist kein Versehen. Das ist Absicht."
+    "text": "Das ist kein Versehen, sondern eine Entscheidung. Und sie hat mit eurem Schlüssel zu tun."
    },
    {
-    "text": "Für jedes Objekt ist ein festes Team eingeteilt. Die kennen euren Schlüssel, eure Räume, eure Regeln."
+    "text": "Für jedes Objekt teilen wir ein festes Team ein. Dieselben Leute, jede Woche."
    },
    {
-    "text": "Wer schneller wächst, schickt jede Woche jemand Neues. Mit eurem Schlüssel."
+    "text": "Die wissen, wo der Schlüssel hängt, welche Tür zu bleibt und welche Unterlagen niemand anfasst."
    },
    {
-    "text": "Bei Ferien kommt bei uns jemand, der das Objekt schon kennt."
+    "text": "Eine Firma, die viel schneller wächst, kann das nicht halten. Dort steht jede Woche jemand anderes in euren Räumen, abends, wenn längst niemand mehr da ist."
+   },
+   {
+    "text": "Wenn bei uns jemand in den Ferien ist, kommt kein Fremder. Es kommt jemand, der euer Objekt schon kennt."
    }
   ],
   "schluss": {
    "text": "Richtpreis für euer Büro in 1 Minute",
    "knopf": "habibireinigung.ch"
   },
-  "sprechtext": "Wir nehmen höchstens vier neue Büros pro Monat an. Das ist kein Versehen. Das ist Absicht. Für jedes Objekt ist ein festes Team eingeteilt. Die kennen euren Schlüssel, eure Räume, eure Regeln. Wer schneller wächst, schickt jede Woche jemand Neues. Mit eurem Schlüssel. Bei Ferien kommt bei uns jemand, der das Objekt schon kennt. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!"
+  "sprechtext": "Wir nehmen höchstens vier neue Büros pro Monat an. Obwohl wir mehr Anfragen bekommen. Das ist kein Versehen, sondern eine Entscheidung. Und sie hat mit eurem Schlüssel zu tun. Für jedes Objekt teilen wir ein festes Team ein. Dieselben Leute, jede Woche. Die wissen, wo der Schlüssel hängt, welche Tür zu bleibt und welche Unterlagen niemand anfasst. Eine Firma, die viel schneller wächst, kann das nicht halten. Dort steht jede Woche jemand anderes in euren Räumen, abends, wenn längst niemand mehr da ist. Wenn bei uns jemand in den Ferien ist, kommt kein Fremder. Es kommt jemand, der euer Objekt schon kennt. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!"
  },
  "medien": [
   {
