@@ -3,35 +3,38 @@
  "datum": "2026-10-14",
  "zeit": "18:00",
  "format": "reel",
- "thema": "Drei Stellen, die niemand putzt",
- "saeule": "checkliste",
- "caption": "Drei Stellen im Büro putzt fast niemand. Und genau die fasst ihr täglich an.\n\nDen Lichtschalter.\nDie Türklinke.\nDie Abtropfschale der Kaffeemaschine.\n\nEinmal am Tag feucht abwischen, zehn Sekunden pro Raum.\n\nSpeichern für später\n\n#chur #graubünden #büroreinigung #reinigungchur #unterhaltsreinigung #praxisreinigung #habibireinigung",
+ "thema": "Schreibtisch schmutziger als die Toilette",
+ "saeule": "mythos",
+ "caption": "Dein Schreibtisch hat rund 400 mal mehr Bakterien als eine Toilettenbrille.\n\nDer Grund ist simpel: die Toilette wird jeden Tag geputzt, der Schreibtisch nie.\nDasselbe gilt für den Lichtschalter, die Türklinke und die Abtropfschale der Kaffeemaschine.\nViele Hände, nie ein Tuch.\n\nEinmal am Tag feucht drüber, zehn Sekunden pro Raum.\n\nQuelle: Studie der University of Arizona, Charles Gerba\n\n#chur #graubünden #büroreinigung #reinigungchur #unterhaltsreinigung #praxisreinigung #habibireinigung",
  "spec": {
   "szenen": [
    {
-    "text": "Drei Stellen im Büro putzt fast niemand."
+    "text": "Dein Schreibtisch hat mehr Bakterien als eine Toilettenbrille."
    },
    {
-    "text": "Und genau die fasst ihr am häufigsten an!"
+    "text": "Vierhundert mal mehr. Gemessen von der Uni Arizona."
    },
    {
-    "text": "Nummer eins: der Lichtschalter."
+    "text": "Der Grund ist simpel: Die Toilette wird jeden Tag geputzt. Der Schreibtisch nie."
    },
    {
-    "text": "Nummer zwei: die Türklinke."
+    "text": "Genauso diese drei: der Lichtschalter."
    },
    {
-    "text": "Nummer drei: die Abtropfschale der Kaffeemaschine!"
+    "text": "Die Türklinke."
    },
    {
-    "text": "Einmal am Tag feucht abwischen, zehn Sekunden pro Raum."
+    "text": "Die Abtropfschale der Kaffeemaschine."
+   },
+   {
+    "text": "Viele Hände, nie ein Tuch. Einmal am Tag feucht drüber, zehn Sekunden pro Raum."
    }
   ],
   "schluss": {
    "text": "Richtpreis für euer Büro in 1 Minute",
    "knopf": "habibireinigung.ch"
   },
-  "sprechtext": "Drei Stellen im Büro putzt fast niemand. Und genau die fasst ihr am häufigsten an! Nummer eins: der Lichtschalter. Nummer zwei: die Türklinke. Nummer drei: die Abtropfschale der Kaffeemaschine! Einmal am Tag feucht abwischen, zehn Sekunden pro Raum. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!"
+  "sprechtext": "Dein Schreibtisch hat mehr Bakterien als eine Toilettenbrille. Vierhundert mal mehr. Gemessen von der Uni Arizona. Der Grund ist simpel: Die Toilette wird jeden Tag geputzt. Der Schreibtisch nie. Genauso diese drei: der Lichtschalter. Die Türklinke. Die Abtropfschale der Kaffeemaschine. Viele Hände, nie ein Tuch. Einmal am Tag feucht drüber, zehn Sekunden pro Raum. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!"
  },
  "medien": [
   {

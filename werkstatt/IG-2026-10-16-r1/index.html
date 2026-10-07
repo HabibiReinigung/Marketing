@@ -2,7 +2,7 @@
 <html lang="de" data-resolution="portrait">
 <head>
 <meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
-<title>Zonen ohne Zuschlag</title>
+<title>Wer hat euren Schlüssel</title>
 <script src="assets/gsap.min.js"></script>
 <style>
 @font-face { font-family: "Poppins"; font-weight: 900; src: url("assets/fonts/Poppins-Black.ttf") format("truetype"); }
@@ -28,30 +28,22 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:var(--navy
 .grain { position:absolute; inset:-50%; background:url("assets/grain.png"); opacity:.07; mix-blend-mode:overlay; pointer-events:none; }
 .big { font-weight:900; letter-spacing:-0.02em; line-height:1.02; }
 .spark { position:absolute; width:90px; height:90px; display:block; }
-#s2-card { position:absolute; left:120px; right:120px; top:640px; height:330px; background:#fff; border-radius:40px;
-  box-shadow:0 30px 60px rgba(21,42,67,.18); display:flex; align-items:center; justify-content:center; }
-#s2-ct { font-weight:700; font-size:74px; color:#8a97a6; letter-spacing:-0.02em; }
-#s2-st { position:absolute; left:60px; right:60px; top:150px; height:22px; background:var(--rot); border-radius:11px; transform-origin:left center; display:block; transform:rotate(-4deg); }
-#s2-u { position:absolute; left:0; right:0; top:1060px; text-align:center; font-size:130px; color:var(--steel); }
-#s2-q1, #s2-q2 { position:absolute; font-weight:900; font-size:150px; color:rgba(44,102,147,.25); display:block; }#s3-grid { position:absolute; inset:0; background-image:linear-gradient(rgba(159,211,238,.08) 2px, transparent 2px), linear-gradient(90deg, rgba(159,211,238,.08) 2px, transparent 2px); background-size:90px 90px; }
-#s3-ti { position:absolute; left:60px; right:60px; top:290px; text-align:center; color:#fff; }
-#s3-ti .a { font-weight:900; font-size:112px; letter-spacing:-0.02em; line-height:1.22; display:block; }
-#s3-ti .serif { font-size:120px; color:var(--blue); display:block; line-height:1.18; margin-top:4px; }
-#s3-ring { position:absolute; left:190px; top:760px; width:700px; height:700px; border-radius:50%; border:8px dashed var(--blue); background:rgba(159,211,238,.10); display:block; }
-#s3-pin { position:absolute; left:500px; top:1050px; width:80px; height:80px; border-radius:50% 50% 50% 0; transform:rotate(-45deg); background:#fff; display:block; box-shadow:0 10px 30px rgba(0,0,0,.3); }
-#s3-ort { position:absolute; left:0; right:0; top:1150px; text-align:center; font-weight:700; font-size:54px; color:#fff; }
-#s3-km { position:absolute; left:820px; top:800px; font-weight:900; font-size:62px; color:var(--blue); display:block; }
-#s3-abz { position:absolute; left:200px; right:200px; top:1500px; height:130px; border-radius:70px; background:var(--blue); color:var(--navy);
-  font-weight:900; font-size:58px; display:flex; align-items:center; justify-content:center; }#s4-glow { position:absolute; left:40px; top:760px; width:1000px; height:1000px; border-radius:50%;
+#s3-glow { position:absolute; left:40px; top:760px; width:1000px; height:1000px; border-radius:50%;
   background:radial-gradient(circle, rgba(255,255,255,.75) 0%, rgba(255,255,255,.25) 40%, rgba(255,255,255,0) 68%); display:block; }
-#s4-card { position:absolute; left:90px; right:90px; top:330px; height:470px; background:#fff; border-radius:48px; box-shadow:0 30px 60px rgba(21,42,67,.25); display:block; }
-#s4-tail { position:absolute; left:520px; bottom:-46px; width:0; height:0; border-left:40px solid transparent; border-right:40px solid transparent; border-top:50px solid #fff; }
-.s4-txt { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 60px; color:var(--navy); }
-.s4-txt .a { font-weight:900; font-size:104px; letter-spacing:-0.02em; line-height:1.04; }
-.s4-txt .b { font-weight:700; font-size:70px; line-height:1.12; letter-spacing:-0.01em; }
-.s4-txt .serif { font-size:96px; color:var(--steel); }
-#s4-m { position:absolute; left:218px; top:830px; width:643px; height:760px; display:block; transform-origin:50% 100%; }
-#s4-m img { width:100%; height:100%; display:block; filter:drop-shadow(0 34px 40px rgba(21,42,67,.35)); }#s5-mark { width:900px; display:block; margin-top:-380px; }
+#s3-card { position:absolute; left:90px; right:90px; top:330px; height:470px; background:#fff; border-radius:48px; box-shadow:0 30px 60px rgba(21,42,67,.25); display:block; }
+#s3-tail { position:absolute; left:520px; bottom:-46px; width:0; height:0; border-left:40px solid transparent; border-right:40px solid transparent; border-top:50px solid #fff; }
+.s3-txt { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 60px; color:var(--navy); }
+.s3-txt .a { font-weight:900; font-size:104px; letter-spacing:-0.02em; line-height:1.04; }
+.s3-txt .b { font-weight:700; font-size:70px; line-height:1.12; letter-spacing:-0.01em; }
+.s3-txt .serif { font-size:96px; color:var(--steel); }
+#s3-m { position:absolute; left:218px; top:830px; width:643px; height:760px; display:block; transform-origin:50% 100%; }
+#s3-m img { width:100%; height:100%; display:block; filter:drop-shadow(0 34px 40px rgba(21,42,67,.35)); }#s4-w { position:absolute; left:70px; right:70px; top:470px; text-align:center; color:var(--navy); }
+#s4-w .big { display:block; line-height:1.12; }
+#s4-w .serif { display:block; color:var(--steel); line-height:1.15; margin-top:6px; }
+#s4-st { position:absolute; left:150px; right:150px; top:1180px; height:230px; border:16px solid var(--rot); border-radius:34px;
+  display:flex; align-items:center; justify-content:center; font-weight:900; font-size:150px; letter-spacing:.04em; color:var(--rot);
+  background:rgba(255,255,255,.55); transform:rotate(-8deg); }
+#s4-u { position:absolute; left:60px; right:60px; top:1530px; text-align:center; font-size:96px; color:var(--navy); line-height:1.1; }#s5-mark { width:900px; display:block; margin-top:-380px; }
 #s5-line { color:#fff; font-weight:700; font-size:58px; line-height:1.2; margin-top:90px; }
 #s5-line .serif { color:var(--blue); font-size:78px; }
 #s5-btn { margin-top:60px; background:var(--blue); color:var(--navy); font-weight:900; font-size:54px; padding:26px 64px; border-radius:80px; display:block; }
@@ -60,32 +52,32 @@ html, body { width:1080px; height:1920px; overflow:hidden; background:var(--navy
 #s5-m img { width:100%; height:100%; display:block; }</style>
 </head>
 <body>
-<div id="root" data-composition-id="main" data-start="0" data-duration="23.009" data-width="1080" data-height="1920">
-<section id="s1" class="clip" data-start="0.0" data-duration="2.329" data-track-index="0" style="background:var(--navy)">
-<div id="s1-bl" class="fill" data-layout-allow-overflow></div><div id="s1-lab" class="label top-label" style="color:#fff">Chur und Umgebung</div><div id="s1-w" class="center" style="padding:0 60px" data-layout-allow-overflow><div id="s1-z0" class="blk big" style="font-size:98px;color:#fff;">Euer Büro liegt</div><div id="s1-z1" class="blk serif" style="font-size:126px;color:#fff;line-height:1.05;margin-top:6px;">ausserhalb von Chur?</div></div>
+<div id="root" data-composition-id="main" data-start="0" data-duration="27.574" data-width="1080" data-height="1920">
+<section id="s1" class="clip" data-start="0.0" data-duration="3.014" data-track-index="0" style="background:var(--navy)">
+<div id="s1-bl" class="fill" data-layout-allow-overflow></div><div id="s1-lab" class="label top-label" style="color:#fff">So arbeiten wir</div><div id="s1-w" class="center" style="padding:0 60px" data-layout-allow-overflow><div id="s1-z0" class="blk big" style="font-size:92px;color:#fff;">Wir nehmen nur</div><div id="s1-z1" class="blk serif" style="font-size:128px;color:#fff;line-height:1.05;margin-top:6px;">vier neue Büros</div><div id="s1-z2" class="blk big" style="font-size:86px;color:#fff;">pro Monat an.</div></div>
 <div class="grain"></div>
 </section>
-<section id="s2" class="clip" data-start="2.329" data-duration="2.434" data-track-index="0" style="background:var(--ice)">
-<div id="s2-lab" class="label top-label" style="color:var(--steel)">Kennt man ja</div>
-<div id="s2-q1" style="left:120px;top:430px">?</div><div id="s2-q2" style="left:860px;top:1180px">?</div>
-<div id="s2-card" data-layout-allow-overflow><div id="s2-ct">Anfahrts&shy;pauschale</div><div id="s2-st"></div></div>
-<div id="s2-u" class="serif">Bei uns nicht.</div>
+<section id="s2" class="clip" data-start="3.014" data-duration="2.758" data-track-index="0" style="background:var(--navy)">
+<div id="s2-w" class="center" data-layout-allow-overflow>
+<div id="s2-k" class="blk big" style="font-size:64px;color:var(--blue);margin-bottom:10px">Kein Versehen.</div>
+<div id="s2-b" class="blk big" style="font-size:221px;color:#fff;letter-spacing:-0.05em;line-height:1">ABSICHT</div>
+<div id="s2-bar" style="width:600px;height:26px;background:var(--blue);border-radius:13px;margin-top:28px;transform-origin:left center;display:block"></div>
+
+</div>
 <div class="grain"></div>
 </section>
-<section id="s3" class="clip" data-start="4.763" data-duration="7.685" data-track-index="0" style="background:var(--navy)">
-<div id="s3-grid"></div><div id="s3-ti">Bis <span class="serif">5 km</span> ab Chur</div>
-<div id="s3-ring" data-layout-allow-overflow></div><div id="s3-pin"></div><div id="s3-ort">Chur</div>
-<div id="s3-km" data-layout-allow-overflow>5 km</div><div id="s3-abz" data-layout-allow-overflow>ohne Zuschlag</div>
+<section id="s3" class="clip" data-start="5.772" data-duration="6.009" data-track-index="0" style="background:var(--blue)">
+<div id="s3-glow"></div>
+<div class="label top-label" id="s3-lab" style="color:var(--navy)">Für euer Objekt</div>
+<div id="s3-card" data-layout-allow-occlusion><div id="s3-tail" data-layout-allow-overflow></div><div id="s3-t0" class="s3-txt"><div class="a">Immer</div><div class="a"><span class="serif">dasselbe Team.</span></div></div><div id="s3-t1" class="s3-txt"><div class="b">Kennt euren Schlüssel,</div><div class="b"><span class="serif">eure Räume, eure Regeln.</span></div></div></div>
+<div id="s3-m" data-layout-allow-overflow><img src="assets/maskottchen.png" alt="Habibi Maskottchen" /></div>
 <div class="grain"></div>
 </section>
-<section id="s4" class="clip" data-start="12.448" data-duration="3.898" data-track-index="0" style="background:var(--blue)">
-<div id="s4-glow"></div>
-<div class="label top-label" id="s4-lab" style="color:var(--navy)">So arbeiten wir</div>
-<div id="s4-card" data-layout-allow-occlusion><div id="s4-tail" data-layout-allow-overflow></div><div id="s4-t0" class="s4-txt"><div class="a">Fester Monatspreis.</div><div class="a"><span class="serif">Keine Mindestlaufzeit.</span></div></div></div>
-<div id="s4-m" data-layout-allow-overflow><img src="assets/maskottchen.png" alt="Habibi Maskottchen" /></div>
+<section id="s4" class="clip" data-start="11.781" data-duration="10.01" data-track-index="0" style="background:var(--ice)">
+<div id="s4-lab" class="label top-label" style="color:var(--steel)">Wer schneller wächst</div><div id="s4-w" data-layout-allow-overflow><div id="s4-z0" class="big" style="font-size:112px">Jede Woche</div><div id="s4-z1" class="big" style="font-size:104px">ein neues Gesicht.</div></div><div id="s4-st" data-layout-allow-overflow>NIE</div><div id="s4-u" class="serif">Bei Ferien kommt jemand, der es kennt.</div>
 <div class="grain"></div>
 </section>
-<section id="s5" class="clip" data-start="16.346" data-duration="6.663" data-track-index="0" style="background:var(--navy-deep)">
+<section id="s5" class="clip" data-start="21.791" data-duration="5.783" data-track-index="0" style="background:var(--navy-deep)">
 <div id="s5-bl" class="fill" data-layout-allow-overflow></div>
 <div class="center"><img id="s5-mark" src="assets/wortmarke.png" alt="Habibi Reinigung" />
 <div id="s5-line" class="blk"><div class="blk">Richtpreis für euer Büro</div><div class="blk serif">in 1 Minute</div></div>
@@ -124,52 +116,54 @@ const tl = gsap.timeline({ paused: true });
 
 // ---- s1
 {
-makeBubbles(document.getElementById("s1-bl"), 14, 60, 210).forEach((b, i) => tl.fromTo(b.el, { y: 0, x: 0, opacity: 0 }, { y: -b.drift, x: (i % 2 ? 1 : -1) * b.sway, opacity: .95, duration: 2.329, ease: "none" }, 0.0));
+makeBubbles(document.getElementById("s1-bl"), 14, 60, 210).forEach((b, i) => tl.fromTo(b.el, { y: 0, x: 0, opacity: 0 }, { y: -b.drift, x: (i % 2 ? 1 : -1) * b.sway, opacity: .95, duration: 3.014, ease: "none" }, 0.0));
 tl.fromTo("#s1-lab", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 0.02);
 tl.fromTo("#s1-z0", { scale: 2.2, opacity: 0, filter: "blur(18px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 0.15);
-tl.fromTo("#s1-z1", { y: 80, opacity: 0, rotation: -6 }, { y: 0, opacity: 1, rotation: 0, duration: .4, ease: "back.out(2.6)" }, 0.7);
-tl.to("#s1-w", { scale: 1.06, duration: 1.629, ease: "none" }, 0.7);
+tl.fromTo("#s1-z1", { y: 80, opacity: 0, rotation: -6 }, { y: 0, opacity: 1, rotation: 0, duration: .4, ease: "back.out(2.6)" }, 0.65);
+tl.fromTo("#s1-z2", { scale: 2.2, opacity: 0, filter: "blur(18px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 1.15);
+tl.to("#s1-w", { scale: 1.06, duration: 1.864, ease: "none" }, 1.15);
 }
 // ---- s2
 {
-tl.fromTo("#s2-lab", { opacity: 0 }, { opacity: 1, duration: .3 }, 2.329);
-tl.fromTo("#s2-card", { y: -900, rotation: -8 }, { y: 0, rotation: 2, duration: .55, ease: "bounce.out" }, 2.509);
-tl.fromTo("#s2-q1", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: .4, ease: "back.out(3)" }, 2.809);
-tl.fromTo("#s2-q2", { scale: 0, rotation: 30 }, { scale: 1, rotation: 0, duration: .4, ease: "back.out(3)" }, 2.959);
-tl.fromTo("#s2-st", { scaleX: 0 }, { scaleX: 1, duration: .32, ease: "power2.inOut" }, 3.359);
-tl.fromTo("#s2-u", { y: 60, opacity: 0, rotation: 4 }, { y: 0, opacity: 1, rotation: -2, duration: .45, ease: "back.out(2.4)" }, 3.709);
-tl.to("#s2-card", { rotation: -6, y: 40, duration: 1.054, ease: "power1.in" }, 3.709);
+tl.fromTo("#s2-k", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: .3, ease: "power3.out" }, 3.244);
+tl.fromTo("#s2-b", { scale: 3.2, opacity: 0 }, { scale: 1, opacity: 1, duration: .16, ease: "power4.in" }, 3.844);
+tl.fromTo("#s2-w", { x: 0, y: 0 }, { keyframes: [{ x: -26, y: 14, duration: .04 }, { x: 22, y: -18, duration: .04 }, { x: -14, y: 10, duration: .04 }, { x: 8, y: -6, duration: .04 }, { x: 0, y: 0, duration: .05 }] }, 4.004);
+tl.fromTo("#s2-bar", { scaleX: 0 }, { scaleX: 1, duration: .35, ease: "expo.out" }, 4.094);
+tl.to("#s2-w", { scale: 1.08, duration: 1.628, ease: "none" }, 4.144);
 }
 // ---- s3
 {
-tl.fromTo("#s3-ti", { y: -60, opacity: 0 }, { y: 0, opacity: 1, duration: .35, ease: "back.out(2)" }, 4.783);
-tl.fromTo("#s3-pin", { y: -400, opacity: 0 }, { y: 0, opacity: 1, duration: .45, ease: "bounce.out" }, 4.863);
-tl.fromTo("#s3-ort", { opacity: 0 }, { opacity: 1, duration: .3 }, 5.213);
-tl.fromTo("#s3-ring", { scale: 0, rotation: -90 }, { scale: 1, rotation: 0, duration: .8, ease: "expo.out" }, 5.063);
-tl.fromTo("#s3-km", { scale: 0 }, { scale: 1, duration: .35, ease: "back.out(3)" }, 5.563);
-tl.to("#s3-ring", { rotation: 25, duration: 6.585, ease: "none" }, 5.863);
-tl.fromTo("#s3-abz", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: .38, ease: "back.out(2.6)" }, 5.963);
+tl.fromTo("#s3-glow", { scale: .8, opacity: 0 }, { scale: 1, opacity: 1, duration: .7, ease: "power2.out" }, 5.772);
+tl.fromTo("#s3-lab", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 5.822);
+tl.fromTo("#s3-m", { y: 1100, scaleY: 1.15, scaleX: .9 }, { y: 0, scaleY: 1, scaleX: 1, duration: .5, ease: "back.out(1.7)" }, 5.772);
+tl.to("#s3-m", { keyframes: [{ scaleY: .92, scaleX: 1.06, duration: .09 }, { scaleY: 1.04, scaleX: .97, duration: .12 }, { scaleY: 1, scaleX: 1, duration: .12 }] }, 6.272);
+tl.fromTo("#s3-card", { scale: 0, transformOrigin: "50% 100%" }, { scale: 1, duration: .35, ease: "back.out(2.2)" }, 5.822);
+tl.to("#s3-m", { keyframes: [{ rotation: -4, duration: 0.929, ease: "sine.inOut" }, { rotation: 3, duration: 1.135, ease: "sine.inOut" }, { rotation: -3, duration: 1.135, ease: "sine.inOut" }, { rotation: 2, duration: 1.032, ease: "sine.inOut" }, { rotation: 0, duration: 0.929, ease: "sine.inOut" }] }, 6.622);
+tl.fromTo("#s3-t0", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .25, ease: "power3.out" }, 6.022);
+tl.to("#s3-t0", { opacity: 0, y: -30, duration: .18, ease: "power2.in" }, 7.692);
+tl.fromTo("#s3-t1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .25, ease: "power3.out" }, 7.872);
+tl.to("#s3-m", { y: -30, duration: .22, yoyo: true, repeat: 1, ease: "power2.out" }, 7.872);
 }
 // ---- s4
 {
-tl.fromTo("#s4-glow", { scale: .8, opacity: 0 }, { scale: 1, opacity: 1, duration: .7, ease: "power2.out" }, 12.448);
-tl.fromTo("#s4-lab", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: .3, ease: "power3.out" }, 12.498);
-tl.fromTo("#s4-m", { y: 1100, scaleY: 1.15, scaleX: .9 }, { y: 0, scaleY: 1, scaleX: 1, duration: .5, ease: "back.out(1.7)" }, 12.448);
-tl.to("#s4-m", { keyframes: [{ scaleY: .92, scaleX: 1.06, duration: .09 }, { scaleY: 1.04, scaleX: .97, duration: .12 }, { scaleY: 1, scaleX: 1, duration: .12 }] }, 12.948);
-tl.fromTo("#s4-card", { scale: 0, transformOrigin: "50% 100%" }, { scale: 1, duration: .35, ease: "back.out(2.2)" }, 12.498);
-tl.to("#s4-m", { keyframes: [{ rotation: -4, duration: 0.549, ease: "sine.inOut" }, { rotation: 3, duration: 0.671, ease: "sine.inOut" }, { rotation: -3, duration: 0.671, ease: "sine.inOut" }, { rotation: 2, duration: 0.61, ease: "sine.inOut" }, { rotation: 0, duration: 0.549, ease: "sine.inOut" }] }, 13.298);
-tl.fromTo("#s4-t0", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .25, ease: "power3.out" }, 12.698);
+tl.fromTo("#s4-lab", { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: .3 }, 11.801);
+tl.fromTo("#s4-z0", { scale: 1.8, opacity: 0, filter: "blur(12px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 11.881);
+tl.fromTo("#s4-z1", { scale: 1.8, opacity: 0, filter: "blur(12px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: .28, ease: "back.out(2.2)" }, 12.331);
+tl.fromTo("#s4-st", { scale: 3, opacity: 0, rotation: -25 }, { scale: 1, opacity: 1, rotation: -8, duration: .2, ease: "power4.in" }, 13.381);
+tl.fromTo("#s4-w", { x: 0, y: 0 }, { keyframes: [{ x: -22, y: 12, duration: .04 }, { x: 18, y: -14, duration: .04 }, { x: -10, y: 8, duration: .04 }, { x: 0, y: 0, duration: .05 }] }, 13.581);
+tl.to("#s4-w", { opacity: .35, duration: .3 }, 13.631);
+tl.fromTo("#s4-u", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: .4, ease: "back.out(2.2)" }, 16.426);
 }
 // ---- s5
 {
-makeBubbles(document.getElementById("s5-bl"), 10, 50, 170).forEach((b, i) => tl.fromTo(b.el, { y: 0, opacity: 0 }, { y: -b.drift * .8, x: (i % 2 ? 1 : -1) * b.sway, opacity: .6, duration: 6.663, ease: "none" }, 16.346));
-tl.fromTo("#s5-mark", { y: -60, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .42, ease: "back.out(1.8)" }, 16.446);
-tl.fromTo("#s5-m", { y: 500 }, { y: 0, duration: .42, ease: "back.out(1.8)" }, 16.796);
-tl.to("#s5-m", { keyframes: [{ rotation: -8, duration: .25 }, { rotation: 6, duration: .25 }, { rotation: -6, duration: .25 }, { rotation: 0, duration: .25 }] }, 17.246);
-tl.fromTo("#s5-line", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: .38, ease: "power3.out" }, 17.246);
-tl.fromTo("#s5-tag", { opacity: 0 }, { opacity: 1, duration: .4 }, 17.746);
-tl.fromTo("#s5-btn", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: .38, ease: "back.out(2.5)" }, 18.546);
-tl.to("#s5-btn", { scale: 1.06, duration: .25, yoyo: true, repeat: 1, ease: "sine.inOut" }, 19.146);
+makeBubbles(document.getElementById("s5-bl"), 10, 50, 170).forEach((b, i) => tl.fromTo(b.el, { y: 0, opacity: 0 }, { y: -b.drift * .8, x: (i % 2 ? 1 : -1) * b.sway, opacity: .6, duration: 5.783, ease: "none" }, 21.791));
+tl.fromTo("#s5-mark", { y: -60, opacity: 0, scale: .9 }, { y: 0, opacity: 1, scale: 1, duration: .42, ease: "back.out(1.8)" }, 21.891);
+tl.fromTo("#s5-m", { y: 500 }, { y: 0, duration: .42, ease: "back.out(1.8)" }, 22.241);
+tl.to("#s5-m", { keyframes: [{ rotation: -8, duration: .25 }, { rotation: 6, duration: .25 }, { rotation: -6, duration: .25 }, { rotation: 0, duration: .25 }] }, 22.691);
+tl.fromTo("#s5-line", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: .38, ease: "power3.out" }, 22.691);
+tl.fromTo("#s5-tag", { opacity: 0 }, { opacity: 1, duration: .4 }, 23.191);
+tl.fromTo("#s5-btn", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: .38, ease: "back.out(2.5)" }, 23.991);
+tl.to("#s5-btn", { scale: 1.06, duration: .25, yoyo: true, repeat: 1, ease: "sine.inOut" }, 24.591);
 }
 window.__timelines["main"] = tl;
 </script>

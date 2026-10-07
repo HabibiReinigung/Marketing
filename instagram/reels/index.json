@@ -53,33 +53,33 @@
       "post_id": "IG-2026-10-14-r1",
       "datum": "2026-10-14",
       "zeit": "18:00",
-      "thema": "Drei Stellen, die niemand putzt",
-      "saeule": "checkliste",
-      "sprechtext": "Drei Stellen im Büro putzt fast niemand. Und genau die fasst ihr am häufigsten an! Nummer eins: der Lichtschalter. Nummer zwei: die Türklinke. Nummer drei: die Abtropfschale der Kaffeemaschine! Einmal am Tag feucht abwischen, zehn Sekunden pro Raum. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!",
+      "thema": "Schreibtisch schmutziger als die Toilette",
+      "saeule": "mythos",
+      "sprechtext": "Dein Schreibtisch hat mehr Bakterien als eine Toilettenbrille. Vierhundert mal mehr. Gemessen von der Uni Arizona. Der Grund ist simpel: Die Toilette wird jeden Tag geputzt. Der Schreibtisch nie. Genauso diese drei: der Lichtschalter. Die Türklinke. Die Abtropfschale der Kaffeemaschine. Viele Hände, nie ein Tuch. Einmal am Tag feucht drüber, zehn Sekunden pro Raum. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!",
       "erstellt_am": "2026-10-07",
-      "version": 1,
+      "version": 2,
       "import_noetig": true
     },
     {
       "post_id": "IG-2026-10-16-r1",
       "datum": "2026-10-16",
       "zeit": "12:00",
-      "thema": "Zonen: bis 5 km ohne Zuschlag",
+      "thema": "Nur vier neue Büros pro Monat, und warum",
       "saeule": "transparenz",
-      "sprechtext": "Euer Büro liegt ausserhalb von Chur? Dann kommt jetzt der Aufschlag. Kennt man ja. Bei uns: bis fünf Kilometer ab Chur kein Zuschlag! Danach fünfzehn Franken pro Einsatz. Weiter draussen fünfunddreissig. Mehr kommt nicht dazu. Fester Monatspreis, keine Mindestlaufzeit. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!",
+      "sprechtext": "Wir nehmen höchstens vier neue Büros pro Monat an. Das ist kein Versehen. Das ist Absicht. Für jedes Objekt ist ein festes Team eingeteilt. Die kennen euren Schlüssel, eure Räume, eure Regeln. Wer schneller wächst, schickt jede Woche jemand Neues. Mit eurem Schlüssel. Bei Ferien kommt bei uns jemand, der das Objekt schon kennt. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!",
       "erstellt_am": "2026-10-07",
-      "version": 1,
+      "version": 2,
       "import_noetig": true
     },
     {
       "post_id": "IG-2026-10-18-r1",
       "datum": "2026-10-18",
       "zeit": "10:00",
-      "thema": "Ein Mikrofasertuch, acht Flächen",
+      "thema": "Das graue Tuch verteilt statt zu putzen",
       "saeule": "tipp",
-      "sprechtext": "Du benutzt nur ein Viertel von deinem Putztuch. Der Rest ist noch sauber, und du spülst trotzdem aus! Zweimal falten gibt vier Lagen. Vorne und hinten sind das acht saubere Flächen! Ist eine Seite grau: umklappen statt auswaschen. Ein Tuch reicht so für acht Räume. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!",
+      "sprechtext": "Mit einem grauen Putztuch machst du es schlimmer. Du nimmst die Keime vom WC mit an den Schreibtisch. Darum falten Profis zweimal: vier Lagen, acht saubere Flächen. Eine Fläche pro Bereich, nie zweimal dieselbe. Ist eine Seite grau: umklappen statt weiterwischen. So reicht ein Tuch für acht Räume, und nichts wandert mit. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!",
       "erstellt_am": "2026-10-07",
-      "version": 1,
+      "version": 2,
       "import_noetig": true
     }
   ]

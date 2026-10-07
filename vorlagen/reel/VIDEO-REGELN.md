@@ -1,6 +1,6 @@
 # Video-Regeln Habibi Reinigung
 
-**Version 1.3, 07.10.2026.** Verbindliche Regeln für jedes Video (Instagram Reel, TikTok, Shorts) von Habibi Reinigung, Mortaza Habibi, Chur.
+**Version 1.4, 07.10.2026.** Verbindliche Regeln für jedes Video (Instagram Reel, TikTok, Shorts) von Habibi Reinigung, Mortaza Habibi, Chur.
 
 **Für Claude:** Diese Datei vor jedem Video vollständig lesen. Sie entscheidet über Inhalt, Hook, Stimme, Emotion, Bild, Ton und Schnitt. Bei Widerspruch gilt: Faktenregister der Marketing-App (Zahlen und Aussagen) zuerst, dann diese Datei, dann `vorlagen/reel/FABRIK.md` (technischer Ablauf), dann die ANLEITUNG der App. Mortaza muss nichts davon im Chat wiederholen. Wenn etwas hier nicht geregelt ist: so entscheiden, wie es die Beispiele in Abschnitt 12 tun.
 
@@ -183,6 +183,7 @@ Hintergrund pro Szene wechseln (Navy, Hellblau, Eis), damit ein Schnitt sichtbar
 | `zone` | 5-km-Ring um Chur, Pin fällt, Abzeichen «ohne Zuschlag». |
 | `heizung` | Heizkörper mit Wärmewellen, Staubwirbel oder Bürste von oben nach unten. |
 | `spruehen` | Sprühflasche mit Markenabzeichen, Nebel, nasse Fläche, Sekundenzähler. Für Einwirkzeiten und Mittel. |
+| `enthuellen` | Gegenstand liegt unscharf, wird auf dem gesprochenen Wort scharf, darunter das Warum. |
 | `hotspots` | Grundriss von oben, vergessene Stellen leuchten auf, dazu die Liste. Für Checklisten. |
 | `maskottchen_tipp` | Figur springt rein, Sprechblase wechselt den Text. Der «Tipp vom Profi». |
 | `abschluss` | Wortmarke, «Richtpreis für euer Büro in 1 Minute», Knopf habibireinigung.ch, Figur. **Immer die letzte Szene.** |
@@ -340,6 +341,7 @@ Diese Datei ändert nur Mortaza oder Claude auf seine Anweisung. Wenn er ein Vid
 
 | Version | Datum | Änderung |
 | --- | --- | --- |
+| 1.4 | 07.10.2026 | Abschnitt 17: jedes Reel braucht das Warum mit Fakt, Gegenstaende werden gezeigt (Szene enthuellen), Transparenz braucht Konflikt, [sarcastic] verboten. |
 | 1.3 | 07.10.2026 | Markenabzeichen auf erzeugte Gegenstaende, Rauschen im Abschluss behoben, Webadresse getrennt sprechen, Tonkette mit Zweidurchlauf, neue Szene hotspots. |
 | 1.2 | 07.10.2026 | Abschnitt 15: ohne konkrete Zahl kein Video, Schrift muss ins Bild passen, mehr Abwechslung im Bild bei gleichbleibendem Abschluss. |
 | 1.1 | 07.10.2026 | Stimme: Lenny ist Standard, der Klon von Mortaza wird nicht verwendet. |
@@ -408,3 +410,33 @@ Jedes Reel braucht einen Grund, warum jemand es zu Ende schaut: ein Learning mit
 Trend oder Humor. Hintergrundfarbe, Szenenfolge und die thematische Szene wechseln von Reel
 zu Reel. Neue Szene seit 07.10.2026: `hotspots` (Grundriss von oben, vergessene Stellen
 leuchten nacheinander auf, dazu die Liste). Gedacht für Checklisten.
+
+---
+
+## 17. Das Warum (Rückmeldung 07.10.2026, dritte Runde)
+
+Mortaza hat die Reels vom 14., 16. und 18.10. zurückgewiesen: «Ich wüsste nicht, was ich daraus lernen sollte.» Der Mangel war in allen drei derselbe. Sie sagten **was** zu tun ist, aber nicht **warum**.
+
+### 17.1 Jedes Reel braucht einen Grund, nicht nur eine Anweisung
+
+«Diese Stelle geht oft vergessen» ist kein Grund. «Auf dem Schreibtisch sitzen rund 400-mal mehr Bakterien als auf einer Toilettenbrille, weil die Toilette täglich geputzt wird und der Schreibtisch nie» ist einer.
+
+Aufbau, der funktioniert:
+
+1. **Überraschender Fakt** mit Quelle. Er ist der Hook.
+2. **Warum das so ist.** Ein Satz Erklärung, der den Fakt plausibel macht.
+3. **Was man dagegen tut**, mit Zahl (Abschnitt 15.1).
+
+Findet sich kein Fakt, der einen Zuschauer überrascht, taugt das Thema nicht. Dann ein anderes nehmen.
+
+### 17.2 Das Bild zeigt den Gegenstand, nicht nur das Wort
+
+Wird eine Türklinke genannt, erscheint eine Türklinke. Neue Szene `enthuellen`: der Gegenstand liegt zuerst unscharf da und wird genau auf dem gesprochenen Wort scharf, darunter steht in einer Zeile, warum er geputzt gehört. Gegenstände sind reine CSS-Formen in den Markenfarben, keine Fotos und keine KI-Bilder.
+
+### 17.3 Transparenz-Themen brauchen einen Konflikt
+
+Ein Reel, das nur Konditionen aufzählt (Zonen, Zuschläge), ist Werbung ohne Inhalt. Ein Transparenz-Reel braucht eine Aussage, die man nicht erwartet: warum wir höchstens vier neue Objekte im Monat annehmen, warum der Preis offen auf der Website steht, wer den Schlüssel zu euren Räumen hat. Die Konditionen sind dann der Beleg, nicht das Thema.
+
+### 17.4 Immer dieselbe Stimme, immer dasselbe Tag-Muster
+
+Im Zonen-Reel klang die Stimme anders als in den übrigen. Ursache war der Tag `[sarcastic]`, den nur dieses Reel benutzte: ElevenLabs v3 ändert damit hörbar die Klangfarbe. **`[sarcastic]` wird nicht mehr verwendet.** Erlaubt bleiben `[curious]`, `[intense]`, `[excited]`, `[warmly]`, und zwar in jedem Reel in derselben Reihenfolge, damit alle Videos gleich klingen.
