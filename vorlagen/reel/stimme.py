@@ -34,8 +34,26 @@ def straffen(src, out, phrasen, pausen=None, tempo=TEMPO):
     y = np.concatenate(teile)
     w2 = wave.open(tmp + '2.wav', 'wb'); w2.setnchannels(1); w2.setsampwidth(2); w2.setframerate(SR)
     w2.writeframes((np.clip(y, -1, 1) * 32767).astype(np.int16).tobytes()); w2.close()
-    kette = f'atempo={tempo},highpass=f=80,equalizer=f=3200:t=q:w=1.2:g=2.5,acompressor=threshold=-18dB:ratio=2:attack=8:release=120,loudnorm=I=-14:TP=-1.2:LRA=11'
-    subprocess.run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-y', '-i', tmp + '2.wav', '-af', kette, '-ar', str(SR), '-ac', '1', out], check=True)
+    # Kompressor bewusst sanft (ratio 1.6): die Regeln verlangen einen Lautstaerke-Bogen
+    # ueber das Video. Ein harter Kompressor plus loudnorm im Einzeldurchlauf buegelt
+    # alles platt (gemessen LRA 1.4 LU am 07.10.2026) und klingt robotisch.
+    vor = f'atempo={tempo},highpass=f=80,equalizer=f=3200:t=q:w=1.2:g=2.5,acompressor=threshold=-14dB:ratio=1.6:attack=12:release=160'
+    ziel = 'I=-14:TP=-1.5:LRA=11'
+    # Durchlauf 1: messen
+    mess = subprocess.run(['ffmpeg', '-hide_banner', '-i', tmp + '2.wav', '-af',
+                           vor + f',loudnorm={ziel}:print_format=json', '-f', 'null', '-'],
+                          capture_output=True, text=True, errors='replace').stderr
+    linear = ''
+    try:
+        roh = mess[mess.rindex('{'):mess.rindex('}') + 1]
+        m = json.loads(roh)
+        linear = (':measured_I=%s:measured_TP=%s:measured_LRA=%s:measured_thresh=%s:linear=true'
+                  % (m['input_i'], m['input_tp'], m['input_lra'], m['input_thresh']))
+    except Exception:
+        pass   # ohne Messwerte faellt es auf den Einzeldurchlauf zurueck
+    # Durchlauf 2: anwenden, linear verstaerken statt dynamisch nachregeln
+    subprocess.run(['ffmpeg', '-hide_banner', '-loglevel', 'error', '-y', '-i', tmp + '2.wav',
+                    '-af', vor + f',loudnorm={ziel}{linear}', '-ar', str(SR), '-ac', '1', out], check=True)
     return {k: [round(v[0] / tempo, 3), round(v[1] / tempo, 3)] for k, v in zeiten.items()}
 
 

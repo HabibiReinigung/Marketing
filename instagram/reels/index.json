@@ -48,6 +48,39 @@
       "erstellt_am": "2026-10-07",
       "version": 2,
       "import_noetig": true
+    },
+    {
+      "post_id": "IG-2026-10-14-r1",
+      "datum": "2026-10-14",
+      "zeit": "18:00",
+      "thema": "Drei Stellen, die niemand putzt",
+      "saeule": "checkliste",
+      "sprechtext": "Drei Stellen im Büro putzt fast niemand. Und genau die fasst ihr am häufigsten an! Nummer eins: der Lichtschalter. Nummer zwei: die Türklinke. Nummer drei: die Abtropfschale der Kaffeemaschine! Einmal am Tag feucht abwischen, zehn Sekunden pro Raum. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!",
+      "erstellt_am": "2026-10-07",
+      "version": 1,
+      "import_noetig": true
+    },
+    {
+      "post_id": "IG-2026-10-16-r1",
+      "datum": "2026-10-16",
+      "zeit": "12:00",
+      "thema": "Zonen: bis 5 km ohne Zuschlag",
+      "saeule": "transparenz",
+      "sprechtext": "Euer Büro liegt ausserhalb von Chur? Dann kommt jetzt der Aufschlag. Kennt man ja. Bei uns: bis fünf Kilometer ab Chur kein Zuschlag! Danach fünfzehn Franken pro Einsatz. Weiter draussen fünfunddreissig. Mehr kommt nicht dazu. Fester Monatspreis, keine Mindestlaufzeit. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!",
+      "erstellt_am": "2026-10-07",
+      "version": 1,
+      "import_noetig": true
+    },
+    {
+      "post_id": "IG-2026-10-18-r1",
+      "datum": "2026-10-18",
+      "zeit": "10:00",
+      "thema": "Ein Mikrofasertuch, acht Flächen",
+      "saeule": "tipp",
+      "sprechtext": "Du benutzt nur ein Viertel von deinem Putztuch. Der Rest ist noch sauber, und du spülst trotzdem aus! Zweimal falten gibt vier Lagen. Vorne und hinten sind das acht saubere Flächen! Ist eine Seite grau: umklappen statt auswaschen. Ein Tuch reicht so für acht Räume. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!",
+      "erstellt_am": "2026-10-07",
+      "version": 1,
+      "import_noetig": true
     }
   ]
 }

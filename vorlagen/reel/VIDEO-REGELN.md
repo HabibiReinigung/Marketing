@@ -1,6 +1,6 @@
 # Video-Regeln Habibi Reinigung
 
-**Version 1.2, 07.10.2026.** Verbindliche Regeln für jedes Video (Instagram Reel, TikTok, Shorts) von Habibi Reinigung, Mortaza Habibi, Chur.
+**Version 1.3, 07.10.2026.** Verbindliche Regeln für jedes Video (Instagram Reel, TikTok, Shorts) von Habibi Reinigung, Mortaza Habibi, Chur.
 
 **Für Claude:** Diese Datei vor jedem Video vollständig lesen. Sie entscheidet über Inhalt, Hook, Stimme, Emotion, Bild, Ton und Schnitt. Bei Widerspruch gilt: Faktenregister der Marketing-App (Zahlen und Aussagen) zuerst, dann diese Datei, dann `vorlagen/reel/FABRIK.md` (technischer Ablauf), dann die ANLEITUNG der App. Mortaza muss nichts davon im Chat wiederholen. Wenn etwas hier nicht geregelt ist: so entscheiden, wie es die Beispiele in Abschnitt 12 tun.
 
@@ -182,6 +182,8 @@ Hintergrund pro Szene wechseln (Navy, Hellblau, Eis), damit ein Schnitt sichtbar
 | `preis` | Zahl zählt auf 650 hoch, Stempel «ALLES INBEGRIFFEN». |
 | `zone` | 5-km-Ring um Chur, Pin fällt, Abzeichen «ohne Zuschlag». |
 | `heizung` | Heizkörper mit Wärmewellen, Staubwirbel oder Bürste von oben nach unten. |
+| `spruehen` | Sprühflasche mit Markenabzeichen, Nebel, nasse Fläche, Sekundenzähler. Für Einwirkzeiten und Mittel. |
+| `hotspots` | Grundriss von oben, vergessene Stellen leuchten auf, dazu die Liste. Für Checklisten. |
 | `maskottchen_tipp` | Figur springt rein, Sprechblase wechselt den Text. Der «Tipp vom Profi». |
 | `abschluss` | Wortmarke, «Richtpreis für euer Büro in 1 Minute», Knopf habibireinigung.ch, Figur. **Immer die letzte Szene.** |
 
@@ -338,6 +340,7 @@ Diese Datei ändert nur Mortaza oder Claude auf seine Anweisung. Wenn er ein Vid
 
 | Version | Datum | Änderung |
 | --- | --- | --- |
+| 1.3 | 07.10.2026 | Markenabzeichen auf erzeugte Gegenstaende, Rauschen im Abschluss behoben, Webadresse getrennt sprechen, Tonkette mit Zweidurchlauf, neue Szene hotspots. |
 | 1.2 | 07.10.2026 | Abschnitt 15: ohne konkrete Zahl kein Video, Schrift muss ins Bild passen, mehr Abwechslung im Bild bei gleichbleibendem Abschluss. |
 | 1.1 | 07.10.2026 | Stimme: Lenny ist Standard, der Klon von Mortaza wird nicht verwendet. |
 | 1.0 | 07.10.2026 | Erste Fassung. Qualitätsmassstab, Pausenverbot, Hook-Muster, Szenen-Baukasten, Prüfliste. |
@@ -373,3 +376,35 @@ Alle Reels sahen gleich aus. Das soll sich ändern, der Abschluss aber nicht.
 - Fehlt eine passende Szene, wird sie in `szenen.py` gebaut und in Abschnitt 6.3 ergänzt. Neu seit 07.10.2026: `spruehen` (Sprühflasche, Nebel, nasse Fläche, Sekundenzähler).
 - Hintergrundfarbe und Szenenfolge von Reel zu Reel wechseln.
 - **Der Abschluss bleibt immer gleich**: Wortmarke, «Richtpreis in 1 Minute», Knopf habibireinigung.ch. Das ist das Wiedererkennungsmerkmal der Marke und wird nicht variiert.
+
+---
+
+## 16. Lehren aus der Rückmeldung vom 07.10.2026 (zweite Runde)
+
+### 16.1 Die Marke gehört auf alles, was wir selbst zeichnen
+
+Jeder Gegenstand, den eine Szene erzeugt (Sprühflasche, Eimer, Tuch, Schild), trägt das
+Habibi-Abzeichen aus `assets/hr_icon.png`. Das kostet nichts und zeigt die Marke ein
+zweites Mal im selben Video. Neu seit 07.10.2026 in der Szene `spruehen` umgesetzt.
+
+### 16.2 Der gesprochene Schluss
+
+- **Das Rauschen am Schluss** kam vom Soundeffekt `whoosh_lang`. Die Whoosh-Effekte in
+  `klang.py` sind gefiltertes weisses Rauschen. In `abschluss` läuft er jetzt kürzer
+  (0.16 s statt 0.25 s) und leiser (30 Prozent).
+- **Die Webadresse wird getrennt gesprochen:** «auf habibi reinigung punkt c h».
+  Zusammengeschrieben ist «habibireinigung» für das Sprachmodell ein Kunstwort und klingt
+  abgehackt. Geschrieben bleibt es in der Caption natürlich `habibireinigung.ch`.
+- **Die Tonkette** bügelte vorher alles platt (gemessen LRA 1.4 LU). `stimme.py` misst jetzt
+  in einem ersten Durchlauf und verstärkt im zweiten linear (`linear=true`), der Kompressor
+  ist sanfter (ratio 1.6 statt 2). Die Lautstärke darf einen Bogen haben, das verlangt
+  Abschnitt 4.2.
+- Der Schluss bleibt inhaltlich gleich. Eine Abweichung ist nur erlaubt, wenn ein Trend
+  oder ein Format es verlangt, und auch dann bleiben Wortmarke und Knopf.
+
+### 16.3 Mehr Abwechslung, aber nach den Regeln von Social Media
+
+Jedes Reel braucht einen Grund, warum jemand es zu Ende schaut: ein Learning mit Zahl, ein
+Trend oder Humor. Hintergrundfarbe, Szenenfolge und die thematische Szene wechseln von Reel
+zu Reel. Neue Szene seit 07.10.2026: `hotspots` (Grundriss von oben, vergessene Stellen
+leuchten nacheinander auf, dazu die Liste). Gedacht für Checklisten.

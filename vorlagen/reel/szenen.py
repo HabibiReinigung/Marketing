@@ -355,6 +355,7 @@ def spruehen(reel, sid, start, ende, zeilen, sekunden, t_spray, t_zaehler, label
 #{sid}-koerper {{ position:absolute; left:0; bottom:0; width:230px; height:300px; border-radius:34px 34px 26px 26px;
   background:linear-gradient(160deg, var(--steel), var(--navy-deep)); box-shadow:inset 0 0 0 7px rgba(255,255,255,.16); }}
 #{sid}-fuell {{ position:absolute; left:26px; right:26px; bottom:26px; height:150px; border-radius:18px; background:var(--blue); opacity:.55; }}
+#{sid}-logo {{ position:absolute; left:50%; top:150px; transform:translateX(-50%); width:118px; height:118px; background:url('assets/hr_icon.png') center/contain no-repeat; filter:drop-shadow(0 3px 8px rgba(0,0,0,.35)); }}
 #{sid}-hals {{ position:absolute; left:74px; top:96px; width:82px; height:90px; background:var(--steel); border-radius:12px; }}
 #{sid}-kopf {{ position:absolute; left:40px; top:34px; width:150px; height:76px; background:#fff; border-radius:20px 8px 8px 20px; }}
 #{sid}-duese {{ position:absolute; left:186px; top:56px; width:44px; height:24px; background:#fff; border-radius:6px; }}
@@ -378,7 +379,7 @@ def spruehen(reel, sid, start, ende, zeilen, sekunden, t_spray, t_zaehler, label
     inhalt = (f'<div id="{sid}-lab" class="label top-label" style="color:var(--blue)">{label}</div>' if label else '') + f'''
 <div id="{sid}-txt" data-layout-allow-overflow>{zt}</div>
 <div id="{sid}-flasche" data-layout-allow-overflow>
-  <div id="{sid}-koerper"><div id="{sid}-fuell"></div></div>
+  <div id="{sid}-koerper"><div id="{sid}-fuell"></div><div id="{sid}-logo" data-layout-allow-overflow></div></div>
   <div id="{sid}-hals"></div><div id="{sid}-kopf"></div><div id="{sid}-duese"></div><div id="{sid}-hebel"></div>
 </div>
 <div id="{sid}-nebel" data-layout-allow-overflow></div>
@@ -426,6 +427,60 @@ def spruehen(reel, sid, start, ende, zeilen, sekunden, t_spray, t_zaehler, label
     reel.szene(sid, start, ende, bg, inhalt, css=css, js='\n'.join(js), sfx=sfx)
 
 
+def hotspots(reel, sid, start, ende, titel_html, punkte, t_titel=None, bg='var(--navy-deep)'):
+    """Grundriss von oben, auf dem vergessene Stellen nacheinander aufleuchten.
+
+    punkte: Liste dict(x, y, text, t)  -- x,y in Prozent des Grundrisses.
+    Fuer Checklisten: das Bild zeigt WO, der Text sagt WAS.
+    """
+    css = f'''#{sid}-t {{ position:absolute; left:70px; right:70px; top:260px; text-align:center; color:#fff; font-size:96px; line-height:1.1; }}
+#{sid}-t .serif {{ color:var(--blue); }}
+#{sid}-raum {{ position:absolute; left:110px; right:110px; top:560px; height:760px; border:9px solid var(--steel);
+  border-radius:30px; background:rgba(159,211,238,.07); }}
+#{sid}-raum .moebel {{ position:absolute; background:var(--steel); opacity:.45; border-radius:10px; }}
+#{sid}-raum .m1 {{ left:7%; top:12%; width:34%; height:19%; }}
+#{sid}-raum .m2 {{ right:7%; top:12%; width:26%; height:30%; }}
+#{sid}-raum .m3 {{ left:7%; bottom:12%; width:44%; height:22%; }}
+#{sid}-raum .m4 {{ right:9%; bottom:14%; width:22%; height:17%; border-radius:50%; }}
+#{sid}-raum .pin {{ position:absolute; width:96px; height:96px; margin:-48px 0 0 -48px; border-radius:50%;
+  background:var(--rot); display:flex; align-items:center; justify-content:center; color:#fff;
+  font-weight:900; font-size:52px; opacity:0; }}
+#{sid}-raum .ring {{ position:absolute; width:96px; height:96px; margin:-48px 0 0 -48px; border-radius:50%;
+  border:7px solid var(--rot); opacity:0; }}
+#{sid}-liste {{ position:absolute; left:80px; right:80px; top:1390px; }}
+#{sid}-liste .z {{ display:flex; align-items:center; gap:26px; margin-bottom:18px; opacity:0; }}
+#{sid}-liste .n {{ flex:0 0 68px; height:68px; border-radius:50%; background:var(--rot); color:#fff;
+  font-weight:900; font-size:40px; display:flex; align-items:center; justify-content:center; }}
+#{sid}-liste .x {{ font-weight:700; font-size:62px; color:#fff; line-height:1.1; }}'''
+
+    pins = ''.join(
+        f'<div class="ring" id="{sid}-r{i}" style="left:{p["x"]}%;top:{p["y"]}%"></div>'
+        f'<div class="pin" id="{sid}-p{i}" style="left:{p["x"]}%;top:{p["y"]}%">{i + 1}</div>'
+        for i, p in enumerate(punkte))
+    zeilen = ''.join(
+        f'<div class="z" id="{sid}-z{i}"><div class="n">{i + 1}</div><div class="x">{p["text"]}</div></div>'
+        for i, p in enumerate(punkte))
+
+    inhalt = f'''<div id="{sid}-t" data-layout-allow-overflow>{titel_html}</div>
+<div id="{sid}-raum" data-layout-allow-overflow>
+  <div class="moebel m1"></div><div class="moebel m2"></div><div class="moebel m3"></div><div class="moebel m4"></div>
+  {pins}
+</div>
+<div id="{sid}-liste" data-layout-allow-overflow>{zeilen}</div>'''
+
+    tt = r(t_titel if t_titel is not None else start + .05)
+    js = [f'tl.fromTo("#{sid}-t", {{ y: 54, opacity: 0 }}, {{ y: 0, opacity: 1, duration: .32, ease: "back.out(1.7)" }}, {tt});',
+          f'tl.fromTo("#{sid}-raum", {{ scale: .9, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: .38, ease: "back.out(1.4)" }}, {r(tt + .12)});']
+    sfx = [('whoosh_hoch', tt - .05, .18, .3)]
+    for i, p in enumerate(punkte):
+        t = r(p['t'])
+        js.append(f'tl.fromTo("#{sid}-p{i}", {{ scale: 0, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: .26, ease: "back.out(2.4)" }}, {t});')
+        js.append(f'tl.fromTo("#{sid}-r{i}", {{ scale: 1, opacity: .9 }}, {{ scale: 2.4, opacity: 0, duration: .9, ease: "power2.out", repeat: 2 }}, {t});')
+        js.append(f'tl.fromTo("#{sid}-z{i}", {{ x: -70, opacity: 0 }}, {{ x: 0, opacity: 1, duration: .3, ease: "power3.out" }}, {r(t + .08)});')
+        sfx += [('pop_hoch', p['t'], .18, .55), ('tick', p['t'] + .1, .1, .3)]
+    reel.szene(sid, start, ende, bg, inhalt, css=css, js='\n'.join(js), sfx=sfx)
+
+
 def abschluss(reel, sid, start, ende, t_marke, t_zeile, t_knopf, bg='var(--navy-deep)'):
     mh = 330; mw = round(mh * MASKOTTCHEN_W / MASKOTTCHEN_H)
     css = f'''#{sid}-mark {{ width:900px; display:block; margin-top:-380px; }}
@@ -448,7 +503,9 @@ def abschluss(reel, sid, start, ende, t_marke, t_zeile, t_knopf, bg='var(--navy-
           f'tl.fromTo("#{sid}-tag", {{ opacity: 0 }}, {{ opacity: 1, duration: .4 }}, {r(t_zeile + .5)});',
           f'tl.fromTo("#{sid}-btn", {{ scale: 0, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: .38, ease: "back.out(2.5)" }}, {r(t_knopf)});',
           f'tl.to("#{sid}-btn", {{ scale: 1.06, duration: .25, yoyo: true, repeat: 1, ease: "sine.inOut" }}, {r(t_knopf + .6)});']
-    sfx = [('whoosh_lang', start - .1, .25), ('boing_kurz', t_marke + .35, .2), ('pop', t_knopf, .3), ('ding', t_knopf + .6, .2)]
+    # whoosh_lang ist gefiltertes weisses Rauschen. In voller Laenge und Lautstaerke
+    # hoert man es am Schluss als Rauschen (Rueckmeldung 07.10.2026).
+    sfx = [('whoosh_lang', start - .08, .16, .30), ('boing_kurz', t_marke + .35, .2, .55), ('pop', t_knopf, .3, .6), ('ding', t_knopf + .6, .2, .5)]
     reel.szene(sid, start, ende, bg, inhalt, css=css, js='\n'.join(js), sfx=sfx)
 
 

@@ -1,0 +1,45 @@
+{
+ "post_id": "IG-2026-10-16-r1",
+ "datum": "2026-10-16",
+ "zeit": "12:00",
+ "format": "reel",
+ "thema": "Zonen: bis 5 km ohne Zuschlag",
+ "saeule": "transparenz",
+ "caption": "Euer Büro liegt ausserhalb von Chur? Dann kommt jetzt der Aufschlag. Bei uns nicht.\n\nBis 5 km ab Chur: kein Zuschlag.\nDanach CHF 15 pro Einsatz, weiter draussen CHF 35.\nMehr kommt nicht dazu.\n\nFester Monatspreis, keine Mindestlaufzeit.\n\nRichtpreis in 1 Minute: Link in der Bio\n\n#chur #graubünden #büroreinigung #reinigungchur #unterhaltsreinigung #praxisreinigung #habibireinigung",
+ "spec": {
+  "szenen": [
+   {
+    "text": "Euer Büro liegt ausserhalb von Chur?"
+   },
+   {
+    "text": "Dann kommt jetzt der Aufschlag. Kennt man ja."
+   },
+   {
+    "text": "Bei uns: bis fünf Kilometer ab Chur kein Zuschlag!"
+   },
+   {
+    "text": "Danach fünfzehn Franken pro Einsatz. Weiter draussen fünfunddreissig."
+   },
+   {
+    "text": "Mehr kommt nicht dazu. Fester Monatspreis, keine Mindestlaufzeit."
+   }
+  ],
+  "schluss": {
+   "text": "Richtpreis für euer Büro in 1 Minute",
+   "knopf": "habibireinigung.ch"
+  },
+  "sprechtext": "Euer Büro liegt ausserhalb von Chur? Dann kommt jetzt der Aufschlag. Kennt man ja. Bei uns: bis fünf Kilometer ab Chur kein Zuschlag! Danach fünfzehn Franken pro Einsatz. Weiter draussen fünfunddreissig. Mehr kommt nicht dazu. Fester Monatspreis, keine Mindestlaufzeit. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!"
+ },
+ "medien": [
+  {
+   "datei": "IG-2026-10-16-r1.mp4",
+   "typ": "video"
+  },
+  {
+   "datei": "IG-2026-10-16-r1_titel.jpg",
+   "typ": "titelbild"
+  }
+ ],
+ "ordner": "instagram/IG-2026-10-16-r1",
+ "warnungen": []
+}

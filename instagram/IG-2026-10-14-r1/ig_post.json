@@ -1,0 +1,48 @@
+{
+ "post_id": "IG-2026-10-14-r1",
+ "datum": "2026-10-14",
+ "zeit": "18:00",
+ "format": "reel",
+ "thema": "Drei Stellen, die niemand putzt",
+ "saeule": "checkliste",
+ "caption": "Drei Stellen im Büro putzt fast niemand. Und genau die fasst ihr täglich an.\n\nDen Lichtschalter.\nDie Türklinke.\nDie Abtropfschale der Kaffeemaschine.\n\nEinmal am Tag feucht abwischen, zehn Sekunden pro Raum.\n\nSpeichern für später\n\n#chur #graubünden #büroreinigung #reinigungchur #unterhaltsreinigung #praxisreinigung #habibireinigung",
+ "spec": {
+  "szenen": [
+   {
+    "text": "Drei Stellen im Büro putzt fast niemand."
+   },
+   {
+    "text": "Und genau die fasst ihr am häufigsten an!"
+   },
+   {
+    "text": "Nummer eins: der Lichtschalter."
+   },
+   {
+    "text": "Nummer zwei: die Türklinke."
+   },
+   {
+    "text": "Nummer drei: die Abtropfschale der Kaffeemaschine!"
+   },
+   {
+    "text": "Einmal am Tag feucht abwischen, zehn Sekunden pro Raum."
+   }
+  ],
+  "schluss": {
+   "text": "Richtpreis für euer Büro in 1 Minute",
+   "knopf": "habibireinigung.ch"
+  },
+  "sprechtext": "Drei Stellen im Büro putzt fast niemand. Und genau die fasst ihr am häufigsten an! Nummer eins: der Lichtschalter. Nummer zwei: die Türklinke. Nummer drei: die Abtropfschale der Kaffeemaschine! Einmal am Tag feucht abwischen, zehn Sekunden pro Raum. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!"
+ },
+ "medien": [
+  {
+   "datei": "IG-2026-10-14-r1.mp4",
+   "typ": "video"
+  },
+  {
+   "datei": "IG-2026-10-14-r1_titel.jpg",
+   "typ": "titelbild"
+  }
+ ],
+ "ordner": "instagram/IG-2026-10-14-r1",
+ "warnungen": []
+}

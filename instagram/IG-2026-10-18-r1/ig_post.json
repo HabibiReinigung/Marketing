@@ -1,0 +1,45 @@
+{
+ "post_id": "IG-2026-10-18-r1",
+ "datum": "2026-10-18",
+ "zeit": "10:00",
+ "format": "reel",
+ "thema": "Ein Mikrofasertuch, acht Flächen",
+ "saeule": "tipp",
+ "caption": "Du benutzt nur ein Viertel von deinem Putztuch.\n\nZweimal falten gibt vier Lagen.\nVorne und hinten sind das acht saubere Flächen.\nIst eine Seite grau: umklappen statt auswaschen.\n\nEin Tuch reicht so für acht Räume.\n\nSpeichern für später\n\n#chur #graubünden #büroreinigung #reinigungchur #unterhaltsreinigung #putztipp #habibireinigung",
+ "spec": {
+  "szenen": [
+   {
+    "text": "Du benutzt nur ein Viertel von deinem Putztuch."
+   },
+   {
+    "text": "Der Rest ist noch sauber, und du spülst trotzdem aus!"
+   },
+   {
+    "text": "Zweimal falten gibt vier Lagen. Vorne und hinten sind das acht saubere Flächen!"
+   },
+   {
+    "text": "Ist eine Seite grau: umklappen statt auswaschen."
+   },
+   {
+    "text": "Ein Tuch reicht so für acht Räume."
+   }
+  ],
+  "schluss": {
+   "text": "Richtpreis für euer Büro in 1 Minute",
+   "knopf": "habibireinigung.ch"
+  },
+  "sprechtext": "Du benutzt nur ein Viertel von deinem Putztuch. Der Rest ist noch sauber, und du spülst trotzdem aus! Zweimal falten gibt vier Lagen. Vorne und hinten sind das acht saubere Flächen! Ist eine Seite grau: umklappen statt auswaschen. Ein Tuch reicht so für acht Räume. Habibi Reinigung! Richtpreis in einer Minute, auf habibi reinigung punkt c h!"
+ },
+ "medien": [
+  {
+   "datei": "IG-2026-10-18-r1.mp4",
+   "typ": "video"
+  },
+  {
+   "datei": "IG-2026-10-18-r1_titel.jpg",
+   "typ": "titelbild"
+  }
+ ],
+ "ordner": "instagram/IG-2026-10-18-r1",
+ "warnungen": []
+}
